@@ -1,0 +1,283 @@
+- generic [ref=f17e1]:
+  - link "Skip to content" [ref=f17e2] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=f17e3]:
+    - generic [ref=f17e4]:
+      - link [ref=f17e5] [cursor=pointer]:
+        - /url: http://localhost/sklentr/sklentr-v3/
+        - img "Sklentr V3" [ref=f17e6]
+      - navigation "Primary" [ref=f17e7]:
+        - list [ref=f17e8]:
+          - listitem [ref=f17e9]:
+            - link "Services" [ref=f17e10] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/services/
+          - listitem [ref=f17e17]:
+            - link "Portfolio" [ref=f17e18] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+          - listitem [ref=f17e23]:
+            - link "Pricing" [ref=f17e24] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/pricing/
+          - listitem [ref=f17e29]:
+            - link "About" [ref=f17e30] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/about/
+          - listitem [ref=f17e34]:
+            - link "Blog" [ref=f17e35] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/blog/
+      - link "Book a Call" [ref=f17e42] [cursor=pointer]:
+        - /url: https://calendly.com/sklentr
+  - main [ref=f17e46]:
+    - region [ref=f17e47]:
+      - generic [ref=f17e49]:
+        - generic [ref=f17e50]:
+          - heading "Ideas we’ve brought to life" [level=1] [ref=f17e51]:
+            - text: Ideas we’ve brought to
+            - generic [ref=f17e52]: life
+          - paragraph [ref=f17e53]: From healthcare AI to blockchain fintech, we’ve helped founders across industries launch products that matter. Here’s proof we deliver.
+          - generic [ref=f17e54]:
+            - link "Start a Project" [ref=f17e55] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Start a Project
+              - generic [ref=f17e56]: →
+            - link "See the Work" [ref=f17e57] [cursor=pointer]:
+              - /url: "#pf-featured"
+        - generic [ref=f17e58]:
+          - figure [ref=f17e59]:
+            - generic [ref=f17e60]:
+              - generic [ref=f17e61]: Get Takaful
+              - generic [ref=f17e62]: FinTech / Blockchain
+          - figure [ref=f17e63]:
+            - generic [ref=f17e64]:
+              - generic [ref=f17e65]: KindredCare
+              - generic [ref=f17e66]: Elderly Care
+          - figure [ref=f17e67]:
+            - generic [ref=f17e68]:
+              - generic [ref=f17e69]: GAinData
+              - generic [ref=f17e70]: Data / SaaS
+    - region [ref=f17e71]:
+      - generic [ref=f17e72]:
+        - generic:
+          - figure
+          - figure
+          - figure
+          - figure
+        - generic [ref=f17e74]:
+          - heading "We build meaningful products and intuitive digital experiences — through strategy, craft & technology that ships." [level=2] [ref=f17e75]:
+            - generic [ref=f17e76]: We build meaningful products and
+            - generic [ref=f17e77]: intuitive digital experiences — through
+            - generic [ref=f17e78]: strategy, craft & technology that ships.
+          - link "How We Work" [ref=f17e79] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/#process
+    - region [ref=f17e83]:
+      - generic [ref=f17e85]:
+        - generic [ref=f17e87]:
+          - generic [ref=f17e88]:
+            - paragraph [ref=f17e89]: Case Studies
+            - generic [ref=f17e90]:
+              - heading "Featured Works" [level=2] [ref=f17e91]
+              - generic [ref=f17e93]:
+                - generic [ref=f17e94]: "01"
+                - generic [ref=f17e95]: "02"
+                - generic [ref=f17e96]: "03"
+                - generic [ref=f17e97]: "04"
+                - generic [ref=f17e98]: "05"
+                - generic [ref=f17e99]: "06"
+          - generic [ref=f17e100]:
+            - generic [ref=f17e101]:
+              - list
+              - heading "Scalable architecture ready" [level=3] [ref=f17e102]
+              - paragraph
+              - list
+            - generic:
+              - list:
+                - listitem: AgriTech
+                - listitem: AI
+              - heading "AI Farming" [level=3]
+              - paragraph: A comprehensive AI-based plant management system for urban farmers in Canada. From seed to harvest, the platform provides real-time recommendations based on location, weather, and plant status.
+              - list:
+                - listitem: Laravel
+                - listitem: Next.js
+                - listitem: WordPress
+                - listitem: Google Gemini
+            - generic:
+              - list:
+                - listitem: FinTech
+                - listitem: Blockchain
+              - heading "Get Takaful" [level=3]
+              - paragraph: A Shariah-compliant insurance alternative for Muslims in Canada. Built on blockchain for transparency, users see exactly where their money goes and can vote on claim approvals.
+              - list:
+                - listitem: Laravel
+                - listitem: Next.js
+                - listitem: Blockchain
+                - listitem: WordPress
+            - generic:
+              - list:
+                - listitem: Healthcare
+                - listitem: Elderly Care
+              - heading "KindredCare" [level=3]
+              - paragraph: An interactive marketplace connecting families with pre-vetted caregivers. Features AI-powered granular matching beyond basics — hobbies, interests, cultural similarities, food habits, even movie preferences — ensuring long-term care contracts.
+              - list:
+                - listitem: Laravel
+                - listitem: Next.js
+                - listitem: ChatGPT
+                - listitem: Google Gemini
+            - generic:
+              - list:
+                - listitem: Fashion
+                - listitem: Sustainable Design
+              - heading "Agile Sourcing" [level=3]
+              - paragraph: Helps sustainable designers validate designs before production via social-media publishing and data analysis. AI-powered design creation and clothing-image generation with Instagram analytics to predict market success.
+              - list:
+                - listitem: Laravel
+                - listitem: Next.js
+                - listitem: AI
+                - listitem: Instagram API
+            - generic:
+              - list:
+                - listitem: SaaS
+                - listitem: Data Analytics
+              - heading "GAinData" [level=3]
+              - paragraph: AI-powered data-intelligence platform solving the small-data problem for startups and SMEs. Features an AI Survey Generator, a Synthetic Data Engine, and a dual-dashboard experience for comprehensive data workflows.
+              - list:
+                - listitem: Laravel
+                - listitem: Next.js
+                - listitem: ChatGPT
+                - listitem: Gemini
+                - listitem: Claude
+        - generic [ref=f17e103]:
+          - figure "Scalable architecture ready" [ref=f17e104]:
+            - generic [ref=f17e105]: "01"
+            - img "Scalable architecture ready —" [ref=f17e106]
+          - figure "AI Farming A comprehensive AI-based plant management system for urban farmers in Canada. From seed to harvest, the platform provides real-time recommendations based on location, weather, and plant status." [ref=f17e107]:
+            - generic [ref=f17e108]: "02"
+            - img "AI Farming — AgriTech / AI" [ref=f17e109]
+          - figure "Get Takaful A Shariah-compliant insurance alternative for Muslims in Canada. Built on blockchain for transparency, users see exactly where their money goes and can vote on claim approvals." [ref=f17e110]:
+            - generic [ref=f17e111]: "03"
+            - img "Get Takaful — FinTech / Blockchain" [ref=f17e112]
+          - figure "KindredCare An interactive marketplace connecting families with pre-vetted caregivers. Features AI-powered granular matching beyond basics — hobbies, interests, cultural similarities, food habits, even movie preferences — ensuring long-term care contracts." [ref=f17e113]:
+            - generic [ref=f17e114]: "04"
+            - img "KindredCare — Healthcare / Elderly Care" [ref=f17e115]
+          - figure "Agile Sourcing Helps sustainable designers validate designs before production via social-media publishing and data analysis. AI-powered design creation and clothing-image generation with Instagram analytics to predict market success." [ref=f17e116]:
+            - generic [ref=f17e117]: "05"
+            - img "Agile Sourcing — Fashion / Sustainable Design" [ref=f17e118]
+          - figure "GAinData AI-powered data-intelligence platform solving the small-data problem for startups and SMEs. Features an AI Survey Generator, a Synthetic Data Engine, and a dual-dashboard experience for comprehensive data workflows." [ref=f17e119]:
+            - generic [ref=f17e120]: "06"
+            - img "GAinData — SaaS / Data Analytics" [ref=f17e121]
+    - region [ref=f17e122]:
+      - generic [ref=f17e124]:
+        - paragraph [ref=f17e125]: Let’s build
+        - heading "Ready to launch your MVP in weeks?" [level=2] [ref=f17e127]
+        - paragraph [ref=f17e128]: Book a free 30-minute consultation. No pressure, no jargon — just a clear plan and timeline.
+        - link "Book a Free Consultation" [ref=f17e130] [cursor=pointer]:
+          - /url: https://calendly.com/sklentr
+          - text: Book a Free Consultation
+          - generic [ref=f17e131]: →
+        - generic [ref=f17e132]:
+          - generic [ref=f17e133]: Or reach us directly
+          - list [ref=f17e134]:
+            - listitem [ref=f17e135]:
+              - link "WhatsApp" [ref=f17e136] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f17e139]:
+              - link "info@sklentr.com" [ref=f17e140] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f17e144]:
+              - link "+1 647-997-0557" [ref=f17e145] [cursor=pointer]:
+                - /url: tel:+16479970557
+  - contentinfo [ref=f17e148]:
+    - generic [ref=f17e149]:
+      - generic [ref=f17e150]:
+        - heading "Get founder-grade MVP & Startup Visa tips straight to your inbox." [level=2] [ref=f17e151]
+        - generic [ref=f17e153]:
+          - generic [ref=f17e154]: you@company.com
+          - textbox "you@company.com" [ref=f17e155]
+          - button "Subscribe" [ref=f17e156] [cursor=pointer]:
+            - text: Subscribe
+            - generic [ref=f17e157]: →
+      - generic [ref=f17e158]:
+        - navigation "Services" [ref=f17e159]:
+          - heading "Services" [level=3] [ref=f17e160]
+          - list [ref=f17e161]:
+            - listitem [ref=f17e162]:
+              - link "MVP Development" [ref=f17e163] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f17e164]:
+              - link "Website Design" [ref=f17e165] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f17e166]:
+              - link "SEO & Marketing" [ref=f17e167] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f17e168]:
+              - link "Paid Ads" [ref=f17e169] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f17e170]:
+              - link "Video Production" [ref=f17e171] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f17e172]:
+              - link "Business Consultation" [ref=f17e173] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f17e174]:
+              - link "Startup Visa" [ref=f17e175] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+        - navigation "Company" [ref=f17e176]:
+          - heading "Company" [level=3] [ref=f17e177]
+          - list [ref=f17e178]:
+            - listitem [ref=f17e179]:
+              - link "About" [ref=f17e180] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/about/
+            - listitem [ref=f17e181]:
+              - link "Portfolio" [ref=f17e182] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+            - listitem [ref=f17e183]:
+              - link "Blog" [ref=f17e184] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/blog/
+            - listitem [ref=f17e185]:
+              - link "Pricing" [ref=f17e186] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#pricing
+            - listitem [ref=f17e187]:
+              - link "Contact" [ref=f17e188] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#contact
+        - navigation "Resources" [ref=f17e189]:
+          - heading "Resources" [level=3] [ref=f17e190]
+          - list [ref=f17e191]:
+            - listitem [ref=f17e192]:
+              - link "Startup Visa" [ref=f17e193] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+            - listitem [ref=f17e194]:
+              - link "FAQ" [ref=f17e195] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#faq
+            - listitem [ref=f17e196]:
+              - link "How We Work" [ref=f17e197] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#how-we-work
+            - listitem [ref=f17e198]:
+              - link "Privacy Policy" [ref=f17e199] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/privacy-policy/
+            - listitem [ref=f17e200]:
+              - link "Terms" [ref=f17e201] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/terms/
+        - generic [ref=f17e202]:
+          - heading "Contact Us" [level=3] [ref=f17e203]
+          - list [ref=f17e204]:
+            - listitem [ref=f17e205]:
+              - link "+1 647-997-0557" [ref=f17e209] [cursor=pointer]:
+                - /url: tel:+16479970557
+            - listitem [ref=f17e210]:
+              - link "info@sklentr.com" [ref=f17e215] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f17e216]:
+              - link "WhatsApp" [ref=f17e220] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f17e221]:
+              - generic [ref=f17e226]: Toronto, Ontario, Canada
+      - generic [ref=f17e227]:
+        - paragraph [ref=f17e228]: © 2026 Sklentr V3 — Toronto-based MVP studio. All rights reserved.
+        - generic [ref=f17e229]:
+          - generic [ref=f17e230]: Follow Us
+          - link "LinkedIn" [ref=f17e231] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/sklentr/
+    - generic [ref=f17e237]:
+      - generic [ref=f17e238]: S
+      - generic [ref=f17e239]: K
+      - generic [ref=f17e240]: L
+      - generic [ref=f17e245]: "N"
+      - generic [ref=f17e246]: T
+      - generic [ref=f17e247]: R

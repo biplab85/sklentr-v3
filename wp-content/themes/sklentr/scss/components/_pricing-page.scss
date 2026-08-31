@@ -1,0 +1,258 @@
+// =====================================================================
+// STANDALONE PRICING PAGE  (/pricing)
+// Premium centered "aurora" dark hero (distinct from every other hero) →
+// light 3-plan grid (featured plan = dark card w/ gold ring) → dark
+// guarantees → shared FAQ accordion → final-CTA.
+// Scoped to .pr-* / body.pricingpage. Tokens only (CLAUDE.md §11).
+// Content mirrors sklentr.com/pricing (editable via Sklentr Settings).
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+// Hero paints full-bleed behind the transparent fixed header on this page.
+body.pricingpage .site-main { padding-top: 0; }
+
+// Shared centred section header --------------------------------------------
+.pr-section-head {
+  max-width: 720px;
+  margin: 0 auto clamp(40px, 5vw, 64px);
+  text-align: center;
+
+  &__title {
+    margin: 12px 0 0;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--fs-h2);
+    letter-spacing: -.02em;
+    color: var(--slate-900);
+    &--on-dark { color: #fff; }
+  }
+  &__intro {
+    margin: 16px auto 0;
+    max-width: 58ch;
+    font-size: var(--fs-body-lg);
+    line-height: 1.7;
+    color: var(--slate-600);
+  }
+}
+.pr-eyebrow { justify-content: center; color: var(--brand-gold-deep);
+  &--on-dark { color: var(--brand-gold); } }
+
+// =====================================================================
+// 01 · HERO (dark, centred, aurora)
+// =====================================================================
+.pr-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  text-align: center;
+  color: var(--color-text-on-dark);
+  background:
+    radial-gradient(130% 100% at 50% -10%, #17233d 0%, var(--ink-950) 60%),
+    var(--ink-950);
+  padding-top: calc(var(--header-h) + clamp(56px, 9vw, 132px));
+  padding-bottom: clamp(64px, 9vw, 130px);
+
+  &__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  &__grid  { position: absolute; inset: 0; opacity: .7; }
+  &__aurora {
+    position: absolute; border-radius: 50%; filter: blur(100px); opacity: .55;
+    &--gold   { width: 46vw; height: 38vw; top: -16vw; left: 12%;  background: radial-gradient(circle, rgba(243,179,81,.50), transparent 66%); }
+    &--green  { width: 40vw; height: 34vw; top: -8vw;  right: 6%;  background: radial-gradient(circle, rgba(30,255,133,.28), transparent 66%); }
+    &--violet { width: 44vw; height: 36vw; bottom: -22vw; left: 28%; background: radial-gradient(circle, rgba(124,58,237,.30), transparent 66%); }
+  }
+
+  &__inner { max-width: 860px; margin-inline: auto; }
+
+  &__eyebrow {
+    display: inline-flex; align-items: center; gap: 9px;
+    margin: 0 0 22px; padding: 8px 16px;
+    border-radius: var(--radius-pill);
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.14);
+    backdrop-filter: blur(8px);
+    font-family: var(--font-body); font-size: var(--fs-overline); font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: #EAD9BC;
+  }
+  &__eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--brand-green); box-shadow: 0 0 0 4px rgba(30,255,133,.18); }
+
+  &__title {
+    margin: 0;
+    font-family: var(--font-heading); font-weight: 800;
+    font-size: var(--fs-display); line-height: 1.03; letter-spacing: -.03em; color: #fff;
+    text-wrap: balance;
+  }
+  &__accent { color: var(--brand-gold); }
+
+  // Typewriter caret (added by pr-hero.js while the H1 types in).
+  &__caret {
+    display: inline-block;
+    width: 3px;
+    height: .92em;
+    margin-left: 5px;
+    vertical-align: -0.06em;
+    background: var(--brand-gold);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(243, 179, 81, .6);
+    animation: prCaret 1s steps(1) infinite;
+  }
+
+  &__sub { margin: 22px auto 0; max-width: 60ch; font-size: var(--fs-body-lg); line-height: 1.7; color: #AAB8CC; }
+
+  &__actions { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 32px; }
+
+  &__chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; margin: clamp(34px, 4vw, 48px) 0 0; padding: 0; list-style: none; }
+  &__chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border-radius: var(--radius-pill);
+    background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12);
+    font-size: 13px; color: #C7D2E1;
+  }
+  &__chip-check { display: grid; place-items: center; width: 16px; height: 16px; color: var(--brand-green); svg { width: 13px; height: 13px; } }
+
+  // --- floating decorative shapes + IT icons (smooth, subtle) ----------
+  &__deco { position: absolute; inset: 0; overflow: hidden; }
+  &__deco-item {
+    position: absolute;
+    color: rgba(255,255,255,.16);
+    will-change: transform;
+    svg { width: 100%; height: 100%; display: block; }
+    @include bp-max(760px) { display: none; }   // declutter on small screens
+  }
+  // Geometric shapes
+  &__deco--tri    { top: 15%;   left: 7%;   width: 42px; height: 42px; color: rgba(243,179,81,.30); animation: prSpin 20s linear infinite; }
+  &__deco--square { top: 44%;   right: 5%;  width: 40px; height: 40px; color: rgba(255,255,255,.16); animation: prSpinR 24s linear infinite; }
+  &__deco--circle { top: 13%;   right: 8%;  width: 46px; height: 46px; color: rgba(30,255,133,.28); animation: prFloatY 7s var(--ease-inout) infinite; }
+  // IT icons
+  &__deco--code     { top: 46%;    left: 4%;   width: 40px; height: 40px; color: rgba(243,179,81,.32); animation: prFloatY2 8s var(--ease-inout) infinite; }
+  &__deco--braces   { bottom: 16%; right: 10%; width: 38px; height: 38px; color: rgba(30,255,133,.30);  animation: prDrift 11s var(--ease-inout) infinite; }
+  &__deco--terminal { top: 11%;    left: 23%;  width: 40px; height: 40px; color: rgba(255,255,255,.18); animation: prFloatY 6.5s var(--ease-inout) infinite; }
+  &__deco--db       { bottom: 18%; left: 9%;   width: 38px; height: 38px; color: rgba(243,179,81,.30);  animation: prFloatY2 9s var(--ease-inout) infinite; }
+  &__deco--gear     { bottom: 13%; right: 25%; width: 40px; height: 40px; color: rgba(255,255,255,.16); animation: prSpin 16s linear infinite; }
+  &__deco--cloud    { top: 10%;    right: 24%; width: 44px; height: 44px; color: rgba(255,255,255,.15); animation: prDrift 13s var(--ease-inout) infinite; }
+}
+
+@keyframes prFloatY  { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+@keyframes prFloatY2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(14px); } }
+@keyframes prSpin    { to { transform: rotate(360deg); } }
+@keyframes prSpinR   { to { transform: rotate(-360deg); } }
+@keyframes prDrift   { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(12px, -12px); } }
+@keyframes prCaret   { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+
+// =====================================================================
+// 02 · PLANS (light; featured plan is a dark card with a gold ring)
+// =====================================================================
+.pr-plans {
+  background: linear-gradient(180deg, var(--white) 0%, var(--slate-50) 100%);
+  padding-block: clamp(64px, 9vw, 120px);
+}
+.pr-plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.4vw, 30px);
+  align-items: center; // let the taller featured card sit centred against its shorter neighbours
+  list-style: none; margin: 0; padding: 0;
+
+  // Give the middle (featured) plan a wider track than Starter & Full-Service.
+  @include bp-min(981px) { grid-template-columns: 1fr 1.16fr 1fr; }
+  @include bp-max(980px) { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; }
+}
+.pr-plan {
+  position: relative;
+  display: flex; flex-direction: column;
+  padding: clamp(26px, 2.4vw, 34px);
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+
+  &:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+  // Featured (badged) plan — dark card, gold gradient ring, lifted.
+  &--featured {
+    background: var(--ink-950);
+    border-color: transparent;
+    color: var(--color-text-on-dark);
+    box-shadow: var(--shadow-lg);
+    &::before {
+      content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1.5px;
+      background: linear-gradient(150deg, var(--brand-gold), rgba(30,255,133,.6));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
+    }
+    // Taller than the flanking plans (extra internal padding) + a touch of lift.
+    @include bp-min(981px) {
+      padding: clamp(38px, 3vw, 50px);
+      transform: scale(1.05);
+      &:hover { transform: scale(1.05) translateY(-4px); }
+    }
+  }
+
+  &__badge {
+    position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%);
+    padding: 6px 15px; border-radius: var(--radius-pill);
+    background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-deep));
+    color: #1a1205; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    box-shadow: var(--shadow-accent); white-space: nowrap;
+    overflow: hidden;
+
+    // Continuous shine sweep — same mechanism as the home pricing ribbon.
+    &::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(105deg, transparent 36%, rgba(255, 255, 255, .95) 50%, transparent 64%);
+      mix-blend-mode: screen;
+      transform: translateX(-120%);
+      animation: priceShine 3.6s var(--ease-out) infinite;
+    }
+  }
+
+  &__name { margin: 0; font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; letter-spacing: -.01em; color: var(--slate-900); }
+  &--featured &__name { color: #fff; }
+  &__tag { margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: var(--slate-500); }
+  &--featured &__tag { color: #AAB8CC; }
+
+  &__price { margin: 22px 0 0; display: flex; align-items: baseline; gap: 8px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(2rem, 1.4rem + 1.6vw, 2.6rem); letter-spacing: -.02em; color: var(--slate-900); }
+  &--featured &__price { color: #fff; }
+  &__cur { font-size: .8rem; font-weight: 600; letter-spacing: .06em; color: var(--slate-400); }
+  &--featured &__cur { color: var(--brand-gold); }
+  &__range { margin: 4px 0 0; font-size: 13.5px; color: var(--slate-500); }
+  &--featured &__range { color: #8FA0B8; }
+
+  &__time { display: inline-flex; align-items: center; gap: 7px; margin: 18px 0 0; font-size: 13px; font-weight: 600; color: var(--brand-gold-deep); svg { width: 16px; height: 16px; } }
+  &--featured &__time { color: var(--brand-gold); }
+
+  &__cta { display: flex; width: 100%; justify-content: center; margin-top: 22px; }
+
+  &__incl-label { margin: 26px 0 14px; font-size: var(--fs-overline); font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--slate-400); }
+  &--featured &__incl-label { color: #6E7F97; }
+
+  &__features { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
+  &__feature { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.45; color: var(--slate-700); }
+  &--featured &__feature { color: #C7D2E1; }
+  &__feature-ico { flex: 0 0 auto; display: grid; place-items: center; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; color: var(--brand-green-deep); background: rgba(16,185,129,.12); svg { width: 12px; height: 12px; } }
+  &--featured &__feature-ico { color: var(--brand-green); background: rgba(30,255,133,.14); }
+
+  &__feature.is-excluded { color: var(--slate-400); text-decoration: line-through; text-decoration-color: var(--slate-300); }
+  &--featured &__feature.is-excluded { color: #5C6B82; }
+  &__feature.is-excluded .pr-plan__feature-ico { color: var(--slate-400); background: var(--slate-100); }
+  &--featured &__feature.is-excluded .pr-plan__feature-ico { color: #5C6B82; background: rgba(255,255,255,.06); }
+}
+
+// =====================================================================
+// 03 · GUARANTEES (dark)
+// =====================================================================
+// Guarantees now reuse the homepage "How We Work" staircase (the shared
+// `.process*` component — light section, oversized ghost numerals, zigzag rail,
+// cumulative scroll reveal). Only a tiny page-scoped tweak on top: the guarantee
+// copy runs a little longer than the home step copy, so give it a touch more width.
+.pr-guarantees .process-step__desc { max-width: 34ch; }
+
+// =====================================================================
+// Reduced motion
+// =====================================================================
+@include reduced-motion {
+  .pr-plan, .pr-plan:hover,
+  .pr-plan--featured, .pr-plan--featured:hover { transition: none; }
+  .pr-hero__deco-item { animation: none !important; }
+  .pr-plan__badge::after { animation: none; opacity: 0; }
+}

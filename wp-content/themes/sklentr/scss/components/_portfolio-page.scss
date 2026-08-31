@@ -1,0 +1,1212 @@
+// =====================================================================
+// STANDALONE PORTFOLIO PAGE  (/portfolio)
+// Premium, editorial showcase. DARK hero with a tilted thumbnail collage
+// (distinct from the home / services / startup-visa heroes) → LIGHT
+// alternating case-study rows → shared final-CTA.
+// Scoped to .pf-* / body.portfoliopage. Tokens only (CLAUDE.md §11).
+// Content mirrors sklentr.com/portfolio (static).
+// =====================================================================
+@use "../abstracts/mixins" as *;
+
+// The hero paints full-bleed behind the transparent fixed header on this page.
+body.portfoliopage .site-main {
+  padding-top: 0;
+}
+
+// =====================================================================
+// 01 · HERO (dark, editorial)
+// =====================================================================
+.pf-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 78% 8%, #16233c 0%, var(--ink-950) 58%),
+    var(--ink-950);
+  color: var(--color-text-on-dark);
+  padding-top: calc(var(--header-h) + clamp(48px, 7vw, 104px));
+  padding-bottom: clamp(56px, 7vw, 108px);
+
+  &__atmos {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  &__grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.7;
+  }
+  &__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.5;
+    &--gold {
+      width: 42vw;
+      height: 42vw;
+      top: -14vw;
+      left: -8vw;
+      background: radial-gradient(
+        circle,
+        rgba(243, 179, 81, 0.42),
+        transparent 68%
+      );
+    }
+    &--green {
+      width: 40vw;
+      height: 40vw;
+      bottom: -18vw;
+      right: -6vw;
+      background: radial-gradient(
+        circle,
+        rgba(30, 255, 133, 0.24),
+        transparent 68%
+      );
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: clamp(32px, 5vw, 72px);
+
+    @include bp-max(1024px) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  // --- copy column ------------------------------------------------------
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 22px;
+    font-family: var(--font-body);
+    font-size: var(--fs-overline);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--brand-gold);
+  }
+  &__eyebrow-line {
+    width: 34px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--brand-gold), transparent);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--fs-display);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: #fff;
+    text-wrap: balance;
+  }
+  &__accent {
+    position: relative;
+    color: var(--brand-gold);
+    white-space: nowrap;
+  }
+  &__accent-underline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.06em;
+    height: 0.11em;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      var(--brand-green),
+      rgba(30, 255, 133, 0)
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: pfUnderline var(--dur-slower) var(--ease-out) 0.5s forwards;
+  }
+
+  &__sub {
+    margin: 22px 0 0;
+    max-width: 46ch;
+    font-size: var(--fs-body-lg);
+    line-height: 1.7;
+    color: #aab8cc;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  // --- stats strip (tidy 2×2 block beside the copy) --------------------
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(22px, 2.6vw, 30px) clamp(28px, 3.4vw, 48px);
+    max-width: 440px;
+    margin: clamp(34px, 4vw, 48px) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__stat {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      border-radius: 999px;
+      background: linear-gradient(
+        180deg,
+        var(--brand-gold),
+        rgba(30, 255, 133, 0.55)
+      );
+    }
+  }
+  &__stat-num {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(1.9rem, 1.2rem + 2vw, 2.6rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #fff 0%, var(--brand-gold) 130%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  &__stat-label {
+    display: block;
+    margin-top: 8px;
+    font-size: var(--fs-body-sm);
+    color: #8698b0;
+  }
+
+  // --- collage ----------------------------------------------------------
+  &__collage {
+    position: relative;
+    min-height: 660px;
+    @include bp-max(1024px) {
+      display: none;
+    }
+  }
+  &__shot {
+    position: absolute;
+    margin: 0;
+    width: 62%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--ink-800);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.7);
+    transition:
+      transform var(--dur-slow) var(--ease-out),
+      box-shadow var(--dur-slow) var(--ease-out);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 3 / 2;
+    }
+
+    figcaption {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      right: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      background: rgba(11, 17, 32, 0.62);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    &-name {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+    &-tag {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+    }
+
+    // opt-in tilted composition — spaced apart so the three read as distinct
+    &--1 {
+      top: 0;
+      right: 0;
+      z-index: 3;
+      width: 68%;
+      transform: rotate(3.5deg);
+      animation: pfFloatA 9s var(--ease-inout) infinite;
+    }
+    &--2 {
+      top: 34%;
+      left: 0;
+      z-index: 2;
+      width: 62%;
+      transform: rotate(-4deg);
+      box-shadow: 0 24px 48px -22px rgba(0, 0, 0, 0.65);
+      animation: pfFloatB 11s var(--ease-inout) infinite;
+    }
+    &--3 {
+      bottom: 0;
+      right: 4%;
+      z-index: 1;
+      width: 60%;
+      transform: rotate(6deg);
+      opacity: 0.96;
+      animation: pfFloatA 12s var(--ease-inout) infinite reverse;
+    }
+  }
+  &:hover &__shot--1 {
+    transform: rotate(1.5deg) translateY(-4px);
+  }
+}
+
+@keyframes pfUnderline {
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes pfFloatA {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
+}
+@keyframes pfFloatB {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 10px;
+  }
+}
+
+// =====================================================================
+// 01b · MANIFESTO (centered statement; photos fan out from behind text
+//        on scroll — scrubbed via --p set by pf-manifesto.js)
+// =====================================================================
+.pf-manifesto {
+  --p: 1; // JS-scrubbed 0→1 over the pinned scroll; default 1 so no-JS shows the final spread.
+  position: relative;
+  background: var(--white);
+  height: 230vh; // tall track: the inner content pins while this scrolls past.
+
+  @include bp-max(1100px) {
+    height: auto;
+  } // no pin / no photos on small screens.
+
+  // --- sticky pin: content stays centred in the viewport during the scrub.
+  &__pin {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden; // clips the growing photos → no page-level h-scroll.
+
+    @include bp-max(1100px) {
+      position: static;
+      height: auto;
+      overflow: visible;
+      padding-block: clamp(72px, 12vw, 140px);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 840px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__statement {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 1rem + 2.4vw, 2.9rem);
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    color: var(--slate-900);
+    text-wrap: balance;
+  }
+  &__line {
+    display: block;
+  }
+  &__accent {
+    display: inline;
+    color: var(--brand-gold-deep);
+  }
+
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: clamp(28px, 3vw, 42px);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--slate-700);
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid var(--slate-300);
+    transition:
+      color var(--dur-base) var(--ease-out),
+      border-color var(--dur-base) var(--ease-out),
+      gap var(--dur-base) var(--ease-out);
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+    &:hover,
+    &:focus-visible {
+      color: var(--brand-gold-deep);
+      border-color: var(--brand-gold-deep);
+      gap: 12px;
+    }
+  }
+
+  // --- photos: start tiny + clustered at centre (behind the text), then
+  //     GROW and SPREAD to the four corners as --p goes 0→1 (Novatra mechanic).
+  &__photos {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    @include bp-max(1100px) {
+      display: none;
+    }
+  }
+  &__photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    width: clamp(180px, 18vw, 272px);
+    aspect-ratio: 1 / 1.06;
+    overflow: hidden;
+    background: var(--slate-100);
+    border-radius: 2px; // near-sharp, flat cut-outs (reference has 0).
+    opacity: calc(var(--p) * 5); // quick fade-in at the start; clamps to 1.
+    will-change: transform, opacity;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    // translate = centre (-50%,-50%) + spread·p; scale 0.42→1; fixed hard tilt.
+    // Pushed outward enough to overlap only the corners, keeping the core text legible.
+    &--1 {
+      transform: translate(
+          calc(-50% + var(--p) * -480px),
+          calc(-50% + var(--p) * -178px)
+        )
+        scale(calc(0.42 + 0.58 * var(--p))) rotate(-13deg);
+    } // top-left
+    &--2 {
+      transform: translate(
+          calc(-50% + var(--p) * 480px),
+          calc(-50% + var(--p) * -178px)
+        )
+        scale(calc(0.42 + 0.58 * var(--p))) rotate(13deg);
+    } // top-right
+    &--3 {
+      transform: translate(
+          calc(-50% + var(--p) * -452px),
+          calc(-50% + var(--p) * 200px)
+        )
+        scale(calc(0.42 + 0.58 * var(--p))) rotate(12deg);
+    } // bottom-left
+    &--4 {
+      transform: translate(
+          calc(-50% + var(--p) * 452px),
+          calc(-50% + var(--p) * 200px)
+        )
+        scale(calc(0.42 + 0.58 * var(--p))) rotate(-12deg);
+    } // bottom-right
+  }
+}
+
+// =====================================================================
+// 01c · FEATURED WORKS (dark; sticky index synced to a scrolling image
+//        stack — active name + rolling number + swapping title/desc)
+// =====================================================================
+.pf-featured {
+  position: relative;
+  isolation: isolate;
+  // NOTE: no `overflow: hidden` here — it would break the sticky column.
+  // The glows are clipped by `&__atmos` instead.
+  background:
+    radial-gradient(120% 80% at 12% -5%, #16233c 0%, var(--ink-950) 55%),
+    var(--ink-950);
+  color: var(--color-text-on-dark);
+  padding-block: clamp(64px, 8vw, 120px);
+
+  &__atmos {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  &__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.4;
+    &--gold {
+      width: 36vw;
+      height: 36vw;
+      top: -10vw;
+      left: -6vw;
+      background: radial-gradient(
+        circle,
+        rgba(243, 179, 81, 0.4),
+        transparent 68%
+      );
+    }
+    &--green {
+      width: 34vw;
+      height: 34vw;
+      bottom: -14vw;
+      right: -6vw;
+      background: radial-gradient(
+        circle,
+        rgba(30, 255, 133, 0.2),
+        transparent 68%
+      );
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(36px, 5vw, 88px);
+    align-items: stretch; // aside column stretches to the stack's height so the sticky pins across it
+    @include bp-max(900px) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  // --- left sticky column ----------------------------------------------
+  &__sticky {
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    min-height: calc(100vh - var(--header-h) - 48px);
+    display: flex;
+    flex-direction: column;
+    @include bp-max(900px) {
+      position: static;
+      min-height: 0;
+      display: block;
+    }
+  }
+  &__eyebrow {
+    justify-content: flex-start;
+    color: var(--brand-gold);
+  }
+  &__title-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2vw, 28px);
+    flex-wrap: wrap;
+    margin-top: 12px;
+    .pf-featured__title {
+      margin: 0;
+    } // the number now sits beside the title
+  }
+  &__title {
+    margin: 12px 0 0;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--fs-h2);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    color: #fff;
+  }
+  &__viewall {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.2);
+    transition:
+      color var(--dur-base) var(--ease-out),
+      border-color var(--dur-base) var(--ease-out),
+      gap var(--dur-base) var(--ease-out);
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+    &:hover,
+    &:focus-visible {
+      color: var(--brand-gold);
+      border-color: var(--brand-gold);
+      gap: 12px;
+    }
+  }
+
+  &__index {
+    display: none; // hidden: names index removed; number sits by the title, panel still syncs
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: clamp(28px, 4vw, 48px);
+  }
+  &__names {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  &__name {
+    appearance: none;
+    background: none;
+    border: 0;
+    padding: 0 0 0 0;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.42);
+    transition:
+      color var(--dur-base) var(--ease-out),
+      padding var(--dur-base) var(--ease-out);
+    &::before {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--brand-gold);
+      transform: translateY(-50%);
+      transition: width var(--dur-base) var(--ease-out);
+    }
+    &.is-active {
+      color: #fff;
+      padding-left: 4px;
+    }
+    &.is-active::before {
+      width: 12px;
+    }
+    &:hover {
+      color: rgba(255, 255, 255, 0.82);
+    }
+  }
+  &__num {
+    height: 1em;
+    overflow: hidden;
+    flex: 0 0 auto;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 1.6rem + 3vw, 4rem);
+    line-height: 1;
+    color: var(--brand-gold);
+  }
+  &__num-track {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(calc(var(--i, 0) * -1em));
+    transition: transform 0.55s var(--ease-out);
+    span {
+      height: 1em;
+      line-height: 1;
+      display: block;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+
+  &__active {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-top: 0;
+    padding-right: 12px;
+    display: grid;
+    // Height follows the content — no cap, so the panel never scrolls internally.
+    max-height: none;
+    overflow-y: auto;
+    // Scrollbar hidden: the panel is driven by page scroll, not a visible bar.
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  }
+  // &__active {
+  //   margin-top: auto;
+  //   margin-bottom: 50px;
+  //   padding-top: clamp(32px, 5vw, 56px);
+  //   padding-right: 12px;
+  //   display: grid;
+  //   // Cap the height so a long panel scrolls internally on the mouse wheel.
+  //   max-height: 52vh;
+  //   overflow-y: auto;
+  //   // Smart, thin scrollbar (Firefox + WebKit), on-brand gold.
+  //   scrollbar-width: thin;
+  //   scrollbar-color: rgba(243, 179, 81, .55) rgba(255, 255, 255, .08);
+  //   &::-webkit-scrollbar { width: 6px; }
+  //   &::-webkit-scrollbar-track { background: rgba(255, 255, 255, .06); border-radius: 999px; }
+  //   &::-webkit-scrollbar-thumb { background: rgba(243, 179, 81, .5); border-radius: 999px; }
+  //   &::-webkit-scrollbar-thumb:hover { background: var(--brand-gold); }
+  // }
+  &__panel {
+    grid-area: 1 / 1;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity var(--dur-slow) var(--ease-out),
+      transform var(--dur-slow) var(--ease-out);
+    &.is-active {
+      opacity: 1;
+      transform: none;
+      pointer-events: auto;
+    }
+  }
+  &__panel-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 14px;
+    padding: 0;
+    list-style: none;
+    li {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-gold);
+      border: 1px solid rgba(243, 179, 81, 0.3);
+      border-radius: var(--radius-pill);
+      padding: 4px 11px;
+    }
+  }
+  &__panel-title {
+    margin: 0 0 12px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(1.6rem, 1.1rem + 1.6vw, 2.4rem);
+    letter-spacing: -0.02em;
+    color: #fff;
+  }
+  &__panel-desc {
+    margin: 0;
+    max-width: 46ch;
+    font-size: var(--fs-body-lg);
+    line-height: 1.65;
+    color: #aab8cc;
+  }
+
+  &__panel-cs {
+    display: none;
+    gap: 16px;
+    margin: 20px 0 0;
+    max-width: 46ch;
+  }
+  &__panel-block p {
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #8fa0b8;
+  }
+  &__panel-label {
+    font-size: var(--fs-overline);
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--brand-gold);
+    &--green {
+      color: var(--brand-green);
+    }
+  }
+  &__panel-results {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
+    display: none;
+    gap: 9px;
+    max-width: 46ch;
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: #c7d2e1;
+    }
+  }
+  &__panel-check {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    border-radius: 50%;
+    color: var(--brand-green);
+    background: rgba(30, 255, 133, 0.14);
+    svg {
+      width: 11px;
+      height: 11px;
+    }
+  }
+  &__panel-stack {
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    li {
+      font-size: 12px;
+      font-weight: 500;
+      color: #aab8cc;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 5px 11px;
+      border-radius: var(--radius-sm);
+    }
+  }
+
+  // --- right scrolling image stack -------------------------------------
+  &__stack {
+    min-width: 0;
+  }
+  &__shot {
+    position: relative;
+    margin: 0 0 clamp(28px, 4vw, 56px);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--ink-800);
+    border: 1px solid var(--ink-700);
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 3;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__shot-num {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #fff;
+    mix-blend-mode: difference;
+    transition: color var(--dur-base) var(--ease-out);
+  }
+  // Active project → its image number becomes a gold pill badge (in sync with the panel).
+  &__shot.is-active &__shot-num {
+    mix-blend-mode: normal;
+    background: #f3b35169;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    width: 40px;
+    height: 40px;
+  }
+  &__shot-cap {
+    display: none;
+  }
+
+  // --- mobile: drop the sticky sync; show a simple captioned gallery ----
+  @include bp-max(900px) {
+    &__index,
+    &__active {
+      display: none;
+    }
+    // The frame must no longer clip: only the <img> keeps the rounded 4:3 crop,
+    // so the caption below it is visible.
+    &__shot {
+      overflow: visible;
+      aspect-ratio: auto;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      margin-bottom: clamp(40px, 9vw, 64px);
+      img {
+        aspect-ratio: 4 / 3;
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-lg);
+      }
+    }
+    &__shot-cap {
+      display: block;
+      padding: 18px 2px 0;
+      h3 {
+        margin: 0 0 8px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #fff;
+      }
+      p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #aab8cc;
+      }
+    }
+  }
+}
+
+// =====================================================================
+// 02 · CASE STUDIES (light, alternating editorial rows)
+// =====================================================================
+.pf-work {
+  background: linear-gradient(180deg, var(--white) 0%, var(--slate-50) 100%);
+  padding-block: clamp(64px, 9vw, 132px);
+
+  &__head {
+    max-width: 720px;
+    margin: 0 auto clamp(48px, 6vw, 84px);
+    text-align: center;
+  }
+  &__eyebrow {
+    justify-content: center;
+    color: var(--brand-gold-deep);
+  }
+  &__title {
+    margin: 12px 0 0;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--fs-h2);
+    letter-spacing: -0.02em;
+    color: var(--slate-900);
+  }
+  &__intro {
+    margin: 18px auto 0;
+    max-width: 60ch;
+    font-size: var(--fs-body-lg);
+    line-height: 1.7;
+    color: var(--slate-600);
+  }
+}
+
+.pf-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(56px, 8vw, 120px);
+  counter-reset: none;
+}
+
+.pf-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 4.5vw, 68px);
+
+  @include bp-max(880px) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  // Alternate the image side for editorial rhythm.
+  &:nth-child(even) {
+    .pf-item__media {
+      order: 2;
+    }
+    @include bp-max(880px) {
+      .pf-item__media {
+        order: 0;
+      }
+    }
+  }
+
+  // --- media ------------------------------------------------------------
+  &__media {
+    position: relative;
+  }
+  &__index {
+    position: absolute;
+    top: -26px;
+    left: -6px;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: clamp(3rem, 2rem + 4vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(224, 145, 43, 0.3);
+    pointer-events: none;
+    user-select: none;
+    @include bp-max(880px) {
+      top: -18px;
+      font-size: 3.2rem;
+    }
+  }
+  &__frame {
+    position: relative;
+    margin: 0;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--slate-100);
+    border: 1px solid var(--slate-200);
+    box-shadow: var(--shadow-lg);
+    aspect-ratio: 4 / 3;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--dur-slower) var(--ease-out);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(11, 17, 32, 0.28) 100%
+      );
+      pointer-events: none;
+    }
+  }
+  &:hover &__frame img {
+    transform: scale(1.045);
+  }
+
+  &__status {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--slate-200);
+    box-shadow: var(--shadow-sm);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--slate-700);
+  }
+  &__status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--brand-green-deep);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.16);
+  }
+
+  // --- body -------------------------------------------------------------
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+
+    li {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brand-gold-deep);
+      background: var(--accent-50);
+      border: 1px solid var(--accent-100);
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+    }
+  }
+  &__title {
+    margin: 0 0 14px;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--fs-h3);
+    letter-spacing: -0.02em;
+    color: var(--slate-900);
+  }
+  &__desc {
+    margin: 0 0 24px;
+    font-size: var(--fs-body-lg);
+    line-height: 1.7;
+    color: var(--slate-600);
+  }
+
+  &__cs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 0 24px;
+    padding: 22px 24px;
+    background: var(--slate-50);
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-lg);
+
+    @include bp-max(520px) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    p {
+      margin: 8px 0 0;
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--slate-600);
+    }
+  }
+  &__cs-label {
+    display: inline-block;
+    font-size: var(--fs-overline);
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--brand-gold-deep);
+    &--green {
+      color: var(--brand-green-deep);
+    }
+  }
+
+  &__results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 22px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+
+    @include bp-max(520px) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--slate-700);
+    }
+  }
+  &__result-check {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    border-radius: 50%;
+    color: var(--brand-green-deep);
+    background: rgba(16, 185, 129, 0.12);
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__chip {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--slate-600);
+    background: var(--white);
+    border: 1px solid var(--slate-200);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-xs);
+  }
+}
+
+// =====================================================================
+// Reduced motion
+// =====================================================================
+@include reduced-motion {
+  .pf-hero__accent-underline {
+    animation: none;
+    transform: scaleX(1);
+  }
+  .pf-hero__shot {
+    animation: none !important;
+  }
+  .pf-item__frame img,
+  .pf-hero__shot,
+  .pf-hero:hover .pf-hero__shot--1 {
+    transition: none;
+  }
+  // No pinned scrub: render the statement in a normal static block, drop the photos.
+  .pf-manifesto {
+    --p: 1;
+    height: auto;
+  }
+  .pf-manifesto__pin {
+    position: static;
+    height: auto;
+    overflow: visible;
+    padding-block: clamp(72px, 12vw, 140px);
+  }
+  .pf-manifesto__photos {
+    display: none;
+  }
+}

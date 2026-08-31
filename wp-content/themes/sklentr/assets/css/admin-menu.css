@@ -1,0 +1,191 @@
+/**
+ * Sklentr — admin menu styling.
+ *
+ * Loaded on every admin screen (the menu is always present), but every rule is
+ * scoped to #toplevel_page_sklentr-settings so no other admin menu is touched.
+ * Admin-only — never enqueued on the front end.
+ */
+
+/* ==========================================================================
+   Submenu rows — icon + label, with hairline separators
+   ========================================================================== */
+
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu li > a {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 1.45;
+	transition: color .12s ease, background .12s ease;
+}
+
+/* Separator between consecutive items (never after the "Sklentr" head, and
+   never above the first real item). */
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu li:not(.wp-submenu-head) + li:not(.wp-submenu-head) > a {
+	border-top: 1px solid rgba(255, 255, 255, .07);
+}
+
+/* ==========================================================================
+   Icons
+   ========================================================================== */
+
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu .skl-menu__ico {
+	flex: 0 0 auto;
+	width: 18px;
+	height: 18px;
+	font-size: 17px;
+	line-height: 18px;
+	text-align: center;
+	opacity: .55;
+	transition: opacity .12s ease, color .12s ease, transform .12s ease;
+}
+
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu .skl-menu__txt {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu a:hover .skl-menu__ico,
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu a:focus .skl-menu__ico {
+	opacity: 1;
+	transform: translateX(1px);
+}
+
+/* ==========================================================================
+   Active state — gold rail + lit icon (brand accent)
+   ========================================================================== */
+
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu li.current > a,
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu li > a.current {
+	position: relative;
+	font-weight: 600;
+	background: rgba(255, 255, 255, .04);
+	box-shadow: inset 3px 0 0 #f0b429;
+}
+
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu li.current > a .skl-menu__ico,
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu li > a.current .skl-menu__ico {
+	opacity: 1;
+	color: #f0b429;
+}
+
+/* ==========================================================================
+   Folded / flyout menu — keep the layout intact when the sidebar collapses
+   ========================================================================== */
+
+#adminmenu.folded #toplevel_page_sklentr-settings .wp-submenu li > a,
+.auto-fold #adminmenu #toplevel_page_sklentr-settings .wp-submenu li > a {
+	display: flex;
+}
+
+/* The flyout header is a label, not a link — no icon slot needed. */
+#adminmenu #toplevel_page_sklentr-settings .wp-submenu .wp-submenu-head {
+	border-top: 0;
+}
+
+/* ==========================================================================
+   Collapse toggle — folds the 18 child items away (assets/js/admin-menu.js)
+   ========================================================================== */
+
+#adminmenu #toplevel_page_sklentr-settings {
+	position: relative;
+}
+
+#adminmenu #toplevel_page_sklentr-settings .skl-menu__toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: #a7aaad;
+	cursor: pointer;
+}
+
+#adminmenu #toplevel_page_sklentr-settings .skl-menu__toggle:hover,
+#adminmenu #toplevel_page_sklentr-settings .skl-menu__toggle:focus {
+	color: #f0b429;
+	background: rgba(255, 255, 255, .06);
+}
+
+#adminmenu #toplevel_page_sklentr-settings .skl-menu__toggle:focus-visible {
+	outline: 2px solid #f0b429;
+	outline-offset: -2px;
+}
+
+/* Chevron — points down when open, right when collapsed. */
+#adminmenu #toplevel_page_sklentr-settings .skl-menu__chev {
+	width: 8px;
+	height: 8px;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	transform: translateY(-2px) rotate(45deg);
+	transition: transform .18s ease;
+}
+
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--collapsed .skl-menu__chev {
+	transform: translate(-2px, 0) rotate(-45deg);
+}
+
+/* Keep the top-level label clear of the toggle. */
+#adminmenu #toplevel_page_sklentr-settings > a.menu-top {
+	padding-right: 34px;
+}
+
+/* Smooth the fold. The submenu is display-toggled by core, so animate only the
+   frame around the change rather than fighting display:none. */
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--animating .wp-submenu {
+	animation: skl-menu-fold .18s ease;
+}
+
+@keyframes skl-menu-fold {
+	from { opacity: 0; transform: translateY(-4px); }
+	to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#adminmenu #toplevel_page_sklentr-settings .skl-menu__chev,
+	#adminmenu #toplevel_page_sklentr-settings.skl-menu--animating .wp-submenu {
+		transition: none;
+		animation: none;
+	}
+}
+
+/* Collapsed: fold the inline list away.
+   Core keeps `wp-has-current-submenu` on the current menu and shows the list
+   for that class too, so dropping `wp-menu-open` alone is not enough — hide it
+   explicitly here. */
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--collapsed .wp-submenu {
+	display: none;
+}
+
+/* ...but keep the items reachable, as a hover/focus flyout — the same
+   affordance core gives any non-current menu. */
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--collapsed:hover > .wp-submenu,
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--collapsed.opensub > .wp-submenu,
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--collapsed:focus-within > .wp-submenu {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 175px;
+	max-height: calc(100vh - 46px);
+	overflow-y: auto;
+	z-index: 9999;
+	border-radius: 0 4px 4px 0;
+	box-shadow: 0 3px 14px rgba(0, 0, 0, .4);
+}
+
+/* The flyout needs its header visible for context. */
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--collapsed:hover > .wp-submenu .wp-submenu-head,
+#adminmenu #toplevel_page_sklentr-settings.skl-menu--collapsed:focus-within > .wp-submenu .wp-submenu-head {
+	display: block;
+}

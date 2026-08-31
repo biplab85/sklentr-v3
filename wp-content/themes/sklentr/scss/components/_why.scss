@@ -1,0 +1,191 @@
+// =====================================================================
+// SECTION 05 — Why Sklentr (4 pillars)
+// Sticky-stacking cards: full-width, one per row, each with a distinct light
+// background. As you scroll, each card pins and the next slides up to overlap
+// it, building a layered stack — then the stack releases into the next section.
+// NB: no `overflow` on the section (would break position: sticky).
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.why {
+  position: relative;
+  background: linear-gradient(165deg, #FFFDF9 0%, #FFFFFF 48%, #F5FBF8 100%);
+  padding-block: clamp(64px, 8vw, 110px) clamp(80px, 10vw, 140px);
+}
+
+// ---- Header ----
+.why__head {
+  max-width: 720px;
+  margin: 0 auto clamp(44px, 5vw, 68px);
+  text-align: center;
+}
+.why__eyebrow { margin: 0 0 14px; }
+.why__title {
+  margin: 0 0 16px;
+  color: var(--ink-950);
+  font-size: var(--fs-h2);
+}
+.why__intro {
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  color: var(--slate-600);
+}
+
+// ---- Sticky stack ----
+.why__stack {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1120px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pillar {
+  position: sticky;
+  // Pin below the fixed header; each card sits a touch lower so the ones
+  // underneath peek out — that's the stacked look.
+  top: calc(var(--header-h) + 40px + var(--i, 0) * 26px);
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+  min-height: clamp(320px, 44vh, 440px);
+  padding: clamp(36px, 5vw, 56px) clamp(32px, 5vw, 64px);
+  border-radius: 28px;
+  border: 1px solid rgba(15, 23, 42, .06);
+  box-shadow: 0 -6px 20px rgba(15, 23, 42, .04), 0 26px 60px rgba(15, 23, 42, .11);
+  overflow: hidden; // safe on the sticky element itself (clips the watermark)
+
+  // Distinct light backgrounds + per-card accent.
+  &:nth-child(1) { background: #FEF4E3; --acc: #E0912B; --tint: rgba(224, 145, 43, .16); z-index: 1; }
+  &:nth-child(2) { background: #E8FAF0; --acc: #0EA271; --tint: rgba(16, 185, 129, .16); z-index: 2; }
+  &:nth-child(3) { background: #E9F1FD; --acc: #2563EB; --tint: rgba(37, 99, 235, .14); z-index: 3; }
+  &:nth-child(4) { background: #F2ECFB; --acc: #7C3AED; --tint: rgba(124, 58, 237, .14); z-index: 4; }
+}
+
+.pillar__body { max-width: 640px; }
+.pillar__num {
+  display: block;
+  margin-bottom: 16px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .12em;
+  color: var(--acc);
+}
+.pillar__title {
+  margin: 0 0 14px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--ink-950);
+}
+.pillar__desc {
+  margin: 0;
+  font-size: clamp(1rem, .95rem + .3vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--slate-600);
+}
+
+// ---- Highlights (per-pillar checklist) ----
+.pillar__points {
+  list-style: none;
+  margin: clamp(20px, 2.5vw, 30px) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+
+  // Two neat columns on roomy cards; single column when tight.
+  @include bp-min(560px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(20px, 3vw, 44px);
+  }
+}
+.pillar__point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(.95rem, .9rem + .2vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink-950);
+}
+.pillar__point-tick {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-pill);
+  background: var(--tint);
+  color: var(--acc);
+
+  svg { width: 15px; height: 15px; }
+}
+
+.pillar__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: clamp(96px, 12vw, 140px);
+  height: clamp(96px, 12vw, 140px);
+  color: var(--acc);
+  animation: pillarFloat 5s var(--ease-inout) infinite; // continuous micro-float
+
+  svg { position: relative; z-index: 1; width: 42%; height: 42%; }
+}
+
+// Each pillar icon gets a DIFFERENT masked shape (like the problem-card icons),
+// tinted per pillar.
+.pillar:nth-child(1) .pillar__icon {          // organic blob
+  background: var(--tint);
+  border-radius: 46% 54% 57% 43% / 52% 46% 54% 48%;
+}
+.pillar:nth-child(2) .pillar__icon {          // squircle
+  background: var(--tint);
+  border-radius: 34%;
+}
+.pillar:nth-child(3) .pillar__icon::before {  // rotated diamond
+  content: "";
+  position: absolute;
+  inset: 14%;
+  border-radius: 30%;
+  background: var(--tint);
+  transform: rotate(45deg);
+}
+.pillar:nth-child(4) .pillar__icon {          // organic blob (different)
+  background: var(--tint);
+  border-radius: 63% 37% 41% 59% / 43% 57% 43% 57%;
+}
+.pillar:nth-child(2) .pillar__icon { animation-delay: -1.2s; }
+.pillar:nth-child(3) .pillar__icon { animation-delay: -2.4s; }
+.pillar:nth-child(4) .pillar__icon { animation-delay: -3.6s; }
+@keyframes pillarFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+// ---- CTA ----
+.why__cta {
+  margin: clamp(44px, 6vw, 72px) 0 0;
+  text-align: center;
+}
+
+// ---- Responsive ----
+@include bp-max(720px) {
+  .pillar {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    min-height: 0;
+    // Smaller stagger so tall content still fits under the header.
+    top: calc(var(--header-h) + 20px + var(--i, 0) * 16px);
+  }
+  .pillar__icon { order: -1; } // icon on top when stacked
+}

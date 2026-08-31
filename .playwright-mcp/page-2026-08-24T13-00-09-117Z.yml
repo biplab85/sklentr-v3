@@ -1,0 +1,217 @@
+- generic [ref=f14e1]:
+  - link "Skip to content" [ref=f14e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=f14e3]:
+    - generic [ref=f14e5]:
+      - link [ref=f14e8] [cursor=pointer]:
+        - /url: https://bythelook.ca
+        - img "By the look logo" [ref=f14e9]
+      - generic [ref=f14e11]:
+        - navigation "Menu" [ref=f14e12]:
+          - list [ref=f14e13]:
+            - listitem [ref=f14e14]:
+              - link "Trending" [ref=f14e15] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/trending
+            - listitem [ref=f14e16]:
+              - link "Browse" [ref=f14e17] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/browse
+            - listitem [ref=f14e18]:
+              - link "How It Works" [ref=f14e19] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/how-it-works
+        - text:  
+      - generic [ref=f14e20]:
+        - link "Login" [ref=f14e24] [cursor=pointer]:
+          - /url: https://app.bythelook.ca/auth/login
+        - link "Register" [ref=f14e30] [cursor=pointer]:
+          - /url: https://app.bythelook.ca/auth/register
+    - text:     
+  - main [ref=f14e33]:
+    - generic [ref=f14e35]:
+      - generic [ref=f14e37]:
+        - generic [ref=f14e38]:
+          - generic [ref=f14e40]:
+            - heading "Enabling Influencers" [level=1] [ref=f14e43]
+            - heading "look in minutes" [level=2] [ref=f14e46]
+          - heading "ByTheLook is a unique platform that allows influencers in Canada to create their online store and sell high-end clothing from manufacturers all over the world." [level=2] [ref=f14e51]
+          - link "Explore Now" [ref=f14e57] [cursor=pointer]:
+            - /url: https://app.bythelook.ca/browse
+            - generic [ref=f14e58]:
+              - generic [ref=f14e59]: 
+              - generic [ref=f14e61]: Explore Now
+        - region "Image Carousel" [ref=f14e65]:
+          - generic [ref=f14e66]:
+            - group [ref=f14e67]:
+              - figure [ref=f14e68]
+            - group "1 / 3" [ref=f14e70]:
+              - figure [ref=f14e71]:
+                - img "home-slide-1" [ref=f14e72]
+            - group [ref=f14e73]:
+              - figure [ref=f14e74]
+            - group [ref=f14e76]:
+              - figure [ref=f14e77]
+            - group [ref=f14e79]:
+              - figure [ref=f14e80]
+      - generic [ref=f14e83]:
+        - heading "Our High-End Manufacturers" [level=2] [ref=f14e86]
+        - heading "At ByTheLook, we work with a carefully selected range of high-end manufacturers from all over the world. Our clothing is carefully curated to ensure that it meets the highest standards of quality and style. We offer a wide selection of clothing for both men and women" [level=2] [ref=f14e89]
+        - generic [ref=f14e91]:
+          - heading "Checkout the trending items" [level=2] [ref=f14e94]
+          - link "View All" [ref=f14e98] [cursor=pointer]:
+            - /url: https://app.bythelook.ca/trending
+        - generic [ref=f14e102]:
+          - figure [ref=f14e106]:
+            - link [ref=f14e107] [cursor=pointer]:
+              - /url: https://app.bythelook.ca/trending
+          - figure [ref=f14e111]:
+            - link [ref=f14e112] [cursor=pointer]:
+              - /url: https://app.bythelook.ca/trending
+          - figure [ref=f14e116]:
+            - link [ref=f14e117] [cursor=pointer]:
+              - /url: https://app.bythelook.ca/trending
+          - figure [ref=f14e121]:
+            - link [ref=f14e122] [cursor=pointer]:
+              - /url: https://app.bythelook.ca/trending
+      - generic [ref=f14e124]:
+        - heading "About ByTheLook" [level=2] [ref=f14e128]
+        - generic [ref=f14e134]:
+          - heading "ByTheLook is a unique platform that allows influencers in Canada to create their online store and sell high-end clothing from manufacturers all over the world. At ByTheLook, we work with a carefully selected range of high-end manufacturers from all over the world. Our clothing is carefully curated to ensure that it meets the highest standards of quality and style. We offer a wide selection of clothing for both men and women." [level=2] [ref=f14e137]
+          - link "More About Us" [ref=f14e141] [cursor=pointer]:
+            - /url: https://app.bythelook.ca/about
+      - generic [ref=f14e148]:
+        - generic [ref=f14e149]:
+          - heading "How ByTheLook Works" [level=2] [ref=f14e152]
+          - heading "ByTheLook is a platform designed for influencers to monetize their social media influence. The influencers create and share product recommendations with their followers." [level=2] [ref=f14e155]
+        - generic [ref=f14e157]:
+          - generic [ref=f14e161]: "#1"
+          - generic [ref=f14e165]:
+            - heading "Sign up as an influencer" [level=3] [ref=f14e168]
+            - paragraph [ref=f14e171]: Joining ByTheLook is quick and easy. Simply create an account and you'll be ready to start selling your look in no time.
+        - generic [ref=f14e173]:
+          - generic [ref=f14e174]:
+            - heading "Choose outfits" [level=3] [ref=f14e177]
+            - paragraph [ref=f14e180]: Browse our selection of high-end clothing and choose the outfits that best fit your style and your audience.
+          - generic [ref=f14e184]: "#2"
+        - generic [ref=f14e189]:
+          - generic [ref=f14e190]: "#3"
+          - generic [ref=f14e194]:
+            - heading "Sell and get commission" [level=3] [ref=f14e197]
+            - paragraph [ref=f14e200]: Once you've chosen your outfits, it's time to start selling. Share your store with your followers and earn commission on every sale.
+      - generic [ref=f14e205]:
+        - heading "What's makes us different" [level=2] [ref=f14e208]
+        - heading "At ByTheLook, we're not just another online marketplace. We offer several features and benefits that set us apart from the competition, including" [level=2] [ref=f14e211]
+        - generic [ref=f14e213]:
+          - img "Fashionista Diaries Tales of Style, Beauty, and Confidence" [ref=f14e217]
+          - generic [ref=f14e218]:
+            - generic [ref=f14e221]:
+              - generic [ref=f14e222]: 
+              - generic [ref=f14e225]:
+                - heading "High-end clothing" [level=3] [ref=f14e226]
+                - paragraph [ref=f14e227]: We work with manufacturers from all over the world to offer a wide selection of high-end clothing for both men and women. Our clothing is carefully curated to ensure that it meets the highest standards of quality and style.
+            - generic [ref=f14e230]:
+              - generic [ref=f14e231]: 
+              - generic [ref=f14e234]:
+                - heading "Easy to use platform" [level=3] [ref=f14e235]
+                - paragraph [ref=f14e236]: Our platform is designed with the needs of influencers in mind. It's easy to use, intuitive, and offers all the features you need to start selling your look online.
+            - generic [ref=f14e239]:
+              - generic [ref=f14e240]: 
+              - generic [ref=f14e243]:
+                - heading "Personalized support" [level=3] [ref=f14e244]
+                - paragraph [ref=f14e245]: We understand that every influencer is unique, which is why we offer personalized support to help you succeed. Our team of experts is always available to answer your questions and provide guidance when you need it.
+            - generic [ref=f14e248]:
+              - generic [ref=f14e249]: 
+              - generic [ref=f14e252]:
+                - heading "Competitive commission rates" [level=3] [ref=f14e253]
+                - paragraph [ref=f14e254]: We offer competitive commission rates to ensure that you're able to earn the most possible from every sale.
+      - generic [ref=f14e256]:
+        - heading "Read Our Latest Blogs" [level=2] [ref=f14e259]
+        - generic [ref=f14e262]:
+          - article [ref=f14e263]:
+            - link [ref=f14e264] [cursor=pointer]:
+              - /url: https://bythelook.ca/20-complete-outfit-ideas-for-every-occasion-work-casual-date-night-more/
+              - img "Complete Outfit Ideas for Every Occasion" [ref=f14e266]
+            - generic [ref=f14e267]:
+              - heading [level=3] [ref=f14e268]:
+                - 'link "20 Complete Outfit Ideas for Every Occasion: Work, Casual, Date Night & More" [ref=f14e269] [cursor=pointer]':
+                  - /url: https://bythelook.ca/20-complete-outfit-ideas-for-every-occasion-work-casual-date-night-more/
+              - 'link "Read more about 20 Complete Outfit Ideas for Every Occasion: Work, Casual, Date Night & More" [ref=f14e270] [cursor=pointer]':
+                - /url: https://bythelook.ca/20-complete-outfit-ideas-for-every-occasion-work-casual-date-night-more/
+                - text: Read More »
+          - article [ref=f14e271]:
+            - link [ref=f14e272] [cursor=pointer]:
+              - /url: https://bythelook.ca/the-ultimate-body-shape-outfit-guide-what-to-wear-for-apple-pear-hourglass-rectangle-inverted-triangle-bodies/
+              - img "Body Shape Outfit Guide" [ref=f14e274]
+            - generic [ref=f14e275]:
+              - heading [level=3] [ref=f14e276]:
+                - 'link "The Ultimate Body Shape Outfit Guide: What to Wear for Apple, Pear, Hourglass, Rectangle & Inverted Triangle Bodies" [ref=f14e277] [cursor=pointer]':
+                  - /url: https://bythelook.ca/the-ultimate-body-shape-outfit-guide-what-to-wear-for-apple-pear-hourglass-rectangle-inverted-triangle-bodies/
+              - 'link "Read more about The Ultimate Body Shape Outfit Guide: What to Wear for Apple, Pear, Hourglass, Rectangle & Inverted Triangle Bodies" [ref=f14e278] [cursor=pointer]':
+                - /url: https://bythelook.ca/the-ultimate-body-shape-outfit-guide-what-to-wear-for-apple-pear-hourglass-rectangle-inverted-triangle-bodies/
+                - text: Read More »
+          - article [ref=f14e279]:
+            - link [ref=f14e280] [cursor=pointer]:
+              - /url: https://bythelook.ca/influencer-marketing-in-canada-2025-statistics-trends-2026-opportunities-for-fashion-creators/
+              - img "Influencer Marketing in Canada" [ref=f14e282]
+            - generic [ref=f14e283]:
+              - heading [level=3] [ref=f14e284]:
+                - 'link "Influencer Marketing in Canada: 2025 Statistics, Trends & 2026 Opportunities for Fashion Creators" [ref=f14e285] [cursor=pointer]':
+                  - /url: https://bythelook.ca/influencer-marketing-in-canada-2025-statistics-trends-2026-opportunities-for-fashion-creators/
+              - 'link "Read more about Influencer Marketing in Canada: 2025 Statistics, Trends & 2026 Opportunities for Fashion Creators" [ref=f14e286] [cursor=pointer]':
+                - /url: https://bythelook.ca/influencer-marketing-in-canada-2025-statistics-trends-2026-opportunities-for-fashion-creators/
+                - text: Read More »
+      - generic [ref=f14e290]:
+        - heading "For Influencers" [level=2] [ref=f14e293]
+        - heading "Get Registered for free now" [level=2] [ref=f14e296]
+        - link "Click here" [ref=f14e300] [cursor=pointer]:
+          - /url: https://app.bythelook.ca/auth/register
+  - generic [ref=f14e309]:
+    - generic [ref=f14e310]:
+      - generic [ref=f14e311]:
+        - generic:
+          - generic:
+            - link "By the look logo":
+              - /url: https://bythelook.ca
+              - img "By the look logo"
+        - paragraph [ref=f14e314]: Complete outfits from Toronto’s best boutiques. One checkout.
+      - generic [ref=f14e315]:
+        - heading "Discover" [level=2] [ref=f14e318]
+        - navigation "Menu" [ref=f14e321]:
+          - list [ref=f14e322]:
+            - listitem [ref=f14e323]:
+              - link "Trending" [ref=f14e324] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/trending
+            - listitem [ref=f14e325]:
+              - link "Browse" [ref=f14e326] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/browse
+            - listitem [ref=f14e327]:
+              - link "How It Works" [ref=f14e328] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/how-it-works
+      - generic [ref=f14e329]:
+        - heading "Join" [level=2] [ref=f14e332]
+        - link "For Creators" [ref=f14e336] [cursor=pointer]:
+          - /url: https://app.bythelook.ca/for-creators
+        - link "For Retailers" [ref=f14e342] [cursor=pointer]:
+          - /url: https://app.bythelook.ca/for-retailers
+      - generic [ref=f14e345]:
+        - heading "Company" [level=2] [ref=f14e348]
+        - navigation "Menu" [ref=f14e351]:
+          - list [ref=f14e352]:
+            - listitem [ref=f14e353]:
+              - link "About" [ref=f14e354] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/about
+            - listitem [ref=f14e355]:
+              - link "Contact" [ref=f14e356] [cursor=pointer]:
+                - /url: https://bythelook.ca/contact-us/
+            - listitem [ref=f14e357]:
+              - link "FAQ" [ref=f14e358] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/faq
+            - listitem [ref=f14e359]:
+              - link "Terms of Service" [ref=f14e360] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/terms
+            - listitem [ref=f14e361]:
+              - link "Privacy Policy" [ref=f14e362] [cursor=pointer]:
+                - /url: https://app.bythelook.ca/privacy
+    - generic [ref=f14e366]:
+      - contentinfo [ref=f14e367]:
+        - paragraph [ref=f14e370]: Based in Toronto, Canada · © 2026 ByTheLook. All rights reserved.
+      - region "Notifications alt+T"
+  - generic [ref=f14e371]: desktop

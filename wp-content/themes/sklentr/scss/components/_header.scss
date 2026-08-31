@@ -1,0 +1,449 @@
+// =====================================================================
+// Site header + primary nav — LIGHT theme
+// Transparent over the light hero → frosted-white bar once scrolled.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out),
+              backdrop-filter var(--dur-base) var(--ease-out);
+
+  &.is-scrolled {
+    background: linear-gradient(180deg, rgba(11, 17, 32, .92) 0%, rgba(30, 41, 59, .88) 100%);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    backdrop-filter: saturate(160%) blur(14px);
+    border-bottom-color: rgba(255, 255, 255, .10);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .28);
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 0 0 auto;
+  }
+}
+
+// Push inner-page content below the fixed header (front page hero self-spaces).
+body:not(.home) .site-main { padding-top: var(--header-h); }
+
+// Dark hero (home + the Services page): the header is transparent over the
+// black hero at the top, so its marks/links must be LIGHT until it frosts on
+// scroll. (Excludes the scrolled bar and the mobile open-menu, both light-bg.)
+body.home .site-header:not(.is-scrolled):not(.is-open),
+body.svcpage .site-header:not(.is-scrolled):not(.is-open),
+body.svpage .site-header:not(.is-scrolled):not(.is-open),
+body.portfoliopage .site-header:not(.is-scrolled):not(.is-open),
+body.pricingpage .site-header:not(.is-scrolled):not(.is-open),
+body.aboutpage .site-header:not(.is-scrolled):not(.is-open),
+body.blogpage .site-header:not(.is-scrolled):not(.is-open),
+body.blogdetailpage .site-header:not(.is-scrolled):not(.is-open) {
+  .nav-menu a { color: rgba(255, 255, 255, .82); }
+  .nav-menu a:hover,
+  .nav-menu a:focus-visible,
+  .nav-menu .current-menu-item > a,
+  .nav-menu .current_page_item > a { color: #fff; }
+  .site-logo__word { color: #fff; }
+  .nav-toggle__bars,
+  .nav-toggle__bars::before,
+  .nav-toggle__bars::after { background: #fff; }
+}
+
+// Scrolled bar is now a dark ink gradient, so its marks/links must be LIGHT
+// too. Excludes the mobile open-menu (that overlay is a light-bg panel with
+// dark text/hamburger, handled in the mobile block below).
+.site-header.is-scrolled:not(.is-open) {
+  .nav-menu a { color: rgba(255, 255, 255, .82); }
+  .nav-menu a:hover,
+  .nav-menu a:focus-visible,
+  .nav-menu .current-menu-item > a,
+  .nav-menu .current_page_item > a { color: #fff; }
+  .site-logo__word { color: #fff; }
+  .nav-toggle__bars,
+  .nav-toggle__bars::before,
+  .nav-toggle__bars::after { background: #fff; }
+}
+
+// ---- Logo / wordmark ----
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  line-height: 1;
+
+  &__mark {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    display: inline-flex;
+    align-items: center;
+  }
+  &__word { color: var(--ink-950); }
+  &__eq {
+    color: var(--brand-green-deep);
+    margin: 0 1px;
+    transform: translateY(-1px);
+  }
+}
+.custom-logo-link { display: inline-flex; align-items: center; }
+.custom-logo { height: 34px; width: auto; }
+
+// ---- Nav (horizontally centred in the header on desktop) ----
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--slate-700);
+    transition: color var(--dur-fast) var(--ease-out);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 14px; right: 14px; bottom: 2px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--brand-gold-deep);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--dur-base) var(--ease-out);
+    }
+    &:hover, &:focus-visible { color: var(--ink-950); }
+    &:hover::after { transform: scaleX(1); }
+
+    .nav-icon {
+      display: inline-flex;
+      opacity: .85;
+      svg { width: 16px; height: 16px; display: block; }
+    }
+  }
+
+  .current-menu-item > a,
+  .current_page_item > a {
+    color: var(--ink-950);
+    &::after { transform: scaleX(1); }
+  }
+
+  // Sub-menus (depth 2)
+  .menu-item-has-children { position: relative; }
+  .sub-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 200px;
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity var(--dur-base) var(--ease-out),
+                transform var(--dur-base) var(--ease-out),
+                visibility var(--dur-base);
+
+    a { display: block; border-radius: var(--radius-sm);
+      &::after { display: none; }
+      &:hover { background: var(--slate-100); }
+    }
+  }
+  .menu-item-has-children:hover > .sub-menu,
+  .menu-item-has-children:focus-within > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.site-nav__cta,
+.site-nav__head,
+.site-nav__social { display: none; } // only inside the mobile drawer
+
+// ---- Hamburger ----
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+
+  &__bars {
+    position: relative;
+    &, &::before, &::after {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin-inline: auto;
+      background: var(--ink-950);
+      border-radius: 2px;
+      transition: transform var(--dur-base) var(--ease-out),
+                  opacity var(--dur-fast) var(--ease-out);
+    }
+    &::before { position: absolute; top: -7px; left: 0; }
+    &::after  { position: absolute; top: 7px;  left: 0; }
+  }
+}
+.site-header.is-open .nav-toggle__bars {
+  background: transparent;
+  &::before { transform: translateY(7px) rotate(45deg); }
+  &::after  { transform: translateY(-7px) rotate(-45deg); }
+}
+
+// =====================================================================
+// Mobile / tablet (≤ 980px)
+// =====================================================================
+@include bp-max(980px) {
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .site-header__cta { display: none; }
+
+  // The frosted blur uses backdrop-filter, which makes the scrolled header the
+  // containing block for the fixed nav drawer — trapping/collapsing it inside the
+  // 76px bar. Drop the blur on mobile (the scrolled bar's bg is ~90% opaque, so
+  // the blur is barely visible) so the drawer always fills the viewport. Desktop
+  // keeps its frosted header (this override is scoped to ≤980px).
+  .site-header.is-scrolled {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  // ---- Slide-in drawer (from the right) — DARK panel ----
+  .site-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    z-index: 1002; // above the header + scrim so the drawer owns the full height
+    width: min(86vw, 340px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 18px 22px calc(24px + env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(180deg, #16233c 0%, var(--ink-950) 42%);
+    border-left: 1px solid var(--ink-700);
+    box-shadow: -22px 0 60px rgba(0, 0, 0, .5);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform var(--dur-slow) var(--ease-out),
+                visibility var(--dur-slow);
+  }
+  // While open: lift the header (and its drawer child) above the scrim, and
+  // hide the header bar's own logo + actions so they don't duplicate the
+  // drawer's own logo/close button.
+  .site-header.is-open {
+    z-index: 1002;
+
+    .site-header__inner > :not(.site-nav) { visibility: hidden; }
+
+    .site-nav {
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  // Drawer header: brand logo + close button
+  .site-nav__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+  }
+  .site-nav__logo {
+    display: inline-flex;
+    align-items: center;
+
+    .site-logo__word { color: #fff; }
+    .site-logo__mark { font-size: 22px; }
+    .custom-logo { height: 30px; width: auto; }
+  }
+  .site-nav__close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    padding: 0;
+    color: #fff;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: background var(--dur-fast) var(--ease-out),
+                border-color var(--dur-fast) var(--ease-out),
+                color var(--dur-fast) var(--ease-out);
+    svg { display: block; }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--ink-950);
+      background: var(--brand-gold);
+      border-color: var(--brand-gold);
+    }
+    &:focus-visible { outline: 2px solid var(--brand-gold); outline-offset: 2px; }
+  }
+
+  // Drawer social row (pinned toward the bottom)
+  .site-nav__social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 22px;
+  }
+  .site-nav__social-label {
+    font-family: var(--font-body);
+    font-size: var(--fs-overline);
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--slate-400);
+  }
+  .site-nav__socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: rgba(255, 255, 255, .82);
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: var(--radius-pill);
+      transition: color var(--dur-fast) var(--ease-out),
+                  background var(--dur-fast) var(--ease-out),
+                  border-color var(--dur-fast) var(--ease-out),
+                  transform var(--dur-fast) var(--ease-out);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--ink-950);
+        background: var(--brand-gold);
+        border-color: var(--brand-gold);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // ---- Backdrop scrim behind the drawer ----
+  .nav-scrim {
+    position: fixed;
+    inset: 0;
+    z-index: 1001; // above the header (1000), below the drawer (1002)
+    background: rgba(11, 17, 32, .55);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--dur-base) var(--ease-out),
+                visibility var(--dur-base);
+  }
+  body.nav-open .nav-scrim {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px 6px;
+      font-size: 17px;
+      color: rgba(255, 255, 255, .86);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      &::after { display: none; }
+      &:hover,
+      &:focus-visible { color: #fff; }
+      .nav-icon { opacity: .9; svg { width: 18px; height: 18px; } }
+    }
+    .current-menu-item > a,
+    .current_page_item > a { color: var(--brand-gold); }
+    .sub-menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      padding: 0 0 0 14px;
+    }
+  }
+
+  .site-nav__cta {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+// Lock body scroll while the mobile menu is open (set from JS)
+body.nav-open { overflow: hidden; }

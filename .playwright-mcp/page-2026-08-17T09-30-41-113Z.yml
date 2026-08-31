@@ -1,0 +1,1016 @@
+- generic [ref=f43e2]:
+  - navigation "Main menu":
+    - link "Skip to main content" [ref=f43e3] [cursor=pointer]:
+      - /url: "#wpbody-content"
+    - link "Skip to toolbar" [ref=f43e4] [cursor=pointer]:
+      - /url: "#wp-toolbar"
+    - list [ref=f43e7]:
+      - listitem [ref=f43e8]:
+        - link "Dashboard" [ref=f43e9] [cursor=pointer]:
+          - /url: index.php
+          - generic [ref=f43e10]: 
+        - list [ref=f43e12]:
+          - listitem [ref=f43e13]:
+            - link "Home" [ref=f43e14] [cursor=pointer]:
+              - /url: index.php
+          - listitem [ref=f43e15]:
+            - link "Updates" [ref=f43e16] [cursor=pointer]:
+              - /url: update-core.php
+      - listitem [ref=f43e17]
+      - listitem [ref=f43e19]:
+        - link "Posts" [ref=f43e20] [cursor=pointer]:
+          - /url: edit.php
+          - generic [ref=f43e21]: 
+        - list [ref=f43e23]:
+          - listitem [ref=f43e24]:
+            - link "All Posts" [ref=f43e25] [cursor=pointer]:
+              - /url: edit.php
+          - listitem [ref=f43e26]:
+            - link "Add Post" [ref=f43e27] [cursor=pointer]:
+              - /url: post-new.php
+          - listitem [ref=f43e28]:
+            - link "Categories" [ref=f43e29] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=category
+          - listitem [ref=f43e30]:
+            - link "Tags" [ref=f43e31] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=post_tag
+      - listitem [ref=f43e32]:
+        - link "Media" [ref=f43e33] [cursor=pointer]:
+          - /url: upload.php
+          - generic [ref=f43e34]: 
+        - list [ref=f43e36]:
+          - listitem [ref=f43e37]:
+            - link "Library" [ref=f43e38] [cursor=pointer]:
+              - /url: upload.php
+          - listitem [ref=f43e39]:
+            - link "Add Media File" [ref=f43e40] [cursor=pointer]:
+              - /url: media-new.php
+      - listitem [ref=f43e41]:
+        - link "Pages" [ref=f43e42] [cursor=pointer]:
+          - /url: edit.php?post_type=page
+          - generic [ref=f43e43]: 
+        - list [ref=f43e45]:
+          - listitem [ref=f43e46]:
+            - link "All Pages" [ref=f43e47] [cursor=pointer]:
+              - /url: edit.php?post_type=page
+          - listitem [ref=f43e48]:
+            - link "Add Page" [ref=f43e49] [cursor=pointer]:
+              - /url: post-new.php?post_type=page
+      - listitem [ref=f43e50]:
+        - link "Comments" [ref=f43e51] [cursor=pointer]:
+          - /url: edit-comments.php
+          - generic [ref=f43e52]: 
+      - listitem [ref=f43e54]
+      - listitem [ref=f43e56]:
+        - link "Sklentr" [ref=f43e57] [cursor=pointer]:
+          - /url: admin.php?page=sklentr-settings
+          - generic [ref=f43e58]: 
+        - list [ref=f43e60]:
+          - listitem [ref=f43e61]:
+            - link "Settings" [ref=f43e62] [cursor=pointer]:
+              - /url: admin.php?page=sklentr-settings
+              - generic [ref=f43e63]: 
+          - listitem [ref=f43e65]:
+            - link "Services (Home, /services)" [ref=f43e66] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_service
+              - generic [ref=f43e67]: 
+          - listitem [ref=f43e69]:
+            - link "Why-Us Points (/services)" [ref=f43e70] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_svc_perk
+              - generic [ref=f43e71]: 
+          - listitem [ref=f43e73]:
+            - link "Trust Stats (Home, /services)" [ref=f43e74] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_stat
+              - generic [ref=f43e75]: 
+          - listitem [ref=f43e77]:
+            - link "Trusted Logos (Home)" [ref=f43e78] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_project
+              - generic [ref=f43e79]: 
+          - listitem [ref=f43e81]:
+            - link "Problem Cards (Home)" [ref=f43e82] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_problem
+              - generic [ref=f43e83]: 
+          - listitem [ref=f43e85]:
+            - link "Hero Plan Steps (Home)" [ref=f43e86] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_step
+              - generic [ref=f43e87]: 
+          - listitem [ref=f43e89]:
+            - link "Hero Plan Tiles (Home)" [ref=f43e90] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_tile
+              - generic [ref=f43e91]: 
+          - listitem [ref=f43e93]:
+            - link "Why-Us Pillars (Home)" [ref=f43e94] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pillar
+              - generic [ref=f43e95]: 
+          - listitem [ref=f43e97]:
+            - link "Visa Features (Home)" [ref=f43e98] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_visa_feature
+              - generic [ref=f43e99]: 
+          - listitem [ref=f43e101]:
+            - link "Featured Work (Home)" [ref=f43e102] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_work
+              - generic [ref=f43e103]: 
+          - listitem [ref=f43e105]:
+            - link "Process Steps (Home)" [ref=f43e106] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_process
+              - generic [ref=f43e107]: 
+          - listitem [ref=f43e109]:
+            - link "FAQ (Home)" [ref=f43e110] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_faq
+              - generic [ref=f43e111]: 
+          - listitem [ref=f43e113]:
+            - link "Team Locations (unused)" [ref=f43e114] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_location
+              - generic [ref=f43e115]: 
+          - listitem [ref=f43e117]:
+            - link "Tech Stack (Home)" [ref=f43e118] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_tech
+              - generic [ref=f43e119]: 
+          - listitem [ref=f43e121]:
+            - link "Pricing Tiers (Home)" [ref=f43e122] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pricing
+              - generic [ref=f43e123]: 
+          - listitem [ref=f43e125]:
+            - link "Portfolio Projects (/portfolio)" [ref=f43e126] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_portfolio
+              - generic [ref=f43e127]: 
+          - listitem [ref=f43e129]:
+            - link "Subscribers" [ref=f43e130] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_subscriber
+              - generic [ref=f43e131]: 
+      - listitem [ref=f43e133]:
+        - link "Appearance" [ref=f43e134] [cursor=pointer]:
+          - /url: themes.php
+          - generic [ref=f43e135]: 
+        - list [ref=f43e137]:
+          - listitem [ref=f43e138]:
+            - link "Themes" [ref=f43e139] [cursor=pointer]:
+              - /url: themes.php
+          - listitem [ref=f43e140]:
+            - link "Patterns" [ref=f43e141] [cursor=pointer]:
+              - /url: site-editor.php?p=/pattern
+          - listitem [ref=f43e142]:
+            - link "Customize" [ref=f43e143] [cursor=pointer]:
+              - /url: customize.php?return=%2Fsklentr%2Fsklentr-v3%2Fwp-admin%2Foptions-general.php
+          - listitem [ref=f43e144]:
+            - link "Fonts" [ref=f43e145] [cursor=pointer]:
+              - /url: font-library.php
+          - listitem [ref=f43e146]:
+            - link "Menus" [ref=f43e147] [cursor=pointer]:
+              - /url: nav-menus.php
+          - listitem [ref=f43e148]:
+            - link "Theme File Editor" [ref=f43e149] [cursor=pointer]:
+              - /url: theme-editor.php
+      - listitem [ref=f43e150]:
+        - link "Plugins" [ref=f43e151] [cursor=pointer]:
+          - /url: plugins.php
+          - generic [ref=f43e152]: 
+        - list [ref=f43e154]:
+          - listitem [ref=f43e155]:
+            - link "Installed Plugins" [ref=f43e156] [cursor=pointer]:
+              - /url: plugins.php
+          - listitem [ref=f43e157]:
+            - link "Add Plugin" [ref=f43e158] [cursor=pointer]:
+              - /url: plugin-install.php
+          - listitem [ref=f43e159]:
+            - link "Plugin File Editor" [ref=f43e160] [cursor=pointer]:
+              - /url: plugin-editor.php
+      - listitem [ref=f43e161]:
+        - link "Users" [ref=f43e162] [cursor=pointer]:
+          - /url: users.php
+          - generic [ref=f43e163]: 
+        - list [ref=f43e165]:
+          - listitem [ref=f43e166]:
+            - link "All Users" [ref=f43e167] [cursor=pointer]:
+              - /url: users.php
+          - listitem [ref=f43e168]:
+            - link "Add User" [ref=f43e169] [cursor=pointer]:
+              - /url: user-new.php
+          - listitem [ref=f43e170]:
+            - link "Profile" [ref=f43e171] [cursor=pointer]:
+              - /url: profile.php
+      - listitem [ref=f43e172]:
+        - link "Tools" [ref=f43e173] [cursor=pointer]:
+          - /url: tools.php
+          - generic [ref=f43e174]: 
+        - list [ref=f43e176]:
+          - listitem [ref=f43e177]:
+            - link "Available Tools" [ref=f43e178] [cursor=pointer]:
+              - /url: tools.php
+          - listitem [ref=f43e179]:
+            - link "Import" [ref=f43e180] [cursor=pointer]:
+              - /url: import.php
+          - listitem [ref=f43e181]:
+            - link "Export" [ref=f43e182] [cursor=pointer]:
+              - /url: export.php
+          - listitem [ref=f43e183]:
+            - link "Site Health" [ref=f43e184] [cursor=pointer]:
+              - /url: site-health.php
+          - listitem [ref=f43e185]:
+            - link "Export Personal Data" [ref=f43e186] [cursor=pointer]:
+              - /url: export-personal-data.php
+          - listitem [ref=f43e187]:
+            - link "Erase Personal Data" [ref=f43e188] [cursor=pointer]:
+              - /url: erase-personal-data.php
+          - listitem [ref=f43e189]:
+            - link "Sklentr Repair" [ref=f43e190] [cursor=pointer]:
+              - /url: tools.php?page=sklentr-repair
+      - listitem [ref=f43e191]:
+        - link "Settings" [ref=f43e192] [cursor=pointer]:
+          - /url: options-general.php
+          - generic [ref=f43e193]: 
+        - list [ref=f43e195]:
+          - listitem [ref=f43e196]:
+            - link "General" [ref=f43e197] [cursor=pointer]:
+              - /url: options-general.php
+          - listitem [ref=f43e198]:
+            - link "Connectors" [ref=f43e199] [cursor=pointer]:
+              - /url: options-connectors.php
+          - listitem [ref=f43e200]:
+            - link "Writing" [ref=f43e201] [cursor=pointer]:
+              - /url: options-writing.php
+          - listitem [ref=f43e202]:
+            - link "Reading" [ref=f43e203] [cursor=pointer]:
+              - /url: options-reading.php
+          - listitem [ref=f43e204]:
+            - link "Discussion" [ref=f43e205] [cursor=pointer]:
+              - /url: options-discussion.php
+          - listitem [ref=f43e206]:
+            - link "Media" [ref=f43e207] [cursor=pointer]:
+              - /url: options-media.php
+          - listitem [ref=f43e208]:
+            - link "Permalinks" [ref=f43e209] [cursor=pointer]:
+              - /url: options-permalink.php
+          - listitem [ref=f43e210]:
+            - link "Privacy" [ref=f43e211] [cursor=pointer]:
+              - /url: options-privacy.php
+      - listitem [ref=f43e212]:
+        - button "Collapse Main menu" [expanded] [ref=f43e213] [cursor=pointer]:
+          - generic [ref=f43e215]: Collapse Menu
+  - generic [ref=f43e216]:
+    - generic [ref=f43e217]:
+      - navigation "Toolbar":
+        - menu:
+          - group [ref=f43e218]:
+            - menuitem "About WordPress" [ref=f43e219] [cursor=pointer]
+          - group [ref=f43e222]:
+            - menuitem "Sklentr V3" [ref=f43e223] [cursor=pointer]
+          - group [ref=f43e224]:
+            - menuitem "Ctrl+K Open command palette" [ref=f43e225] [cursor=pointer]:
+              - generic [ref=f43e227]:
+                - text: Ctrl+K
+                - generic [ref=f43e228]: Open command palette
+          - group [ref=f43e229]:
+            - menuitem "0 Comments in moderation" [ref=f43e230] [cursor=pointer]:
+              - generic [ref=f43e232]: "0"
+          - group [ref=f43e234]:
+            - menuitem "New" [ref=f43e235] [cursor=pointer]
+        - menu [ref=f43e238]:
+          - group [ref=f43e239]:
+            - menuitem "Howdy, admin" [ref=f43e240] [cursor=pointer]
+    - main [ref=f43e241]:
+      - generic [ref=f43e242]:
+        - button "Help" [ref=f43e245] [cursor=pointer]
+        - generic [ref=f43e246]:
+          - heading "General Settings" [level=1] [ref=f43e247]
+          - generic [ref=f43e248]:
+            - text: Site Title
+            - textbox "Site Title" [ref=f43e249]: Sklentr V3
+            - text: Tagline
+            - textbox "Tagline" [ref=f43e250]
+            - paragraph [ref=f43e251]: "In a few words, explain what this site is about. Example: “Just another WordPress site.”"
+            - text: Site Icon
+            - generic [ref=f43e253]:
+              - 'img "App icon preview: The current image has no alternative text. The file name is: sklentr-site-icon.png" [ref=f43e254]'
+              - generic [ref=f43e258]:
+                - 'img "Browser icon preview: The current image has no alternative text. The file name is: sklentr-site-icon.png" [ref=f43e259]'
+                - generic [ref=f43e260]: Sklentr V3
+            - generic [ref=f43e263]:
+              - button "Change Site Icon" [ref=f43e264] [cursor=pointer]
+              - button "Remove Site Icon" [ref=f43e265] [cursor=pointer]
+            - paragraph [ref=f43e266]:
+              - text: The Site Icon is what you see in browser tabs, bookmark bars, and within the WordPress mobile apps. It should be square and at least
+              - code [ref=f43e267]: 512 by 512
+              - text: pixels.
+            - text: WordPress Address (URL)
+            - textbox "WordPress Address (URL)" [ref=f43e268]: http://localhost/sklentr/sklentr-v3
+            - text: Site Address (URL)
+            - textbox "Site Address (URL)" [ref=f43e269]: http://localhost/sklentr/sklentr-v3
+            - paragraph [ref=f43e270]:
+              - text: Enter the same address here unless you
+              - link "want your site home page to be different from your WordPress installation directory" [ref=f43e271] [cursor=pointer]:
+                - /url: https://developer.wordpress.org/advanced-administration/server/wordpress-in-directory/
+              - text: .
+            - text: Administration Email Address
+            - textbox "Administration Email Address" [ref=f43e272]: rishad@sklentr.com
+            - paragraph [ref=f43e273]:
+              - text: This address is used for admin purposes. If you change this, an email will be sent to your new address to confirm it.
+              - strong [ref=f43e274]: The new address will not become active until confirmed.
+            - text: Membership
+            - group "Membership" [ref=f43e275]:
+              - generic [ref=f43e278]:
+                - checkbox "Anyone can register" [ref=f43e279] [cursor=pointer]
+                - text: Anyone can register
+            - text: New User Default Role
+            - combobox "New User Default Role" [ref=f43e280] [cursor=pointer]:
+              - option "Subscriber" [selected]
+              - option "Contributor"
+              - option "Author"
+            - generic [ref=f43e281]:
+              - text: Site Language
+              - generic [ref=f43e282]: 
+            - combobox "Site Language" [ref=f43e283] [cursor=pointer]:
+              - option "English (United States)" [selected]
+              - option "Afrikaans"
+              - option "አማርኛ"
+              - option "Aragonés"
+              - option "العربية"
+              - option "العربية المغربية"
+              - option "অসমীয়া"
+              - option "گؤنئی آذربایجان"
+              - option "Azərbaycan dili"
+              - option "Беларуская мова"
+              - option "Български"
+              - option "বাংলা"
+              - option "བོད་ཡིག"
+              - option "Bosanski"
+              - option "Català"
+              - option "Cebuano"
+              - option "Čeština"
+              - option "Cymraeg"
+              - option "Dansk"
+              - option "Deutsch (Österreich)"
+              - option "Deutsch"
+              - option "Deutsch (Sie)"
+              - option "Deutsch (Schweiz)"
+              - option "Deutsch (Schweiz, Du)"
+              - option "Dolnoserbšćina"
+              - option "རྫོང་ཁ"
+              - option "Ελληνικά"
+              - option "English (South Africa)"
+              - option "English (Canada)"
+              - option "English (New Zealand)"
+              - option "English (UK)"
+              - option "English (Australia)"
+              - option "Esperanto"
+              - option "Español de Argentina"
+              - option "Español de Chile"
+              - option "Español de Colombia"
+              - option "Español de Costa Rica"
+              - option "Español de México"
+              - option "Español"
+              - option "Español de Perú"
+              - option "Español de Venezuela"
+              - option "Español de Ecuador"
+              - option "Español de República Dominicana"
+              - option "Español de Uruguay"
+              - option "Español de Puerto Rico"
+              - option "Español de Guatemala"
+              - option "Eesti"
+              - option "Euskara"
+              - option "فارسی"
+              - option "(فارسی (افغانستان"
+              - option "Suomi"
+              - option "Français du Canada"
+              - option "Français"
+              - option "Français de Belgique"
+              - option "Friulian"
+              - option "Frysk"
+              - option "Gàidhlig"
+              - option "Galego"
+              - option "ગુજરાતી"
+              - option "هزاره گی"
+              - option "עִבְרִית"
+              - option "हिन्दी"
+              - option "Hrvatski"
+              - option "Hornjoserbšćina"
+              - option "Magyar"
+              - option "Հայերեն"
+              - option "Bahasa Indonesia"
+              - option "Íslenska"
+              - option "Italiano"
+              - option "日本語"
+              - option "Basa Jawa"
+              - option "ქართული"
+              - option "Taqbaylit"
+              - option "Қазақ тілі"
+              - option "ភាសាខ្មែរ"
+              - option "ಕನ್ನಡ"
+              - option "한국어"
+              - option "كوردی‎"
+              - option "Кыргызча"
+              - option "ພາສາລາວ"
+              - option "Lietuvių kalba"
+              - option "Latviešu valoda"
+              - option "Македонски јазик"
+              - option "മലയാളം"
+              - option "Монгол"
+              - option "मराठी"
+              - option "Bahasa Melayu"
+              - option "ဗမာစာ"
+              - option "Norsk bokmål"
+              - option "नेपाली"
+              - option "Nederlands"
+              - option "Nederlands (België)"
+              - option "Nederlands (Formeel)"
+              - option "Norsk nynorsk"
+              - option "Occitan"
+              - option "ਪੰਜਾਬੀ"
+              - option "Polski"
+              - option "پښتو"
+              - option "Português do Brasil"
+              - option "Português"
+              - option "Português de Angola"
+              - option "Português (AO90)"
+              - option "Ruáinga"
+              - option "Română"
+              - option "Русский"
+              - option "Сахалыы"
+              - option "سنڌي"
+              - option "සිංහල"
+              - option "Slovenčina"
+              - option "سرائیکی"
+              - option "Slovenščina"
+              - option "Shqip"
+              - option "Српски језик"
+              - option "Svenska"
+              - option "Kiswahili"
+              - option "Ślōnskŏ gŏdka"
+              - option "தமிழ்"
+              - option "தமிழ்"
+              - option "తెలుగు"
+              - option "ไทย"
+              - option "Tagalog"
+              - option "Türkçe"
+              - option "Татар теле"
+              - option "Reo Tahiti"
+              - option "ئۇيغۇرچە"
+              - option "Українська"
+              - option "اردو"
+              - option "O‘zbekcha"
+              - option "Tiếng Việt"
+              - option "Yorùbá"
+              - option "繁體中文"
+              - option "香港中文"
+              - option "简体中文"
+            - text: Timezone
+            - combobox "Timezone" [ref=f43e284] [cursor=pointer]:
+              - option "Abidjan"
+              - option "Accra"
+              - option "Addis Ababa"
+              - option "Algiers"
+              - option "Asmara"
+              - option "Bamako"
+              - option "Bangui"
+              - option "Banjul"
+              - option "Bissau"
+              - option "Blantyre"
+              - option "Brazzaville"
+              - option "Bujumbura"
+              - option "Cairo"
+              - option "Casablanca"
+              - option "Ceuta"
+              - option "Conakry"
+              - option "Dakar"
+              - option "Dar es Salaam"
+              - option "Djibouti"
+              - option "Douala"
+              - option "El Aaiun"
+              - option "Freetown"
+              - option "Gaborone"
+              - option "Harare"
+              - option "Johannesburg"
+              - option "Juba"
+              - option "Kampala"
+              - option "Khartoum"
+              - option "Kigali"
+              - option "Kinshasa"
+              - option "Lagos"
+              - option "Libreville"
+              - option "Lome"
+              - option "Luanda"
+              - option "Lubumbashi"
+              - option "Lusaka"
+              - option "Malabo"
+              - option "Maputo"
+              - option "Maseru"
+              - option "Mbabane"
+              - option "Mogadishu"
+              - option "Monrovia"
+              - option "Nairobi"
+              - option "Ndjamena"
+              - option "Niamey"
+              - option "Nouakchott"
+              - option "Ouagadougou"
+              - option "Porto-Novo"
+              - option "Sao Tome"
+              - option "Tripoli"
+              - option "Tunis"
+              - option "Windhoek"
+              - option "Adak"
+              - option "Anchorage"
+              - option "Anguilla"
+              - option "Antigua"
+              - option "Araguaina"
+              - option "Argentina - Buenos Aires"
+              - option "Argentina - Catamarca"
+              - option "Argentina - Cordoba"
+              - option "Argentina - Jujuy"
+              - option "Argentina - La Rioja"
+              - option "Argentina - Mendoza"
+              - option "Argentina - Rio Gallegos"
+              - option "Argentina - Salta"
+              - option "Argentina - San Juan"
+              - option "Argentina - San Luis"
+              - option "Argentina - Tucuman"
+              - option "Argentina - Ushuaia"
+              - option "Aruba"
+              - option "Asuncion"
+              - option "Atikokan"
+              - option "Bahia"
+              - option "Bahia Banderas"
+              - option "Barbados"
+              - option "Belem"
+              - option "Belize"
+              - option "Blanc-Sablon"
+              - option "Boa Vista"
+              - option "Bogota"
+              - option "Boise"
+              - option "Cambridge Bay"
+              - option "Campo Grande"
+              - option "Cancun"
+              - option "Caracas"
+              - option "Cayenne"
+              - option "Cayman"
+              - option "Chicago"
+              - option "Chihuahua"
+              - option "Ciudad Juarez"
+              - option "Costa Rica"
+              - option "Coyhaique"
+              - option "Creston"
+              - option "Cuiaba"
+              - option "Curacao"
+              - option "Danmarkshavn"
+              - option "Dawson"
+              - option "Dawson Creek"
+              - option "Denver"
+              - option "Detroit"
+              - option "Dominica"
+              - option "Edmonton"
+              - option "Eirunepe"
+              - option "El Salvador"
+              - option "Fortaleza"
+              - option "Fort Nelson"
+              - option "Glace Bay"
+              - option "Goose Bay"
+              - option "Grand Turk"
+              - option "Grenada"
+              - option "Guadeloupe"
+              - option "Guatemala"
+              - option "Guayaquil"
+              - option "Guyana"
+              - option "Halifax"
+              - option "Havana"
+              - option "Hermosillo"
+              - option "Indiana - Indianapolis"
+              - option "Indiana - Knox"
+              - option "Indiana - Marengo"
+              - option "Indiana - Petersburg"
+              - option "Indiana - Tell City"
+              - option "Indiana - Vevay"
+              - option "Indiana - Vincennes"
+              - option "Indiana - Winamac"
+              - option "Inuvik"
+              - option "Iqaluit"
+              - option "Jamaica"
+              - option "Juneau"
+              - option "Kentucky - Louisville"
+              - option "Kentucky - Monticello"
+              - option "Kralendijk"
+              - option "La Paz"
+              - option "Lima"
+              - option "Los Angeles"
+              - option "Lower Princes"
+              - option "Maceio"
+              - option "Managua"
+              - option "Manaus"
+              - option "Marigot"
+              - option "Martinique"
+              - option "Matamoros"
+              - option "Mazatlan"
+              - option "Menominee"
+              - option "Merida"
+              - option "Metlakatla"
+              - option "Mexico City"
+              - option "Miquelon"
+              - option "Moncton"
+              - option "Monterrey"
+              - option "Montevideo"
+              - option "Montserrat"
+              - option "Nassau"
+              - option "New York"
+              - option "Nome"
+              - option "Noronha"
+              - option "North Dakota - Beulah"
+              - option "North Dakota - Center"
+              - option "North Dakota - New Salem"
+              - option "Nuuk"
+              - option "Ojinaga"
+              - option "Panama"
+              - option "Paramaribo"
+              - option "Phoenix"
+              - option "Port-au-Prince"
+              - option "Port of Spain"
+              - option "Porto Velho"
+              - option "Puerto Rico"
+              - option "Punta Arenas"
+              - option "Rankin Inlet"
+              - option "Recife"
+              - option "Regina"
+              - option "Resolute"
+              - option "Rio Branco"
+              - option "Santarem"
+              - option "Santiago"
+              - option "Santo Domingo"
+              - option "Sao Paulo"
+              - option "Scoresbysund"
+              - option "Sitka"
+              - option "St Barthelemy"
+              - option "St Johns"
+              - option "St Kitts"
+              - option "St Lucia"
+              - option "St Thomas"
+              - option "St Vincent"
+              - option "Swift Current"
+              - option "Tegucigalpa"
+              - option "Thule"
+              - option "Tijuana"
+              - option "Toronto"
+              - option "Tortola"
+              - option "Vancouver"
+              - option "Whitehorse"
+              - option "Winnipeg"
+              - option "Yakutat"
+              - option "Casey"
+              - option "Davis"
+              - option "DumontDUrville"
+              - option "Macquarie"
+              - option "Mawson"
+              - option "McMurdo"
+              - option "Palmer"
+              - option "Rothera"
+              - option "Syowa"
+              - option "Troll"
+              - option "Vostok"
+              - option "Longyearbyen"
+              - option "Aden"
+              - option "Almaty"
+              - option "Amman"
+              - option "Anadyr"
+              - option "Aqtau"
+              - option "Aqtobe"
+              - option "Ashgabat"
+              - option "Atyrau"
+              - option "Baghdad"
+              - option "Bahrain"
+              - option "Baku"
+              - option "Bangkok"
+              - option "Barnaul"
+              - option "Beirut"
+              - option "Bishkek"
+              - option "Brunei"
+              - option "Chita"
+              - option "Colombo"
+              - option "Damascus"
+              - option "Dhaka"
+              - option "Dili"
+              - option "Dubai"
+              - option "Dushanbe"
+              - option "Famagusta"
+              - option "Gaza"
+              - option "Hebron"
+              - option "Ho Chi Minh"
+              - option "Hong Kong"
+              - option "Hovd"
+              - option "Irkutsk"
+              - option "Jakarta"
+              - option "Jayapura"
+              - option "Jerusalem"
+              - option "Kabul"
+              - option "Kamchatka"
+              - option "Karachi"
+              - option "Kathmandu"
+              - option "Khandyga"
+              - option "Kolkata"
+              - option "Krasnoyarsk"
+              - option "Kuala Lumpur"
+              - option "Kuching"
+              - option "Kuwait"
+              - option "Macau"
+              - option "Magadan"
+              - option "Makassar"
+              - option "Manila"
+              - option "Muscat"
+              - option "Nicosia"
+              - option "Novokuznetsk"
+              - option "Novosibirsk"
+              - option "Omsk"
+              - option "Oral"
+              - option "Phnom Penh"
+              - option "Pontianak"
+              - option "Pyongyang"
+              - option "Qatar"
+              - option "Qostanay"
+              - option "Qyzylorda"
+              - option "Riyadh"
+              - option "Sakhalin"
+              - option "Samarkand"
+              - option "Seoul"
+              - option "Shanghai"
+              - option "Singapore"
+              - option "Srednekolymsk"
+              - option "Taipei"
+              - option "Tashkent"
+              - option "Tbilisi"
+              - option "Tehran"
+              - option "Thimphu"
+              - option "Tokyo"
+              - option "Tomsk"
+              - option "Ulaanbaatar"
+              - option "Urumqi"
+              - option "Ust-Nera"
+              - option "Vientiane"
+              - option "Vladivostok"
+              - option "Yakutsk"
+              - option "Yangon"
+              - option "Yekaterinburg"
+              - option "Yerevan"
+              - option "Azores"
+              - option "Bermuda"
+              - option "Canary"
+              - option "Cape Verde"
+              - option "Faroe"
+              - option "Madeira"
+              - option "Reykjavik"
+              - option "South Georgia"
+              - option "Stanley"
+              - option "St Helena"
+              - option "Adelaide"
+              - option "Brisbane"
+              - option "Broken Hill"
+              - option "Darwin"
+              - option "Eucla"
+              - option "Hobart"
+              - option "Lindeman"
+              - option "Lord Howe"
+              - option "Melbourne"
+              - option "Perth"
+              - option "Sydney"
+              - option "Amsterdam"
+              - option "Andorra"
+              - option "Astrakhan"
+              - option "Athens"
+              - option "Belgrade"
+              - option "Berlin"
+              - option "Bratislava"
+              - option "Brussels"
+              - option "Bucharest"
+              - option "Budapest"
+              - option "Busingen"
+              - option "Chisinau"
+              - option "Copenhagen"
+              - option "Dublin"
+              - option "Gibraltar"
+              - option "Guernsey"
+              - option "Helsinki"
+              - option "Isle of Man"
+              - option "Istanbul"
+              - option "Jersey"
+              - option "Kaliningrad"
+              - option "Kirov"
+              - option "Kyiv"
+              - option "Lisbon"
+              - option "Ljubljana"
+              - option "London"
+              - option "Luxembourg"
+              - option "Madrid"
+              - option "Malta"
+              - option "Mariehamn"
+              - option "Minsk"
+              - option "Monaco"
+              - option "Moscow"
+              - option "Oslo"
+              - option "Paris"
+              - option "Podgorica"
+              - option "Prague"
+              - option "Riga"
+              - option "Rome"
+              - option "Samara"
+              - option "San Marino"
+              - option "Sarajevo"
+              - option "Saratov"
+              - option "Simferopol"
+              - option "Skopje"
+              - option "Sofia"
+              - option "Stockholm"
+              - option "Tallinn"
+              - option "Tirane"
+              - option "Ulyanovsk"
+              - option "Vaduz"
+              - option "Vatican"
+              - option "Vienna"
+              - option "Vilnius"
+              - option "Volgograd"
+              - option "Warsaw"
+              - option "Zagreb"
+              - option "Zurich"
+              - option "Antananarivo"
+              - option "Chagos"
+              - option "Christmas"
+              - option "Cocos"
+              - option "Comoro"
+              - option "Kerguelen"
+              - option "Mahe"
+              - option "Maldives"
+              - option "Mauritius"
+              - option "Mayotte"
+              - option "Reunion"
+              - option "Apia"
+              - option "Auckland"
+              - option "Bougainville"
+              - option "Chatham"
+              - option "Chuuk"
+              - option "Easter"
+              - option "Efate"
+              - option "Fakaofo"
+              - option "Fiji"
+              - option "Funafuti"
+              - option "Galapagos"
+              - option "Gambier"
+              - option "Guadalcanal"
+              - option "Guam"
+              - option "Honolulu"
+              - option "Kanton"
+              - option "Kiritimati"
+              - option "Kosrae"
+              - option "Kwajalein"
+              - option "Majuro"
+              - option "Marquesas"
+              - option "Midway"
+              - option "Nauru"
+              - option "Niue"
+              - option "Norfolk"
+              - option "Noumea"
+              - option "Pago Pago"
+              - option "Palau"
+              - option "Pitcairn"
+              - option "Pohnpei"
+              - option "Port Moresby"
+              - option "Rarotonga"
+              - option "Saipan"
+              - option "Tahiti"
+              - option "Tarawa"
+              - option "Tongatapu"
+              - option "Wake"
+              - option "Wallis"
+              - option "UTC"
+              - option "UTC-12"
+              - option "UTC-11:30"
+              - option "UTC-11"
+              - option "UTC-10:30"
+              - option "UTC-10"
+              - option "UTC-9:30"
+              - option "UTC-9"
+              - option "UTC-8:30"
+              - option "UTC-8"
+              - option "UTC-7:30"
+              - option "UTC-7"
+              - option "UTC-6:30"
+              - option "UTC-6"
+              - option "UTC-5:30"
+              - option "UTC-5"
+              - option "UTC-4:30"
+              - option "UTC-4"
+              - option "UTC-3:30"
+              - option "UTC-3"
+              - option "UTC-2:30"
+              - option "UTC-2"
+              - option "UTC-1:30"
+              - option "UTC-1"
+              - option "UTC-0:30"
+              - option "UTC+0" [selected]
+              - option "UTC+0:30"
+              - option "UTC+1"
+              - option "UTC+1:30"
+              - option "UTC+2"
+              - option "UTC+2:30"
+              - option "UTC+3"
+              - option "UTC+3:30"
+              - option "UTC+4"
+              - option "UTC+4:30"
+              - option "UTC+5"
+              - option "UTC+5:30"
+              - option "UTC+5:45"
+              - option "UTC+6"
+              - option "UTC+6:30"
+              - option "UTC+7"
+              - option "UTC+7:30"
+              - option "UTC+8"
+              - option "UTC+8:30"
+              - option "UTC+8:45"
+              - option "UTC+9"
+              - option "UTC+9:30"
+              - option "UTC+10"
+              - option "UTC+10:30"
+              - option "UTC+11"
+              - option "UTC+11:30"
+              - option "UTC+12"
+              - option "UTC+12:45"
+              - option "UTC+13"
+              - option "UTC+13:45"
+              - option "UTC+14"
+            - paragraph [ref=f43e285]: Choose either a city in the same timezone as you or a UTC (Coordinated Universal Time) time offset.
+            - paragraph [ref=f43e286]:
+              - generic [ref=f43e287]:
+                - text: Universal time is
+                - code [ref=f43e288]: 2026-08-17 09:30:39
+                - text: .
+            - text: Date Format
+            - group "Date Format" [ref=f43e289]:
+              - generic [ref=f43e292]:
+                - radio "August 17, 2026 F j, Y" [checked] [ref=f43e293] [cursor=pointer]
+                - generic [ref=f43e294]: August 17, 2026
+                - code [ref=f43e295]: F j, Y
+              - generic [ref=f43e296]:
+                - radio "2026-08-17 Y-m-d" [ref=f43e297] [cursor=pointer]
+                - generic [ref=f43e298]: 2026-08-17
+                - code [ref=f43e299]: Y-m-d
+              - generic [ref=f43e300]:
+                - radio "08/17/2026 m/d/Y" [ref=f43e301] [cursor=pointer]
+                - generic [ref=f43e302]: 08/17/2026
+                - code [ref=f43e303]: m/d/Y
+              - generic [ref=f43e304]:
+                - radio "17/08/2026 d/m/Y" [ref=f43e305] [cursor=pointer]
+                - generic [ref=f43e306]: 17/08/2026
+                - code [ref=f43e307]: d/m/Y
+              - generic [ref=f43e308]:
+                - radio "17.08.2026 d.m.Y" [ref=f43e309] [cursor=pointer]
+                - generic [ref=f43e310]: 17.08.2026
+                - code [ref=f43e311]: d.m.Y
+              - generic [ref=f43e312]:
+                - 'radio "Custom: enter a custom date format in the following field" [ref=f43e313] [cursor=pointer]'
+                - generic [ref=f43e314]:
+                  - text: "Custom:"
+                  - generic [ref=f43e315]: enter a custom date format in the following field
+              - generic [ref=f43e316]: "Custom date format:"
+              - textbox "Custom date format:" [ref=f43e317]: F j, Y
+              - paragraph [ref=f43e318]:
+                - strong [ref=f43e319]: "Preview:"
+                - text: August 17, 2026
+            - text: Time Format
+            - group "Time Format" [ref=f43e320]:
+              - generic [ref=f43e323]:
+                - radio "9:30 am g:i a" [checked] [ref=f43e324] [cursor=pointer]
+                - generic [ref=f43e325]: 9:30 am
+                - code [ref=f43e326]: g:i a
+              - generic [ref=f43e327]:
+                - radio "9:30 AM g:i A" [ref=f43e328] [cursor=pointer]
+                - generic [ref=f43e329]: 9:30 AM
+                - code [ref=f43e330]: g:i A
+              - generic [ref=f43e331]:
+                - radio "09:30 H:i" [ref=f43e332] [cursor=pointer]
+                - generic [ref=f43e333]: 09:30
+                - code [ref=f43e334]: H:i
+              - generic [ref=f43e335]:
+                - 'radio "Custom: enter a custom time format in the following field" [ref=f43e336] [cursor=pointer]'
+                - generic [ref=f43e337]:
+                  - text: "Custom:"
+                  - generic [ref=f43e338]: enter a custom time format in the following field
+              - generic [ref=f43e339]: "Custom time format:"
+              - textbox "Custom time format:" [ref=f43e340]: g:i a
+              - paragraph [ref=f43e341]:
+                - strong [ref=f43e342]: "Preview:"
+                - text: 9:30 am
+              - paragraph [ref=f43e343]:
+                - link "Documentation on date and time formatting" [ref=f43e344] [cursor=pointer]:
+                  - /url: https://wordpress.org/documentation/article/customize-date-and-time-format/
+                - text: .
+            - text: Week Starts On
+            - combobox "Week Starts On" [ref=f43e345] [cursor=pointer]:
+              - option "Sunday"
+              - option "Monday" [selected]
+              - option "Tuesday"
+              - option "Wednesday"
+              - option "Thursday"
+              - option "Friday"
+              - option "Saturday"
+            - paragraph [ref=f43e346]:
+              - button "Save Changes" [ref=f43e347] [cursor=pointer]
+  - contentinfo [ref=f43e348]:
+    - paragraph [ref=f43e349]:
+      - generic [ref=f43e350]:
+        - text: Thank you for creating with
+        - link "WordPress" [ref=f43e351] [cursor=pointer]:
+          - /url: https://wordpress.org/
+        - text: .
+    - paragraph [ref=f43e352]: Version 7.0.4

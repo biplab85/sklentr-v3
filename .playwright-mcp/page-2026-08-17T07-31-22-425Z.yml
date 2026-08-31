@@ -1,0 +1,506 @@
+- generic [ref=f1e2]:
+  - navigation "Main menu":
+    - link "Skip to main content" [ref=f1e3] [cursor=pointer]:
+      - /url: "#wpbody-content"
+    - link "Skip to toolbar" [ref=f1e4] [cursor=pointer]:
+      - /url: "#wp-toolbar"
+    - list [ref=f1e7]:
+      - listitem [ref=f1e8]:
+        - link "Dashboard" [ref=f1e9] [cursor=pointer]:
+          - /url: index.php
+          - generic [ref=f1e10]: 
+        - list [ref=f1e12]:
+          - listitem [ref=f1e13]:
+            - link "Home" [ref=f1e14] [cursor=pointer]:
+              - /url: index.php
+          - listitem [ref=f1e15]:
+            - link "Updates" [ref=f1e16] [cursor=pointer]:
+              - /url: update-core.php
+      - listitem [ref=f1e17]
+      - listitem [ref=f1e19]:
+        - link "Posts" [ref=f1e20] [cursor=pointer]:
+          - /url: edit.php
+          - generic [ref=f1e21]: 
+        - list [ref=f1e23]:
+          - listitem [ref=f1e24]:
+            - link "All Posts" [ref=f1e25] [cursor=pointer]:
+              - /url: edit.php
+          - listitem [ref=f1e26]:
+            - link "Add Post" [ref=f1e27] [cursor=pointer]:
+              - /url: post-new.php
+          - listitem [ref=f1e28]:
+            - link "Categories" [ref=f1e29] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=category
+          - listitem [ref=f1e30]:
+            - link "Tags" [ref=f1e31] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=post_tag
+      - listitem [ref=f1e32]:
+        - link "Media" [ref=f1e33] [cursor=pointer]:
+          - /url: upload.php
+          - generic [ref=f1e34]: 
+        - list [ref=f1e36]:
+          - listitem [ref=f1e37]:
+            - link "Library" [ref=f1e38] [cursor=pointer]:
+              - /url: upload.php
+          - listitem [ref=f1e39]:
+            - link "Add Media File" [ref=f1e40] [cursor=pointer]:
+              - /url: media-new.php
+      - listitem [ref=f1e41]:
+        - link "Pages" [ref=f1e42] [cursor=pointer]:
+          - /url: edit.php?post_type=page
+          - generic [ref=f1e43]: 
+        - list [ref=f1e45]:
+          - listitem [ref=f1e46]:
+            - link "All Pages" [ref=f1e47] [cursor=pointer]:
+              - /url: edit.php?post_type=page
+          - listitem [ref=f1e48]:
+            - link "Add Page" [ref=f1e49] [cursor=pointer]:
+              - /url: post-new.php?post_type=page
+      - listitem [ref=f1e50]:
+        - link "Comments" [ref=f1e51] [cursor=pointer]:
+          - /url: edit-comments.php
+          - generic [ref=f1e52]: 
+      - listitem [ref=f1e54]
+      - listitem [ref=f1e56]:
+        - link "Sklentr" [ref=f1e57] [cursor=pointer]:
+          - /url: admin.php?page=sklentr-settings
+          - generic [ref=f1e58]: 
+        - list [ref=f1e60]:
+          - listitem [ref=f1e61]:
+            - link "Settings" [ref=f1e62] [cursor=pointer]:
+              - /url: admin.php?page=sklentr-settings
+          - listitem [ref=f1e63]:
+            - link "Services (Home, /services)" [ref=f1e64] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_service
+          - listitem [ref=f1e65]:
+            - link "Why-Us Points (/services)" [ref=f1e66] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_svc_perk
+          - listitem [ref=f1e67]:
+            - link "Trust Stats (Home, /services)" [ref=f1e68] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_stat
+          - listitem [ref=f1e69]:
+            - link "Trusted Logos (Home)" [ref=f1e70] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_project
+          - listitem [ref=f1e71]:
+            - link "Problem Cards (Home)" [ref=f1e72] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_problem
+          - listitem [ref=f1e73]:
+            - link "Hero Plan Steps (Home)" [ref=f1e74] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_step
+          - listitem [ref=f1e75]:
+            - link "Hero Plan Tiles (Home)" [ref=f1e76] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_tile
+          - listitem [ref=f1e77]:
+            - link "Why-Us Pillars (Home)" [ref=f1e78] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pillar
+          - listitem [ref=f1e79]:
+            - link "Visa Features (Home)" [ref=f1e80] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_visa_feature
+          - listitem [ref=f1e81]:
+            - link "Featured Work (Home)" [ref=f1e82] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_work
+          - listitem [ref=f1e83]:
+            - link "Process Steps (Home)" [ref=f1e84] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_process
+          - listitem [ref=f1e85]:
+            - link "FAQ (Home)" [ref=f1e86] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_faq
+          - listitem [ref=f1e87]:
+            - link "Team Locations (unused)" [ref=f1e88] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_location
+          - listitem [ref=f1e89]:
+            - link "Tech Stack (Home)" [ref=f1e90] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_tech
+          - listitem [ref=f1e91]:
+            - link "Pricing Tiers (Home)" [ref=f1e92] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pricing
+          - listitem [ref=f1e93]:
+            - link "Portfolio Projects (/portfolio)" [ref=f1e94] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_portfolio
+      - listitem [ref=f1e95]:
+        - link "Appearance" [ref=f1e96] [cursor=pointer]:
+          - /url: themes.php
+          - generic [ref=f1e97]: 
+        - list [ref=f1e99]:
+          - listitem [ref=f1e100]:
+            - link "Themes" [ref=f1e101] [cursor=pointer]:
+              - /url: themes.php
+          - listitem [ref=f1e102]:
+            - link "Patterns" [ref=f1e103] [cursor=pointer]:
+              - /url: site-editor.php?p=/pattern
+          - listitem [ref=f1e104]:
+            - link "Customize" [ref=f1e105] [cursor=pointer]:
+              - /url: customize.php?return=%2Fsklentr%2Fsklentr-v3%2Fwp-admin%2F
+          - listitem [ref=f1e106]:
+            - link "Fonts" [ref=f1e107] [cursor=pointer]:
+              - /url: font-library.php
+          - listitem [ref=f1e108]:
+            - link "Menus" [ref=f1e109] [cursor=pointer]:
+              - /url: nav-menus.php
+          - listitem [ref=f1e110]:
+            - link "Theme File Editor" [ref=f1e111] [cursor=pointer]:
+              - /url: theme-editor.php
+      - listitem [ref=f1e112]:
+        - link "Plugins" [ref=f1e113] [cursor=pointer]:
+          - /url: plugins.php
+          - generic [ref=f1e114]: 
+        - list [ref=f1e116]:
+          - listitem [ref=f1e117]:
+            - link "Installed Plugins" [ref=f1e118] [cursor=pointer]:
+              - /url: plugins.php
+          - listitem [ref=f1e119]:
+            - link "Add Plugin" [ref=f1e120] [cursor=pointer]:
+              - /url: plugin-install.php
+          - listitem [ref=f1e121]:
+            - link "Plugin File Editor" [ref=f1e122] [cursor=pointer]:
+              - /url: plugin-editor.php
+      - listitem [ref=f1e123]:
+        - link "Users" [ref=f1e124] [cursor=pointer]:
+          - /url: users.php
+          - generic [ref=f1e125]: 
+        - list [ref=f1e127]:
+          - listitem [ref=f1e128]:
+            - link "All Users" [ref=f1e129] [cursor=pointer]:
+              - /url: users.php
+          - listitem [ref=f1e130]:
+            - link "Add User" [ref=f1e131] [cursor=pointer]:
+              - /url: user-new.php
+          - listitem [ref=f1e132]:
+            - link "Profile" [ref=f1e133] [cursor=pointer]:
+              - /url: profile.php
+      - listitem [ref=f1e134]:
+        - link "Tools" [ref=f1e135] [cursor=pointer]:
+          - /url: tools.php
+          - generic [ref=f1e136]: 
+        - list [ref=f1e138]:
+          - listitem [ref=f1e139]:
+            - link "Available Tools" [ref=f1e140] [cursor=pointer]:
+              - /url: tools.php
+          - listitem [ref=f1e141]:
+            - link "Import" [ref=f1e142] [cursor=pointer]:
+              - /url: import.php
+          - listitem [ref=f1e143]:
+            - link "Export" [ref=f1e144] [cursor=pointer]:
+              - /url: export.php
+          - listitem [ref=f1e145]:
+            - link "Site Health" [ref=f1e146] [cursor=pointer]:
+              - /url: site-health.php
+          - listitem [ref=f1e147]:
+            - link "Export Personal Data" [ref=f1e148] [cursor=pointer]:
+              - /url: export-personal-data.php
+          - listitem [ref=f1e149]:
+            - link "Erase Personal Data" [ref=f1e150] [cursor=pointer]:
+              - /url: erase-personal-data.php
+          - listitem [ref=f1e151]:
+            - link "Sklentr Repair" [ref=f1e152] [cursor=pointer]:
+              - /url: tools.php?page=sklentr-repair
+      - listitem [ref=f1e153]:
+        - link "Settings" [ref=f1e154] [cursor=pointer]:
+          - /url: options-general.php
+          - generic [ref=f1e155]: 
+        - list [ref=f1e157]:
+          - listitem [ref=f1e158]:
+            - link "General" [ref=f1e159] [cursor=pointer]:
+              - /url: options-general.php
+          - listitem [ref=f1e160]:
+            - link "Connectors" [ref=f1e161] [cursor=pointer]:
+              - /url: options-connectors.php
+          - listitem [ref=f1e162]:
+            - link "Writing" [ref=f1e163] [cursor=pointer]:
+              - /url: options-writing.php
+          - listitem [ref=f1e164]:
+            - link "Reading" [ref=f1e165] [cursor=pointer]:
+              - /url: options-reading.php
+          - listitem [ref=f1e166]:
+            - link "Discussion" [ref=f1e167] [cursor=pointer]:
+              - /url: options-discussion.php
+          - listitem [ref=f1e168]:
+            - link "Media" [ref=f1e169] [cursor=pointer]:
+              - /url: options-media.php
+          - listitem [ref=f1e170]:
+            - link "Permalinks" [ref=f1e171] [cursor=pointer]:
+              - /url: options-permalink.php
+          - listitem [ref=f1e172]:
+            - link "Privacy" [ref=f1e173] [cursor=pointer]:
+              - /url: options-privacy.php
+      - listitem [ref=f1e174]:
+        - button "Collapse Main menu" [expanded] [ref=f1e175] [cursor=pointer]:
+          - generic [ref=f1e177]: Collapse Menu
+  - generic [ref=f1e178]:
+    - generic [ref=f1e179]:
+      - navigation "Toolbar":
+        - menu:
+          - group [ref=f1e180]:
+            - menuitem "About WordPress" [ref=f1e181] [cursor=pointer]
+          - group [ref=f1e184]:
+            - menuitem "Sklentr V3" [ref=f1e185] [cursor=pointer]
+          - group [ref=f1e186]:
+            - menuitem "Ctrl+K Open command palette" [ref=f1e187] [cursor=pointer]:
+              - generic [ref=f1e189]:
+                - text: Ctrl+K
+                - generic [ref=f1e190]: Open command palette
+          - group [ref=f1e191]:
+            - menuitem "0 Comments in moderation" [ref=f1e192] [cursor=pointer]:
+              - generic [ref=f1e194]: "0"
+          - group [ref=f1e196]:
+            - menuitem "New" [ref=f1e197] [cursor=pointer]
+        - menu [ref=f1e200]:
+          - group [ref=f1e201]:
+            - menuitem "Howdy, admin" [ref=f1e202] [cursor=pointer]
+    - main [ref=f1e203]:
+      - generic [ref=f1e204]:
+        - generic [ref=f1e205]:
+          - button "Screen Options" [ref=f1e207] [cursor=pointer]
+          - button "Help" [ref=f1e209] [cursor=pointer]
+        - generic [ref=f1e210]:
+          - heading "Dashboard" [level=1] [ref=f1e211]
+          - generic [ref=f1e212]:
+            - link "Dismiss the welcome panel" [ref=f1e213] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/wp-admin/?welcome=0
+              - text:  Dismiss
+            - generic [ref=f1e214]:
+              - generic [ref=f1e216]:
+                - heading "Welcome to WordPress!" [level=2] [ref=f1e223]
+                - paragraph [ref=f1e224]:
+                  - link "Learn more about the 7.0.4 version." [ref=f1e225] [cursor=pointer]:
+                    - /url: http://localhost/sklentr/sklentr-v3/wp-admin/about.php
+              - generic [ref=f1e226]:
+                - generic [ref=f1e231]:
+                  - heading "Author rich content with blocks and patterns" [level=3] [ref=f1e232]
+                  - paragraph [ref=f1e233]: Block patterns are pre-configured block layouts. Use them to get inspired or create new pages in a flash.
+                  - link "Add a new page" [ref=f1e234] [cursor=pointer]:
+                    - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post-new.php?post_type=page
+                - generic [ref=f1e239]:
+                  - heading "Start Customizing" [level=3] [ref=f1e240]
+                  - paragraph [ref=f1e241]: Configure your site’s logo, header, menus, and more in the Customizer.
+                  - link "Open the Customizer" [ref=f1e242] [cursor=pointer]:
+                    - /url: http://localhost/sklentr/sklentr-v3/wp-admin/customize.php
+                - generic [ref=f1e247]:
+                  - heading "Discover a new way to build your site." [level=3] [ref=f1e248]
+                  - paragraph [ref=f1e249]: There is a new kind of WordPress theme, called a block theme, that lets you build the site you’ve always wanted — with blocks and styles.
+                  - link "Learn about block themes" [ref=f1e250] [cursor=pointer]:
+                    - /url: https://wordpress.org/documentation/article/block-themes/
+          - generic [ref=f1e252]:
+            - generic [ref=f1e254]:
+              - generic [ref=f1e255]:
+                - generic [ref=f1e256]:
+                  - heading "Site Health Status" [level=2] [ref=f1e257]
+                  - generic [ref=f1e258]:
+                    - button "Move up" [disabled] [ref=f1e259]
+                    - button "Move down" [ref=f1e262] [cursor=pointer]
+                    - 'button "Toggle panel: Site Health Status" [expanded] [ref=f1e265] [cursor=pointer]'
+                - generic [ref=f1e269]:
+                  - generic [ref=f1e270]: No information yet…
+                  - paragraph [ref=f1e273]:
+                    - text: Site health checks will automatically run periodically to gather information about your site. You can also
+                    - link "visit the Site Health screen" [ref=f1e274] [cursor=pointer]:
+                      - /url: http://localhost/sklentr/sklentr-v3/wp-admin/site-health.php
+                    - text: to gather information about your site now.
+              - generic [ref=f1e275]:
+                - generic [ref=f1e276]:
+                  - heading "At a Glance" [level=2] [ref=f1e277]
+                  - generic [ref=f1e278]:
+                    - button "Move up" [ref=f1e279] [cursor=pointer]
+                    - button "Move down" [ref=f1e282] [cursor=pointer]
+                    - 'button "Toggle panel: At a Glance" [expanded] [ref=f1e285] [cursor=pointer]'
+                - generic [ref=f1e289]:
+                  - list [ref=f1e290]:
+                    - listitem [ref=f1e291]:
+                      - link "7 Published posts" [ref=f1e292] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit.php?post_status=publish&post_type=post
+                    - listitem [ref=f1e293]:
+                      - link "11 Published pages" [ref=f1e294] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit.php?post_status=publish&post_type=page
+                    - listitem [ref=f1e295]:
+                      - link "1 Comment" [ref=f1e296] [cursor=pointer]:
+                        - /url: edit-comments.php
+                  - paragraph [ref=f1e297]:
+                    - generic [ref=f1e298]:
+                      - text: WordPress 7.0.4 running
+                      - link "Sklentr" [ref=f1e299] [cursor=pointer]:
+                        - /url: themes.php
+                      - text: theme.
+              - generic [ref=f1e300]:
+                - generic [ref=f1e301]:
+                  - heading "Activity" [level=2] [ref=f1e302]
+                  - generic [ref=f1e303]:
+                    - button "Move up" [ref=f1e304] [cursor=pointer]
+                    - button "Move down" [ref=f1e307] [cursor=pointer]
+                    - 'button "Toggle panel: Activity" [expanded] [ref=f1e310] [cursor=pointer]'
+                - generic [ref=f1e314]:
+                  - generic [ref=f1e315]:
+                    - heading "Recently Published" [level=3] [ref=f1e316]
+                    - list [ref=f1e317]:
+                      - listitem [ref=f1e318]:
+                        - generic [ref=f1e319]: Today, 3:55 am
+                        - link "Edit “Hello world!”" [ref=f1e320] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=1&action=edit
+                          - text: Hello world!
+                      - listitem [ref=f1e321]:
+                        - generic [ref=f1e322]: Jan 20th, 9:00 am
+                        - link "Edit “How to Validate Your Startup Idea Before Building”" [ref=f1e323] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=146&action=edit
+                          - text: How to Validate Your Startup Idea Before Building
+                      - listitem [ref=f1e324]:
+                        - generic [ref=f1e325]: Jan 15th, 9:00 am
+                        - 'link "Edit “The 2-Week MVP: What’s Actually Possible”" [ref=f1e326] [cursor=pointer]':
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=147&action=edit
+                          - text: "The 2-Week MVP: What’s Actually Possible"
+                      - listitem [ref=f1e327]:
+                        - generic [ref=f1e328]: Jan 10th, 9:00 am
+                        - 'link "Edit “Startup Visa Canada: Technical Requirements Explained”" [ref=f1e329] [cursor=pointer]':
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=148&action=edit
+                          - text: "Startup Visa Canada: Technical Requirements Explained"
+                      - listitem [ref=f1e330]:
+                        - generic [ref=f1e331]: Jan 5th, 9:00 am
+                        - link "Edit “Why Your MVP Doesn’t Need to Be Perfect”" [ref=f1e332] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=149&action=edit
+                          - text: Why Your MVP Doesn’t Need to Be Perfect
+                  - generic [ref=f1e333]:
+                    - heading "Recent Comments" [level=3] [ref=f1e334]
+                    - list [ref=f1e335]:
+                      - listitem [ref=f1e336]:
+                        - generic [ref=f1e337]:
+                          - paragraph [ref=f1e338]:
+                            - text: From
+                            - link "A WordPress Commenter" [ref=f1e340] [cursor=pointer]:
+                              - /url: https://wordpress.org/
+                            - text: "on"
+                            - link "Hello world!" [ref=f1e341] [cursor=pointer]:
+                              - /url: http://localhost/sklentr/sklentr-v3/hello-world/
+                          - blockquote [ref=f1e342]:
+                            - paragraph [ref=f1e343]: Hi, this is a comment. To get started with moderating, editing, and deleting comments, please visit the Comments screen in…
+                          - paragraph [ref=f1e344]:
+                            - button "Unapprove this comment" [ref=f1e346] [cursor=pointer]: Unapprove
+                            - generic [ref=f1e347]:
+                              - text: "|"
+                              - button "Reply to this comment" [ref=f1e348] [cursor=pointer]: Reply
+                            - generic [ref=f1e349]:
+                              - text: "|"
+                              - link "Edit this comment" [ref=f1e350] [cursor=pointer]:
+                                - /url: comment.php?action=editcomment&c=1
+                                - text: Edit
+                            - generic [ref=f1e351]:
+                              - text: "|"
+                              - button "Mark this comment as spam" [ref=f1e352] [cursor=pointer]: Spam
+                            - generic [ref=f1e353]:
+                              - text: "|"
+                              - button "Move this comment to the Trash" [ref=f1e354] [cursor=pointer]: Trash
+                            - generic [ref=f1e355]:
+                              - text: "|"
+                              - link "View this comment" [ref=f1e356] [cursor=pointer]:
+                                - /url: http://localhost/sklentr/sklentr-v3/hello-world/#comment-1
+                                - text: View
+                    - heading "View more comments" [level=3] [ref=f1e357]
+                    - list [ref=f1e358]:
+                      - listitem [ref=f1e359]:
+                        - link "All (1)" [ref=f1e360] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit-comments.php?comment_status=all
+                          - text: All
+                          - generic [ref=f1e361]: (1)
+                        - text: "|"
+                      - listitem [ref=f1e362]:
+                        - link "Mine (0)" [ref=f1e363] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit-comments.php?comment_status=mine&user_id=1
+                          - text: Mine
+                          - generic [ref=f1e364]: (0)
+                        - text: "|"
+                      - listitem [ref=f1e365]:
+                        - link "Pending (0)" [ref=f1e366] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit-comments.php?comment_status=moderated
+                          - text: Pending
+                          - generic [ref=f1e367]: (0)
+                        - text: "|"
+                      - listitem [ref=f1e368]:
+                        - link "Approved (1)" [ref=f1e369] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit-comments.php?comment_status=approved
+                          - text: Approved
+                          - generic [ref=f1e370]: (1)
+                        - text: "|"
+                      - listitem [ref=f1e371]:
+                        - link "Spam (0)" [ref=f1e372] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit-comments.php?comment_status=spam
+                          - text: Spam
+                          - generic [ref=f1e373]: (0)
+                        - text: "|"
+                      - listitem [ref=f1e374]:
+                        - link "Trash (0)" [ref=f1e375] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit-comments.php?comment_status=trash
+                          - text: Trash
+                          - generic [ref=f1e376]: (0)
+            - generic [ref=f1e378]:
+              - generic [ref=f1e379]:
+                - generic [ref=f1e380]:
+                  - heading "Quick Draft" [level=2] [ref=f1e381]
+                  - generic [ref=f1e383]:
+                    - button "Move up" [ref=f1e384] [cursor=pointer]
+                    - button "Move down" [ref=f1e387] [cursor=pointer]
+                    - 'button "Toggle panel: Quick Draft" [expanded] [ref=f1e390] [cursor=pointer]':
+                      - generic [ref=f1e391]:
+                        - text: "Toggle panel:"
+                        - generic [ref=f1e392]: Quick Draft
+                - generic [ref=f1e395]:
+                  - generic [ref=f1e396]:
+                    - generic [ref=f1e397]: Title
+                    - textbox "Title" [ref=f1e398]
+                  - generic [ref=f1e399]:
+                    - generic [ref=f1e400]: Content
+                    - textbox "Content" [ref=f1e401]:
+                      - /placeholder: What’s on your mind?
+                  - paragraph [ref=f1e402]:
+                    - button "Save Draft" [ref=f1e403] [cursor=pointer]
+              - generic [ref=f1e404]:
+                - generic [ref=f1e405]:
+                  - heading "WordPress Events and News" [level=2] [ref=f1e406]
+                  - generic [ref=f1e407]:
+                    - button "Move up" [ref=f1e408] [cursor=pointer]
+                    - button "Move down" [ref=f1e411] [cursor=pointer]
+                    - 'button "Toggle panel: WordPress Events and News" [expanded] [ref=f1e414] [cursor=pointer]'
+                - generic [ref=f1e417]:
+                  - text: 
+                  - generic [ref=f1e418]:
+                    - list [ref=f1e420]:
+                      - listitem [ref=f1e421]:
+                        - link "Introducing the WordPress Browser Extension" [ref=f1e422] [cursor=pointer]:
+                          - /url: https://wordpress.org/news/2026/08/browser-extension/
+                      - listitem [ref=f1e423]:
+                        - link "WordPress 7.0.4 Release" [ref=f1e424] [cursor=pointer]:
+                          - /url: https://wordpress.org/news/2026/08/wordpress-7-0-4-release/
+                    - list [ref=f1e426]:
+                      - listitem [ref=f1e427]:
+                        - 'link "Gutenberg Times: WordPress 7.1 arrives at WordCamp US, Abilities API for developers, and a new theme for Gutenberg Times and more — Weekend Edition #373" [ref=f1e428] [cursor=pointer]':
+                          - /url: https://gutenbergtimes.com/wordpress-7-1-arrives-at-wordcamp-us-abilities-api-for-developers-and-a-new-theme-for-gutenberg-times-and-more-weekend-edition-373/
+                      - listitem [ref=f1e429]:
+                        - 'link "Open Channels FM: Is Digital Fame Really the Same as Traditional Celebrity?" [ref=f1e430] [cursor=pointer]':
+                          - /url: https://openchannels.fm/is-digital-fame-really-the-same-as-traditional-celebrity/
+                      - listitem [ref=f1e431]:
+                        - 'link "Open Channels FM: Mozilla, Alibaba, and WordPress Headlines Reflect Changing Definitions in AI and Open Source" [ref=f1e432] [cursor=pointer]':
+                          - /url: https://openchannels.fm/mozilla-alibaba-and-wordpress-headlines-reflect-changing-definitions-in-ai-and-open-source/
+                  - paragraph [ref=f1e433]:
+                    - link "Meetups (opens in a new tab)" [ref=f1e434] [cursor=pointer]:
+                      - /url: https://make.wordpress.org/community/meetups-landing-page
+                      - text: Meetups
+                      - generic [ref=f1e435]: (opens in a new tab)
+                      - generic [ref=f1e436]: 
+                    - text: "|"
+                    - link "WordCamps (opens in a new tab)" [ref=f1e437] [cursor=pointer]:
+                      - /url: https://central.wordcamp.org/schedule/
+                      - text: WordCamps
+                      - generic [ref=f1e438]: (opens in a new tab)
+                      - generic [ref=f1e439]: 
+                    - text: "|"
+                    - link "News (opens in a new tab)" [ref=f1e440] [cursor=pointer]:
+                      - /url: https://wordpress.org/news/
+                      - text: News
+                      - generic [ref=f1e441]: (opens in a new tab)
+                      - generic [ref=f1e442]: 
+            - generic [ref=f1e443]: Drag boxes here
+            - generic [ref=f1e445]: Drag boxes here
+  - contentinfo [ref=f1e447]:
+    - paragraph [ref=f1e448]:
+      - generic [ref=f1e449]:
+        - text: Thank you for creating with
+        - link "WordPress" [ref=f1e450] [cursor=pointer]:
+          - /url: https://wordpress.org/
+        - text: .
+    - paragraph [ref=f1e451]: Version 7.0.4

@@ -1,0 +1,355 @@
+- generic [ref=f40e2]:
+  - navigation "Main menu":
+    - link "Skip to main content" [ref=f40e3] [cursor=pointer]:
+      - /url: "#wpbody-content"
+    - link "Skip to toolbar" [ref=f40e4] [cursor=pointer]:
+      - /url: "#wp-toolbar"
+    - list [ref=f40e7]:
+      - listitem [ref=f40e8]:
+        - link "Dashboard" [ref=f40e9] [cursor=pointer]:
+          - /url: index.php
+          - generic [ref=f40e10]: 
+        - list [ref=f40e12]:
+          - listitem [ref=f40e13]:
+            - link "Home" [ref=f40e14] [cursor=pointer]:
+              - /url: index.php
+          - listitem [ref=f40e15]:
+            - link "Updates" [ref=f40e16] [cursor=pointer]:
+              - /url: update-core.php
+      - listitem [ref=f40e17]
+      - listitem [ref=f40e19]:
+        - link "Posts" [ref=f40e20] [cursor=pointer]:
+          - /url: edit.php
+          - generic [ref=f40e21]: 
+        - list [ref=f40e23]:
+          - listitem [ref=f40e24]:
+            - link "All Posts" [ref=f40e25] [cursor=pointer]:
+              - /url: edit.php
+          - listitem [ref=f40e26]:
+            - link "Add Post" [ref=f40e27] [cursor=pointer]:
+              - /url: post-new.php
+          - listitem [ref=f40e28]:
+            - link "Categories" [ref=f40e29] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=category
+          - listitem [ref=f40e30]:
+            - link "Tags" [ref=f40e31] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=post_tag
+      - listitem [ref=f40e32]:
+        - link "Media" [ref=f40e33] [cursor=pointer]:
+          - /url: upload.php
+          - generic [ref=f40e34]: 
+        - list [ref=f40e36]:
+          - listitem [ref=f40e37]:
+            - link "Library" [ref=f40e38] [cursor=pointer]:
+              - /url: upload.php
+          - listitem [ref=f40e39]:
+            - link "Add Media File" [ref=f40e40] [cursor=pointer]:
+              - /url: media-new.php
+      - listitem [ref=f40e41]:
+        - link "Pages" [ref=f40e42] [cursor=pointer]:
+          - /url: edit.php?post_type=page
+          - generic [ref=f40e43]: 
+        - list [ref=f40e45]:
+          - listitem [ref=f40e46]:
+            - link "All Pages" [ref=f40e47] [cursor=pointer]:
+              - /url: edit.php?post_type=page
+          - listitem [ref=f40e48]:
+            - link "Add Page" [ref=f40e49] [cursor=pointer]:
+              - /url: post-new.php?post_type=page
+      - listitem [ref=f40e50]:
+        - link "Comments" [ref=f40e51] [cursor=pointer]:
+          - /url: edit-comments.php
+          - generic [ref=f40e52]: 
+      - listitem [ref=f40e54]
+      - listitem [ref=f40e56]:
+        - link "Sklentr" [ref=f40e57] [cursor=pointer]:
+          - /url: admin.php?page=sklentr-settings
+          - generic [ref=f40e58]: 
+        - list [ref=f40e60]:
+          - listitem [ref=f40e61]:
+            - link "Settings" [ref=f40e62] [cursor=pointer]:
+              - /url: admin.php?page=sklentr-settings
+          - listitem [ref=f40e63]:
+            - link "Services (Home, /services)" [ref=f40e64] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_service
+          - listitem [ref=f40e65]:
+            - link "Why-Us Points (/services)" [ref=f40e66] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_svc_perk
+          - listitem [ref=f40e67]:
+            - link "Trust Stats (Home, /services)" [ref=f40e68] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_stat
+          - listitem [ref=f40e69]:
+            - link "Trusted Logos (Home)" [ref=f40e70] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_project
+          - listitem [ref=f40e71]:
+            - link "Problem Cards (Home)" [ref=f40e72] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_problem
+          - listitem [ref=f40e73]:
+            - link "Hero Plan Steps (Home)" [ref=f40e74] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_step
+          - listitem [ref=f40e75]:
+            - link "Hero Plan Tiles (Home)" [ref=f40e76] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_tile
+          - listitem [ref=f40e77]:
+            - link "Why-Us Pillars (Home)" [ref=f40e78] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pillar
+          - listitem [ref=f40e79]:
+            - link "Visa Features (Home)" [ref=f40e80] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_visa_feature
+          - listitem [ref=f40e81]:
+            - link "Featured Work (Home)" [ref=f40e82] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_work
+          - listitem [ref=f40e83]:
+            - link "Process Steps (Home)" [ref=f40e84] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_process
+          - listitem [ref=f40e85]:
+            - link "FAQ (Home)" [ref=f40e86] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_faq
+          - listitem [ref=f40e87]:
+            - link "Team Locations (unused)" [ref=f40e88] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_location
+          - listitem [ref=f40e89]:
+            - link "Tech Stack (Home)" [ref=f40e90] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_tech
+          - listitem [ref=f40e91]:
+            - link "Pricing Tiers (Home)" [ref=f40e92] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pricing
+          - listitem [ref=f40e93]:
+            - link "Portfolio Projects (/portfolio)" [ref=f40e94] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_portfolio
+          - listitem [ref=f40e95]:
+            - link "Subscribers" [ref=f40e96] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_subscriber
+      - listitem [ref=f40e97]:
+        - link "Appearance" [ref=f40e98] [cursor=pointer]:
+          - /url: themes.php
+          - generic [ref=f40e99]: 
+        - list [ref=f40e101]:
+          - listitem [ref=f40e102]:
+            - link "Themes" [ref=f40e103] [cursor=pointer]:
+              - /url: themes.php
+          - listitem [ref=f40e104]:
+            - link "Patterns" [ref=f40e105] [cursor=pointer]:
+              - /url: site-editor.php?p=/pattern
+          - listitem [ref=f40e106]:
+            - link "Customize" [ref=f40e107] [cursor=pointer]:
+              - /url: customize.php?return=%2Fsklentr%2Fsklentr-v3%2Fwp-admin%2Fpost.php%3Fpost%3D136%26action%3Dedit
+          - listitem [ref=f40e108]:
+            - link "Fonts" [ref=f40e109] [cursor=pointer]:
+              - /url: font-library.php
+          - listitem [ref=f40e110]:
+            - link "Menus" [ref=f40e111] [cursor=pointer]:
+              - /url: nav-menus.php
+          - listitem [ref=f40e112]:
+            - link "Theme File Editor" [ref=f40e113] [cursor=pointer]:
+              - /url: theme-editor.php
+      - listitem [ref=f40e114]:
+        - link "Plugins" [ref=f40e115] [cursor=pointer]:
+          - /url: plugins.php
+          - generic [ref=f40e116]: 
+        - list [ref=f40e118]:
+          - listitem [ref=f40e119]:
+            - link "Installed Plugins" [ref=f40e120] [cursor=pointer]:
+              - /url: plugins.php
+          - listitem [ref=f40e121]:
+            - link "Add Plugin" [ref=f40e122] [cursor=pointer]:
+              - /url: plugin-install.php
+          - listitem [ref=f40e123]:
+            - link "Plugin File Editor" [ref=f40e124] [cursor=pointer]:
+              - /url: plugin-editor.php
+      - listitem [ref=f40e125]:
+        - link "Users" [ref=f40e126] [cursor=pointer]:
+          - /url: users.php
+          - generic [ref=f40e127]: 
+        - list [ref=f40e129]:
+          - listitem [ref=f40e130]:
+            - link "All Users" [ref=f40e131] [cursor=pointer]:
+              - /url: users.php
+          - listitem [ref=f40e132]:
+            - link "Add User" [ref=f40e133] [cursor=pointer]:
+              - /url: user-new.php
+          - listitem [ref=f40e134]:
+            - link "Profile" [ref=f40e135] [cursor=pointer]:
+              - /url: profile.php
+      - listitem [ref=f40e136]:
+        - link "Tools" [ref=f40e137] [cursor=pointer]:
+          - /url: tools.php
+          - generic [ref=f40e138]: 
+        - list [ref=f40e140]:
+          - listitem [ref=f40e141]:
+            - link "Available Tools" [ref=f40e142] [cursor=pointer]:
+              - /url: tools.php
+          - listitem [ref=f40e143]:
+            - link "Import" [ref=f40e144] [cursor=pointer]:
+              - /url: import.php
+          - listitem [ref=f40e145]:
+            - link "Export" [ref=f40e146] [cursor=pointer]:
+              - /url: export.php
+          - listitem [ref=f40e147]:
+            - link "Site Health" [ref=f40e148] [cursor=pointer]:
+              - /url: site-health.php
+          - listitem [ref=f40e149]:
+            - link "Export Personal Data" [ref=f40e150] [cursor=pointer]:
+              - /url: export-personal-data.php
+          - listitem [ref=f40e151]:
+            - link "Erase Personal Data" [ref=f40e152] [cursor=pointer]:
+              - /url: erase-personal-data.php
+          - listitem [ref=f40e153]:
+            - link "Sklentr Repair" [ref=f40e154] [cursor=pointer]:
+              - /url: tools.php?page=sklentr-repair
+      - listitem [ref=f40e155]:
+        - link "Settings" [ref=f40e156] [cursor=pointer]:
+          - /url: options-general.php
+          - generic [ref=f40e157]: 
+        - list [ref=f40e159]:
+          - listitem [ref=f40e160]:
+            - link "General" [ref=f40e161] [cursor=pointer]:
+              - /url: options-general.php
+          - listitem [ref=f40e162]:
+            - link "Connectors" [ref=f40e163] [cursor=pointer]:
+              - /url: options-connectors.php
+          - listitem [ref=f40e164]:
+            - link "Writing" [ref=f40e165] [cursor=pointer]:
+              - /url: options-writing.php
+          - listitem [ref=f40e166]:
+            - link "Reading" [ref=f40e167] [cursor=pointer]:
+              - /url: options-reading.php
+          - listitem [ref=f40e168]:
+            - link "Discussion" [ref=f40e169] [cursor=pointer]:
+              - /url: options-discussion.php
+          - listitem [ref=f40e170]:
+            - link "Media" [ref=f40e171] [cursor=pointer]:
+              - /url: options-media.php
+          - listitem [ref=f40e172]:
+            - link "Permalinks" [ref=f40e173] [cursor=pointer]:
+              - /url: options-permalink.php
+          - listitem [ref=f40e174]:
+            - link "Privacy" [ref=f40e175] [cursor=pointer]:
+              - /url: options-privacy.php
+      - listitem [ref=f40e176]:
+        - button "Collapse Main menu" [expanded] [ref=f40e177] [cursor=pointer]:
+          - generic [ref=f40e179]: Collapse Menu
+  - generic [ref=f40e180]:
+    - generic [ref=f40e181]:
+      - navigation "Toolbar":
+        - menu:
+          - group [ref=f40e182]:
+            - menuitem "About WordPress" [ref=f40e183] [cursor=pointer]
+          - group [ref=f40e186]:
+            - menuitem "Sklentr V3" [ref=f40e187] [cursor=pointer]
+          - group [ref=f40e188]:
+            - menuitem "Ctrl+K Open command palette" [ref=f40e189] [cursor=pointer]:
+              - generic [ref=f40e191]:
+                - text: Ctrl+K
+                - generic [ref=f40e192]: Open command palette
+          - group [ref=f40e193]:
+            - menuitem "0 Comments in moderation" [ref=f40e194] [cursor=pointer]:
+              - generic [ref=f40e196]: "0"
+          - group [ref=f40e198]:
+            - menuitem "New" [ref=f40e199] [cursor=pointer]
+        - menu [ref=f40e202]:
+          - group [ref=f40e203]:
+            - menuitem "Howdy, admin" [ref=f40e204] [cursor=pointer]
+    - main [ref=f40e205]:
+      - generic [ref=f40e206]:
+        - button "Screen Options" [ref=f40e209] [cursor=pointer]
+        - generic [ref=f40e210]:
+          - heading "Edit Portfolio Project" [level=1] [ref=f40e211]
+          - link "Add Portfolio Project" [ref=f40e212] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post-new.php?post_type=skl_portfolio
+          - generic [ref=f40e214]:
+            - generic:
+              - generic [ref=f40e217]:
+                - generic: Add title
+                - textbox "Add title" [ref=f40e218]: Get Takaful
+              - generic [ref=f40e220]:
+                - generic [ref=f40e221]:
+                  - generic [ref=f40e222]:
+                    - heading "Publish" [level=2] [ref=f40e223]
+                    - generic [ref=f40e224]:
+                      - button "Move up" [disabled] [ref=f40e225]
+                      - button "Move down" [ref=f40e228] [cursor=pointer]
+                      - 'button "Toggle panel: Publish" [expanded] [ref=f40e231] [cursor=pointer]'
+                  - generic [ref=f40e235]:
+                    - generic [ref=f40e238]:
+                      - generic [ref=f40e239]:
+                        - text: "Status: Published"
+                        - button "Edit status" [ref=f40e240] [cursor=pointer]: Edit
+                      - generic [ref=f40e242]:
+                        - text: "Visibility: Public"
+                        - button "Edit visibility" [ref=f40e243] [cursor=pointer]: Edit
+                      - generic [ref=f40e245]:
+                        - generic [ref=f40e246]: "Published on: Jul 22, 2026 at 10:45"
+                        - button "Edit date and time" [ref=f40e247] [cursor=pointer]: Edit
+                    - generic [ref=f40e249]:
+                      - link "Move to Trash" [ref=f40e251] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=136&action=trash&_wpnonce=35e3fc0078
+                      - button "Update" [ref=f40e253] [cursor=pointer]
+                - generic [ref=f40e254]:
+                  - generic [ref=f40e255]:
+                    - heading "Post Attributes" [level=2] [ref=f40e256]
+                    - generic [ref=f40e257]:
+                      - button "Move up" [ref=f40e258] [cursor=pointer]
+                      - button "Move down" [ref=f40e261] [cursor=pointer]
+                      - 'button "Toggle panel: Post Attributes" [expanded] [ref=f40e264] [cursor=pointer]'
+                  - generic [ref=f40e267]:
+                    - paragraph [ref=f40e268]: Order
+                    - textbox "Order" [ref=f40e269]: "2"
+                - generic [ref=f40e270]:
+                  - generic [ref=f40e271]:
+                    - heading "Featured image" [level=2] [ref=f40e272]
+                    - generic [ref=f40e273]:
+                      - button "Move up" [ref=f40e274] [cursor=pointer]
+                      - button "Move down" [ref=f40e277] [cursor=pointer]
+                      - 'button "Toggle panel: Featured image" [expanded] [ref=f40e280] [cursor=pointer]'
+                  - paragraph [ref=f40e284]:
+                    - button "Set featured image" [ref=f40e285] [cursor=pointer]
+              - generic [ref=f40e288]:
+                - generic [ref=f40e289]:
+                  - heading "Details" [level=2] [ref=f40e290]
+                  - generic [ref=f40e291]:
+                    - button "Move up" [ref=f40e292] [cursor=pointer]
+                    - button "Move down" [ref=f40e295] [cursor=pointer]
+                    - 'button "Toggle panel: Details" [expanded] [ref=f40e298] [cursor=pointer]'
+                - generic [ref=f40e302]:
+                  - paragraph [ref=f40e303]:
+                    - generic [ref=f40e304]: Default image (if no Featured Image)
+                    - combobox "Default image (if no Featured Image)" [ref=f40e305] [cursor=pointer]:
+                      - option "AI Farming"
+                      - option "Get Takaful" [selected]
+                      - option "KindredCare"
+                      - option "Agile Sourcing"
+                      - option "GAinData"
+                  - paragraph [ref=f40e306]:
+                    - generic [ref=f40e307]: Tag 1
+                    - textbox "Tag 1" [ref=f40e308]: FinTech
+                  - paragraph [ref=f40e309]:
+                    - generic [ref=f40e310]: Tag 2
+                    - textbox "Tag 2" [ref=f40e311]: Blockchain
+                  - paragraph [ref=f40e312]:
+                    - generic [ref=f40e313]: Status label
+                    - textbox "Status label" [ref=f40e314]: Launching soon
+                  - paragraph [ref=f40e315]:
+                    - generic [ref=f40e316]: Description
+                    - textbox "Description" [ref=f40e317]: A Shariah-compliant insurance alternative for Muslims in Canada. Built on blockchain for transparency, users see exactly where their money goes and can vote on claim approvals.
+                  - paragraph [ref=f40e318]:
+                    - generic [ref=f40e319]: Challenge
+                    - textbox "Challenge" [ref=f40e320]: Muslims in Canada lack access to ethical, Shariah-compliant insurance options. Traditional insurance conflicts with Islamic principles.
+                  - paragraph [ref=f40e321]:
+                    - generic [ref=f40e322]: Solution
+                    - textbox "Solution" [ref=f40e323]: We built a transparent, community-driven Takaful platform on blockchain. Investments go only into halal businesses, and the community votes on approvals.
+                  - paragraph [ref=f40e324]:
+                    - generic [ref=f40e325]: Results (one per line)
+                    - textbox "Results (one per line)" [ref=f40e326]: "#1 SEO rankings for Islamic insurance keywords Weekly user inquiries Launching soon Strong community traction"
+                  - paragraph [ref=f40e327]:
+                    - generic [ref=f40e328]: Tech stack (one per line)
+                    - textbox "Tech stack (one per line)" [ref=f40e329]: Laravel Next.js Blockchain WordPress
+                  - paragraph [ref=f40e330]: The post title is the main label. Reorder items with the Order field in the Page Attributes box.
+  - contentinfo [ref=f40e332]:
+    - paragraph [ref=f40e333]:
+      - generic [ref=f40e334]:
+        - text: Thank you for creating with
+        - link "WordPress" [ref=f40e335] [cursor=pointer]:
+          - /url: https://wordpress.org/
+        - text: .
+    - paragraph [ref=f40e336]: Version 7.0.4

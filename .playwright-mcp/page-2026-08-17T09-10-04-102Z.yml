@@ -1,0 +1,413 @@
+- generic [ref=f22e2]:
+  - navigation "Main menu":
+    - link "Skip to main content" [ref=f22e3] [cursor=pointer]:
+      - /url: "#wpbody-content"
+    - link "Skip to toolbar" [ref=f22e4] [cursor=pointer]:
+      - /url: "#wp-toolbar"
+    - list [ref=f22e7]:
+      - listitem [ref=f22e8]:
+        - link "Dashboard" [ref=f22e9] [cursor=pointer]:
+          - /url: index.php
+          - generic [ref=f22e10]: 
+        - list [ref=f22e12]:
+          - listitem [ref=f22e13]:
+            - link "Home" [ref=f22e14] [cursor=pointer]:
+              - /url: index.php
+          - listitem [ref=f22e15]:
+            - link "Updates" [ref=f22e16] [cursor=pointer]:
+              - /url: update-core.php
+      - listitem [ref=f22e17]
+      - listitem [ref=f22e19]:
+        - link "Posts" [ref=f22e20] [cursor=pointer]:
+          - /url: edit.php
+          - generic [ref=f22e21]: 
+        - list [ref=f22e23]:
+          - listitem [ref=f22e24]:
+            - link "All Posts" [ref=f22e25] [cursor=pointer]:
+              - /url: edit.php
+          - listitem [ref=f22e26]:
+            - link "Add Post" [ref=f22e27] [cursor=pointer]:
+              - /url: post-new.php
+          - listitem [ref=f22e28]:
+            - link "Categories" [ref=f22e29] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=category
+          - listitem [ref=f22e30]:
+            - link "Tags" [ref=f22e31] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=post_tag
+      - listitem [ref=f22e32]:
+        - link "Media" [ref=f22e33] [cursor=pointer]:
+          - /url: upload.php
+          - generic [ref=f22e34]: 
+        - list [ref=f22e36]:
+          - listitem [ref=f22e37]:
+            - link "Library" [ref=f22e38] [cursor=pointer]:
+              - /url: upload.php
+          - listitem [ref=f22e39]:
+            - link "Add Media File" [ref=f22e40] [cursor=pointer]:
+              - /url: media-new.php
+      - listitem [ref=f22e41]:
+        - link "Pages" [ref=f22e42] [cursor=pointer]:
+          - /url: edit.php?post_type=page
+          - generic [ref=f22e43]: 
+        - list [ref=f22e45]:
+          - listitem [ref=f22e46]:
+            - link "All Pages" [ref=f22e47] [cursor=pointer]:
+              - /url: edit.php?post_type=page
+          - listitem [ref=f22e48]:
+            - link "Add Page" [ref=f22e49] [cursor=pointer]:
+              - /url: post-new.php?post_type=page
+      - listitem [ref=f22e50]:
+        - link "Comments" [ref=f22e51] [cursor=pointer]:
+          - /url: edit-comments.php
+          - generic [ref=f22e52]: 
+      - listitem [ref=f22e54]
+      - listitem [ref=f22e56]:
+        - link "Sklentr" [ref=f22e57] [cursor=pointer]:
+          - /url: admin.php?page=sklentr-settings
+          - generic [ref=f22e58]: 
+        - list [ref=f22e60]:
+          - listitem [ref=f22e61]:
+            - link "Settings" [ref=f22e62] [cursor=pointer]:
+              - /url: admin.php?page=sklentr-settings
+          - listitem [ref=f22e63]:
+            - link "Services (Home, /services)" [ref=f22e64] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_service
+          - listitem [ref=f22e65]:
+            - link "Why-Us Points (/services)" [ref=f22e66] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_svc_perk
+          - listitem [ref=f22e67]:
+            - link "Trust Stats (Home, /services)" [ref=f22e68] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_stat
+          - listitem [ref=f22e69]:
+            - link "Trusted Logos (Home)" [ref=f22e70] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_project
+          - listitem [ref=f22e71]:
+            - link "Problem Cards (Home)" [ref=f22e72] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_problem
+          - listitem [ref=f22e73]:
+            - link "Hero Plan Steps (Home)" [ref=f22e74] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_step
+          - listitem [ref=f22e75]:
+            - link "Hero Plan Tiles (Home)" [ref=f22e76] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_tile
+          - listitem [ref=f22e77]:
+            - link "Why-Us Pillars (Home)" [ref=f22e78] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pillar
+          - listitem [ref=f22e79]:
+            - link "Visa Features (Home)" [ref=f22e80] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_visa_feature
+          - listitem [ref=f22e81]:
+            - link "Featured Work (Home)" [ref=f22e82] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_work
+          - listitem [ref=f22e83]:
+            - link "Process Steps (Home)" [ref=f22e84] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_process
+          - listitem [ref=f22e85]:
+            - link "FAQ (Home)" [ref=f22e86] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_faq
+          - listitem [ref=f22e87]:
+            - link "Team Locations (unused)" [ref=f22e88] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_location
+          - listitem [ref=f22e89]:
+            - link "Tech Stack (Home)" [ref=f22e90] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_tech
+          - listitem [ref=f22e91]:
+            - link "Pricing Tiers (Home)" [ref=f22e92] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pricing
+          - listitem [ref=f22e93]:
+            - link "Portfolio Projects (/portfolio)" [ref=f22e94] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_portfolio
+          - listitem [ref=f22e95]:
+            - link "Subscribers" [ref=f22e96] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_subscriber
+      - listitem [ref=f22e97]:
+        - link "Appearance" [ref=f22e98] [cursor=pointer]:
+          - /url: themes.php
+          - generic [ref=f22e99]: 
+        - list [ref=f22e101]:
+          - listitem [ref=f22e102]:
+            - link "Themes" [ref=f22e103] [cursor=pointer]:
+              - /url: themes.php
+          - listitem [ref=f22e104]:
+            - link "Patterns" [ref=f22e105] [cursor=pointer]:
+              - /url: site-editor.php?p=/pattern
+          - listitem [ref=f22e106]:
+            - link "Customize" [ref=f22e107] [cursor=pointer]:
+              - /url: customize.php?return=%2Fsklentr%2Fsklentr-v3%2Fwp-admin%2Fedit.php%3Fpost_type%3Dskl_hero_step
+          - listitem [ref=f22e108]:
+            - link "Fonts" [ref=f22e109] [cursor=pointer]:
+              - /url: font-library.php
+          - listitem [ref=f22e110]:
+            - link "Menus" [ref=f22e111] [cursor=pointer]:
+              - /url: nav-menus.php
+          - listitem [ref=f22e112]:
+            - link "Theme File Editor" [ref=f22e113] [cursor=pointer]:
+              - /url: theme-editor.php
+      - listitem [ref=f22e114]:
+        - link "Plugins" [ref=f22e115] [cursor=pointer]:
+          - /url: plugins.php
+          - generic [ref=f22e116]: 
+        - list [ref=f22e118]:
+          - listitem [ref=f22e119]:
+            - link "Installed Plugins" [ref=f22e120] [cursor=pointer]:
+              - /url: plugins.php
+          - listitem [ref=f22e121]:
+            - link "Add Plugin" [ref=f22e122] [cursor=pointer]:
+              - /url: plugin-install.php
+          - listitem [ref=f22e123]:
+            - link "Plugin File Editor" [ref=f22e124] [cursor=pointer]:
+              - /url: plugin-editor.php
+      - listitem [ref=f22e125]:
+        - link "Users" [ref=f22e126] [cursor=pointer]:
+          - /url: users.php
+          - generic [ref=f22e127]: 
+        - list [ref=f22e129]:
+          - listitem [ref=f22e130]:
+            - link "All Users" [ref=f22e131] [cursor=pointer]:
+              - /url: users.php
+          - listitem [ref=f22e132]:
+            - link "Add User" [ref=f22e133] [cursor=pointer]:
+              - /url: user-new.php
+          - listitem [ref=f22e134]:
+            - link "Profile" [ref=f22e135] [cursor=pointer]:
+              - /url: profile.php
+      - listitem [ref=f22e136]:
+        - link "Tools" [ref=f22e137] [cursor=pointer]:
+          - /url: tools.php
+          - generic [ref=f22e138]: 
+        - list [ref=f22e140]:
+          - listitem [ref=f22e141]:
+            - link "Available Tools" [ref=f22e142] [cursor=pointer]:
+              - /url: tools.php
+          - listitem [ref=f22e143]:
+            - link "Import" [ref=f22e144] [cursor=pointer]:
+              - /url: import.php
+          - listitem [ref=f22e145]:
+            - link "Export" [ref=f22e146] [cursor=pointer]:
+              - /url: export.php
+          - listitem [ref=f22e147]:
+            - link "Site Health" [ref=f22e148] [cursor=pointer]:
+              - /url: site-health.php
+          - listitem [ref=f22e149]:
+            - link "Export Personal Data" [ref=f22e150] [cursor=pointer]:
+              - /url: export-personal-data.php
+          - listitem [ref=f22e151]:
+            - link "Erase Personal Data" [ref=f22e152] [cursor=pointer]:
+              - /url: erase-personal-data.php
+          - listitem [ref=f22e153]:
+            - link "Sklentr Repair" [ref=f22e154] [cursor=pointer]:
+              - /url: tools.php?page=sklentr-repair
+      - listitem [ref=f22e155]:
+        - link "Settings" [ref=f22e156] [cursor=pointer]:
+          - /url: options-general.php
+          - generic [ref=f22e157]: 
+        - list [ref=f22e159]:
+          - listitem [ref=f22e160]:
+            - link "General" [ref=f22e161] [cursor=pointer]:
+              - /url: options-general.php
+          - listitem [ref=f22e162]:
+            - link "Connectors" [ref=f22e163] [cursor=pointer]:
+              - /url: options-connectors.php
+          - listitem [ref=f22e164]:
+            - link "Writing" [ref=f22e165] [cursor=pointer]:
+              - /url: options-writing.php
+          - listitem [ref=f22e166]:
+            - link "Reading" [ref=f22e167] [cursor=pointer]:
+              - /url: options-reading.php
+          - listitem [ref=f22e168]:
+            - link "Discussion" [ref=f22e169] [cursor=pointer]:
+              - /url: options-discussion.php
+          - listitem [ref=f22e170]:
+            - link "Media" [ref=f22e171] [cursor=pointer]:
+              - /url: options-media.php
+          - listitem [ref=f22e172]:
+            - link "Permalinks" [ref=f22e173] [cursor=pointer]:
+              - /url: options-permalink.php
+          - listitem [ref=f22e174]:
+            - link "Privacy" [ref=f22e175] [cursor=pointer]:
+              - /url: options-privacy.php
+      - listitem [ref=f22e176]:
+        - button "Collapse Main menu" [expanded] [ref=f22e177] [cursor=pointer]:
+          - generic [ref=f22e179]: Collapse Menu
+  - generic [ref=f22e180]:
+    - generic [ref=f22e181]:
+      - navigation "Toolbar":
+        - menu:
+          - group [ref=f22e182]:
+            - menuitem "About WordPress" [ref=f22e183] [cursor=pointer]
+          - group [ref=f22e186]:
+            - menuitem "Sklentr V3" [ref=f22e187] [cursor=pointer]
+          - group [ref=f22e188]:
+            - menuitem "Ctrl+K Open command palette" [ref=f22e189] [cursor=pointer]:
+              - generic [ref=f22e191]:
+                - text: Ctrl+K
+                - generic [ref=f22e192]: Open command palette
+          - group [ref=f22e193]:
+            - menuitem "0 Comments in moderation" [ref=f22e194] [cursor=pointer]:
+              - generic [ref=f22e196]: "0"
+          - group [ref=f22e198]:
+            - menuitem "New" [ref=f22e199] [cursor=pointer]
+        - menu [ref=f22e202]:
+          - group [ref=f22e203]:
+            - menuitem "Howdy, admin" [ref=f22e204] [cursor=pointer]
+    - main [ref=f22e205]:
+      - generic [ref=f22e206]:
+        - button "Screen Options" [ref=f22e209] [cursor=pointer]
+        - generic [ref=f22e210]:
+          - heading "Hero Plan Steps (Home)" [level=1] [ref=f22e211]
+          - link "Add Plan Step" [ref=f22e212] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post-new.php?post_type=skl_hero_step
+          - heading "Filter posts list" [level=2] [ref=f22e213]
+          - list [ref=f22e214]:
+            - listitem [ref=f22e215]:
+              - link "All (4)" [ref=f22e216] [cursor=pointer]:
+                - /url: edit.php?post_type=skl_hero_step
+              - text: "|"
+            - listitem [ref=f22e217]:
+              - link "Published (4)" [ref=f22e218] [cursor=pointer]:
+                - /url: edit.php?post_status=publish&post_type=skl_hero_step
+          - generic [ref=f22e219]:
+            - paragraph [ref=f22e220]:
+              - generic [ref=f22e221]: "Search Posts:"
+              - searchbox "Search Posts:" [ref=f22e222]
+              - button "Search Posts" [ref=f22e223] [cursor=pointer]
+            - generic [ref=f22e224]:
+              - generic [ref=f22e225]:
+                - generic [ref=f22e226]: Select bulk action
+                - combobox "Select bulk action" [ref=f22e227] [cursor=pointer]:
+                  - option "Bulk actions" [selected]
+                  - option "Bulk edit"
+                  - option "Move to Trash"
+                - button "Apply" [ref=f22e228] [cursor=pointer]
+              - generic [ref=f22e229]:
+                - generic [ref=f22e230]: Filter by date
+                - combobox "Filter by date" [ref=f22e231] [cursor=pointer]:
+                  - option "All dates" [selected]
+                  - option "July 2026"
+                - button "Filter" [ref=f22e232] [cursor=pointer]
+              - generic [ref=f22e233]: 4 items
+            - heading "Posts list" [level=2] [ref=f22e235]
+            - table [ref=f22e236]:
+              - caption [ref=f22e237]: Table ordered by Date. Descending.
+              - rowgroup [ref=f22e238]:
+                - row [ref=f22e239]:
+                  - cell "Select All" [ref=f22e240]:
+                    - checkbox "Select All" [ref=f22e241] [cursor=pointer]
+                  - columnheader [ref=f22e244]:
+                    - link "Title Sort ascending." [ref=f22e245] [cursor=pointer]:
+                      - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit.php?post_type=skl_hero_step&orderby=title&order=asc
+                      - generic [ref=f22e246]: Title
+                      - generic [ref=f22e250]: Sort ascending.
+                  - columnheader [ref=f22e251]:
+                    - link "Date" [ref=f22e252] [cursor=pointer]:
+                      - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit.php?post_type=skl_hero_step&orderby=date&order=asc
+              - rowgroup [ref=f22e257]:
+                - row [ref=f22e258]:
+                  - rowheader "Select Discovery" [ref=f22e259]:
+                    - checkbox "Select Discovery" [ref=f22e260] [cursor=pointer]
+                  - cell [ref=f22e263]:
+                    - strong [ref=f22e264]:
+                      - link "Discovery" [ref=f22e265] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=30&action=edit
+                    - generic [ref=f22e266]:
+                      - generic [ref=f22e267]:
+                        - link "Edit “Discovery”" [ref=f22e268] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=30&action=edit
+                          - text: Edit
+                        - text: "|"
+                      - generic [ref=f22e269]:
+                        - button "Quick edit “Discovery” inline" [ref=f22e270] [cursor=pointer]: Quick Edit
+                        - text: "|"
+                      - link "Move “Discovery” to the Trash" [ref=f22e272] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=30&action=trash&_wpnonce=3ab60d48c8
+                        - text: Trash
+                  - cell "Published 2026/07/16 at 9:50 am" [ref=f22e273]: Published2026/07/16 at 9:50 am
+                - row [ref=f22e274]:
+                  - rowheader "Select Design" [ref=f22e275]:
+                    - checkbox "Select Design" [ref=f22e276] [cursor=pointer]
+                  - cell [ref=f22e279]:
+                    - strong [ref=f22e280]:
+                      - link "Design" [ref=f22e281] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=31&action=edit
+                    - generic [ref=f22e282]:
+                      - generic [ref=f22e283]:
+                        - link "Edit “Design”" [ref=f22e284] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=31&action=edit
+                          - text: Edit
+                        - text: "|"
+                      - generic [ref=f22e285]:
+                        - button "Quick edit “Design” inline" [ref=f22e286] [cursor=pointer]: Quick Edit
+                        - text: "|"
+                      - link "Move “Design” to the Trash" [ref=f22e288] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=31&action=trash&_wpnonce=3d43b82d40
+                        - text: Trash
+                  - cell "Published 2026/07/16 at 9:50 am" [ref=f22e289]: Published2026/07/16 at 9:50 am
+                - row [ref=f22e290]:
+                  - rowheader "Select Build" [ref=f22e291]:
+                    - checkbox "Select Build" [ref=f22e292] [cursor=pointer]
+                  - cell [ref=f22e295]:
+                    - strong [ref=f22e296]:
+                      - link "Build" [ref=f22e297] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=32&action=edit
+                    - generic [ref=f22e298]:
+                      - generic [ref=f22e299]:
+                        - link "Edit “Build”" [ref=f22e300] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=32&action=edit
+                          - text: Edit
+                        - text: "|"
+                      - generic [ref=f22e301]:
+                        - button "Quick edit “Build” inline" [ref=f22e302] [cursor=pointer]: Quick Edit
+                        - text: "|"
+                      - link "Move “Build” to the Trash" [ref=f22e304] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=32&action=trash&_wpnonce=b77684b8e0
+                        - text: Trash
+                  - cell "Published 2026/07/16 at 9:50 am" [ref=f22e305]: Published2026/07/16 at 9:50 am
+                - row [ref=f22e306]:
+                  - rowheader "Select Launch" [ref=f22e307]:
+                    - checkbox "Select Launch" [ref=f22e308] [cursor=pointer]
+                  - cell [ref=f22e311]:
+                    - strong [ref=f22e312]:
+                      - link "Launch" [ref=f22e313] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=33&action=edit
+                    - generic [ref=f22e314]:
+                      - generic [ref=f22e315]:
+                        - link "Edit “Launch”" [ref=f22e316] [cursor=pointer]:
+                          - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=33&action=edit
+                          - text: Edit
+                        - text: "|"
+                      - generic [ref=f22e317]:
+                        - button "Quick edit “Launch” inline" [ref=f22e318] [cursor=pointer]: Quick Edit
+                        - text: "|"
+                      - link "Move “Launch” to the Trash" [ref=f22e320] [cursor=pointer]:
+                        - /url: http://localhost/sklentr/sklentr-v3/wp-admin/post.php?post=33&action=trash&_wpnonce=1f1158fce3
+                        - text: Trash
+                  - cell "Published 2026/07/16 at 9:50 am" [ref=f22e321]: Published2026/07/16 at 9:50 am
+              - rowgroup [ref=f22e322]:
+                - row [ref=f22e323]:
+                  - cell "Select All" [ref=f22e324]:
+                    - checkbox "Select All" [ref=f22e325] [cursor=pointer]
+                  - columnheader [ref=f22e328]:
+                    - link "Title Sort ascending." [ref=f22e329] [cursor=pointer]:
+                      - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit.php?post_type=skl_hero_step&orderby=title&order=asc
+                      - generic [ref=f22e330]: Title
+                      - generic [ref=f22e334]: Sort ascending.
+                  - columnheader [ref=f22e335]:
+                    - link "Date" [ref=f22e336] [cursor=pointer]:
+                      - /url: http://localhost/sklentr/sklentr-v3/wp-admin/edit.php?post_type=skl_hero_step&orderby=date&order=asc
+            - generic [ref=f22e341]:
+              - generic [ref=f22e342]:
+                - generic [ref=f22e343]: Select bulk action
+                - combobox "Select bulk action" [ref=f22e344] [cursor=pointer]:
+                  - option "Bulk actions" [selected]
+                  - option "Bulk edit"
+                  - option "Move to Trash"
+                - button "Apply" [ref=f22e345] [cursor=pointer]
+              - generic [ref=f22e346]: 4 items
+  - contentinfo [ref=f22e348]:
+    - paragraph [ref=f22e349]:
+      - generic [ref=f22e350]:
+        - text: Thank you for creating with
+        - link "WordPress" [ref=f22e351] [cursor=pointer]:
+          - /url: https://wordpress.org/
+        - text: .
+    - paragraph [ref=f22e352]: Version 7.0.4

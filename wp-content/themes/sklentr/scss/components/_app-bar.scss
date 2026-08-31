@@ -1,0 +1,156 @@
+// =====================================================================
+// Mobile app bar — native-app-style floating bottom navigation.
+// MOBILE ONLY: hidden by default; only shown ≤ 980px (matches the header).
+// Nothing here affects the desktop layout.
+//   Home · Services · (raised Book FAB) · Pricing · Menu
+// Paired with assets/js/app-bar.js (smart hide-on-scroll + Menu → nav overlay).
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+// Hidden on desktop — the header/nav owns navigation there.
+.app-bar { display: none; }
+
+@include bp-max(980px) {
+
+  .app-bar {
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    z-index: 990;
+    overflow: visible; // let the centre FAB protrude above the pill
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, .92) 0%, rgba(11, 17, 32, .96) 100%);
+    -webkit-backdrop-filter: saturate(160%) blur(16px);
+    backdrop-filter: saturate(160%) blur(16px);
+    border: 1px solid rgba(255, 255, 255, .10);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .38), 0 2px 8px rgba(0, 0, 0, .30);
+    transition: transform var(--dur-slow) var(--ease-out),
+                opacity var(--dur-base) var(--ease-out);
+
+    // Smart auto-hide (JS adds .is-hidden on scroll-down)
+    &.is-hidden { transform: translateY(calc(100% + 24px)); }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2px;
+      list-style: none;
+      margin: 0;
+      padding: 0 6px;
+      height: 62px;
+    }
+
+    &__cell {
+      flex: 1 1 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+
+      &--center { flex-direction: column; justify-content: flex-end; }
+    }
+
+    // ---- Tab (link or the Menu button) ----
+    &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      width: 100%;
+      min-height: 48px;
+      padding: 6px 0 5px;
+      border: 0;
+      background: transparent;
+      font-family: var(--font-body);
+      color: rgba(255, 255, 255, .60);
+      cursor: pointer;
+      transition: color var(--dur-fast) var(--ease-out);
+
+      .nav-icon {
+        display: grid;
+        place-items: center;
+        width: 46px;
+        height: 28px;
+        border-radius: var(--radius-pill);
+        transition: background var(--dur-base) var(--ease-out);
+        svg { width: 23px; height: 23px; display: block; }
+      }
+
+      &:hover,
+      &:focus-visible { color: rgba(255, 255, 255, .92); }
+
+      &.is-active {
+        color: var(--brand-gold);
+        .nav-icon { background: rgba(243, 179, 81, .16); }
+      }
+
+      &:focus-visible { outline: 2px solid var(--brand-gold); outline-offset: 3px; border-radius: var(--radius-md); }
+    }
+
+    &__label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .01em;
+      line-height: 1;
+    }
+
+    // ---- Centre raised "Book a Call" FAB ----
+    &__fab {
+      display: grid;
+      place-items: center;
+      width: 56px;
+      height: 56px;
+      margin-top: -26px; // lift so ~half protrudes above the pill
+      border-radius: 50%;
+      color: var(--ink-950);
+      background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-gold-deep) 100%);
+      box-shadow: 0 10px 22px rgba(243, 179, 81, .42),
+                  0 3px 8px rgba(0, 0, 0, .35),
+                  0 0 0 4px rgba(11, 17, 32, .55); // seats the FAB into the bar
+      transition: transform var(--dur-base) var(--ease-out),
+                  box-shadow var(--dur-base) var(--ease-out);
+
+      svg { width: 24px; height: 24px; display: block; }
+
+      &:hover,
+      &:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(243, 179, 81, .50),
+                    0 4px 10px rgba(0, 0, 0, .40),
+                    0 0 0 4px rgba(11, 17, 32, .55);
+      }
+      &:active { transform: translateY(0) scale(.96); }
+      &:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+    }
+
+    &__fab-label {
+      margin-top: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      line-height: 1;
+      color: var(--brand-gold);
+    }
+  }
+
+  // Hide the app bar while the full nav overlay is open (avoids overlap).
+  body.nav-open .app-bar {
+    transform: translateY(calc(100% + 24px));
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // Clearance so the floating bar never covers content; keep the dark footer
+  // background extending beneath it (no light strip under the footer).
+  .site-footer { padding-bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+}
+
+// Respect reduced-motion: no slide animation.
+@include reduced-motion {
+  .app-bar,
+  .app-bar__fab { transition: none; }
+}

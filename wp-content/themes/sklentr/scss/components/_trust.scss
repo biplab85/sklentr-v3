@@ -1,0 +1,134 @@
+// =====================================================================
+// SECTION 02 — Trust Bar / Social-Proof Strip
+// Light band: animated scale counters + infinite project marquee.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.trust {
+  background: var(--white);
+  border-top: 1px solid var(--slate-100);
+  padding-block: clamp(56px, 7vw, 88px);
+  overflow: hidden;
+}
+
+// ---- Stat counters ----
+.trust__stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.stat {
+  text-align: center;
+  padding: 6px 18px;
+
+  & + & { border-inline-start: 1px solid var(--slate-200); }
+}
+.stat__num {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 1.4rem + 2.4vw, 3.25rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink-950);
+  font-variant-numeric: tabular-nums;
+}
+.stat__suffix {
+  margin-left: 2px;
+  color: var(--brand-gold-deep);
+  font-size: .7em;
+}
+.stat__label {
+  display: block;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--slate-500);
+}
+
+@include bp-max(900px) {
+  .trust__stats { grid-template-columns: repeat(2, 1fr); gap: 34px 8px; }
+  .stat {
+    & + & { border-inline-start: 0; }
+    &:last-child { grid-column: 1 / -1; }   // 5th item centered on its own row
+  }
+}
+
+// ---- "Trusted by" marquee ----
+.trust__proof {
+  margin-top: clamp(40px, 5vw, 64px);
+}
+.trust__proof-label {
+  margin: 0 0 26px;
+  text-align: center;
+  font-size: var(--fs-overline);
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--slate-400);
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  // Fade the edges so items enter/exit softly.
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+
+  &:hover .marquee__track { animation-play-state: paused; }
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+// Each group carries its own internal + trailing gap so the two copies butt
+// seamlessly; translating by -50% lands exactly on the start of copy #2.
+.marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-right: 56px;
+  margin: 0;
+  list-style: none;
+}
+.marquee__item {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.1rem, .9rem + .8vw, 1.5rem);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  color: var(--slate-400);
+  transition: color var(--dur-base) var(--ease-out);
+
+  &::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--brand-green-deep);
+    opacity: .55;
+  }
+  &:hover { color: var(--ink-950); }
+}
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+// Reduced motion: no scroll, no loop — show one static, wrapped set.
+@include reduced-motion {
+  .marquee__track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; }
+  .marquee__group {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 18px;
+    padding-right: 0;
+    &[aria-hidden="true"] { display: none; }
+  }
+}

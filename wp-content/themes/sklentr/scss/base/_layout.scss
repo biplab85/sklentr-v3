@@ -1,0 +1,13 @@
+// =====================================================================
+// Base — layout (shared container)
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.skl-container {
+  width: 100%;
+  max-width: 1366px;
+  margin-inline: auto;
+  padding-inline: 24px;
+
+  @include bp-max(767px) { padding-inline: 20px; }
+}

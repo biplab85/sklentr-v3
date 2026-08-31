@@ -1,0 +1,6 @@
+# Build dependencies — reinstall with `npm install`
+node_modules/
+
+# Runtime logs
+wp-content/debug.log
+wp-content/upgrade/

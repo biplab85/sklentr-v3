@@ -1,0 +1,499 @@
+- generic [ref=f20e1]:
+  - generic [ref=f20e2]:
+    - navigation "Toolbar":
+      - menu:
+        - group [ref=f20e3]:
+          - menuitem "About WordPress" [ref=f20e4] [cursor=pointer]
+        - group [ref=f20e7]:
+          - menuitem "Sklentr V3" [ref=f20e8] [cursor=pointer]
+        - group [ref=f20e9]:
+          - menuitem "Customize" [ref=f20e10] [cursor=pointer]
+        - group [ref=f20e11]:
+          - menuitem "0 Comments in moderation" [ref=f20e12] [cursor=pointer]:
+            - generic [ref=f20e14]: "0"
+        - group [ref=f20e16]:
+          - menuitem "New" [ref=f20e17] [cursor=pointer]
+        - group [ref=f20e20]:
+          - menuitem "Edit Page" [ref=f20e21] [cursor=pointer]
+      - menu [ref=f20e22]:
+        - group [ref=f20e23]:
+          - menuitem "Howdy, admin" [ref=f20e24] [cursor=pointer]
+        - group [ref=f20e25]:
+          - menuitem "Search" [ref=f20e26]:
+            - generic [ref=f20e27]:
+              - textbox "Search" [ref=f20e28] [cursor=pointer]
+              - generic [ref=f20e29]: Search
+  - link "Skip to content" [ref=f20e30] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=f20e31]:
+    - generic [ref=f20e32]:
+      - link "Sklentr V3" [ref=f20e33] [cursor=pointer]:
+        - /url: http://localhost/sklentr/sklentr-v3/
+        - generic [ref=f20e34]:
+          - generic [ref=f20e35]: SKL
+          - generic [ref=f20e36]: ≡
+          - generic [ref=f20e37]: NTR
+      - navigation "Primary" [ref=f20e39]:
+        - list [ref=f20e40]:
+          - listitem [ref=f20e41]:
+            - link "Services" [ref=f20e42] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/services/
+          - listitem [ref=f20e49]:
+            - link "Startup Visa" [ref=f20e50] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/startup-visa/
+          - listitem [ref=f20e55]:
+            - link "Portfolio" [ref=f20e56] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+          - listitem [ref=f20e61]:
+            - link "Pricing" [ref=f20e62] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/pricing/
+          - listitem [ref=f20e67]:
+            - link "About" [ref=f20e68] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/about/
+          - listitem [ref=f20e72]:
+            - link "Blog" [ref=f20e73] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/blog/
+      - link "Book a Call" [ref=f20e80] [cursor=pointer]:
+        - /url: https://calendly.com/sklentr
+  - main [ref=f20e84]:
+    - region [ref=f20e85]:
+      - generic [ref=f20e86]:
+        - generic [ref=f20e87]:
+          - paragraph [ref=f20e88]: About Sklentr
+          - heading [level=1] [ref=f20e89]:
+            - text: We’re
+            - generic [ref=f20e90]: Sklentr
+        - generic [ref=f20e93]:
+          - generic [ref=f20e94]:
+            - generic [ref=f20e96]:
+              - generic [ref=f20e97]: Est. 2023
+              - generic [ref=f20e98]:
+                - generic [ref=f20e103]: Toronto
+                - generic [ref=f20e104]: Dhaka
+              - generic [ref=f20e105]: Canadian management · Global talent
+            - generic [ref=f20e111]:
+              - strong [ref=f20e112]: 50+
+              - generic [ref=f20e113]: Projects Delivered
+            - generic [ref=f20e114]:
+              - generic [ref=f20e115]: 100%
+              - generic [ref=f20e120]: Client Satisfaction
+          - generic [ref=f20e121]:
+            - paragraph [ref=f20e122]: A Toronto-based MVP studio that helps founders launch faster. Canadian management, global talent, and a relentless focus on getting you to market.
+            - generic [ref=f20e123]:
+              - link "Book a Free Consultation" [ref=f20e124] [cursor=pointer]:
+                - /url: https://calendly.com/sklentr
+                - text: Book a Free Consultation
+                - generic [ref=f20e125]: →
+              - link "See Our Work" [ref=f20e126] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+            - list [ref=f20e127]:
+              - listitem [ref=f20e128]:
+                - generic [ref=f20e129]: 19+
+                - generic [ref=f20e130]: Projects Delivered
+              - listitem [ref=f20e131]:
+                - generic [ref=f20e132]: 6+
+                - generic [ref=f20e133]: SUV MVPs Built
+              - listitem [ref=f20e134]:
+                - generic [ref=f20e135]: "1"
+                - generic [ref=f20e136]: Offices Worldwide
+              - listitem [ref=f20e137]:
+                - generic [ref=f20e138]: 37%
+                - generic [ref=f20e139]: Client Satisfaction
+    - region [ref=f20e140]:
+      - generic [ref=f20e142]:
+        - generic [ref=f20e143]:
+          - paragraph [ref=f20e144]: Our Story
+          - heading "Built by Founders, for Founders" [level=2] [ref=f20e145]:
+            - generic [ref=f20e146]:
+              - generic [ref=f20e147]: Built by Founders, for
+              - generic [ref=f20e148]:
+                - generic [ref=f20e149]:
+                  - generic [ref=f20e150]: B
+                  - generic [ref=f20e151]: u
+                  - generic [ref=f20e152]: i
+                  - generic [ref=f20e153]: l
+                  - generic [ref=f20e154]: t
+                - generic [ref=f20e155]:
+                  - generic [ref=f20e156]: b
+                  - generic [ref=f20e157]: "y"
+                - generic [ref=f20e158]:
+                  - generic [ref=f20e159]: F
+                  - generic [ref=f20e160]: o
+                  - generic [ref=f20e161]: u
+                  - generic [ref=f20e162]: "n"
+                  - generic [ref=f20e163]: d
+                  - generic [ref=f20e164]: e
+                  - generic [ref=f20e165]: r
+                  - generic [ref=f20e166]: s
+                  - generic [ref=f20e167]: ","
+                - generic [ref=f20e168]:
+                  - generic [ref=f20e169]: f
+                  - generic [ref=f20e170]: o
+                  - generic [ref=f20e171]: r
+            - generic [ref=f20e172]:
+              - generic [ref=f20e173]: Founders
+              - generic [ref=f20e175]:
+                - generic [ref=f20e176]: F
+                - generic [ref=f20e177]: o
+                - generic [ref=f20e178]: u
+                - generic [ref=f20e179]: "n"
+                - generic [ref=f20e180]: d
+                - generic [ref=f20e181]: e
+                - generic [ref=f20e182]: r
+                - generic [ref=f20e183]: s
+          - generic [ref=f20e184]:
+            - paragraph [ref=f20e185]: We started Sklentr because we lived the pain. As founders ourselves, we knew how hard it was to find reliable development partners who understood startup realities.
+            - paragraph [ref=f20e186]: Most agencies charge a fortune and take forever. Freelancers disappear or deliver broken code. We built Sklentr to be different — fast, transparent, and genuinely invested in your success.
+            - paragraph [ref=f20e187]: Today, we’ve helped 50+ founders launch their products. From healthcare AI to blockchain fintech, from Startup Visa applicants to funded startups — we build what matters.
+        - generic [ref=f20e188]:
+          - img "Built by Founders, for Founders" [ref=f20e190]
+          - generic [ref=f20e191]: Est. 2023 · Toronto
+    - region [ref=f20e193]:
+      - generic [ref=f20e194]:
+        - generic [ref=f20e195]:
+          - paragraph [ref=f20e196]: Our Values
+          - heading "What We Stand For" [level=2] [ref=f20e197]:
+            - generic [ref=f20e199]:
+              - generic [ref=f20e200]:
+                - generic [ref=f20e201]: W
+                - generic [ref=f20e202]: h
+                - generic [ref=f20e203]: a
+                - generic [ref=f20e204]: t
+              - generic [ref=f20e205]:
+                - generic [ref=f20e206]: W
+                - generic [ref=f20e207]: e
+              - generic [ref=f20e208]:
+                - generic [ref=f20e209]: S
+                - generic [ref=f20e210]: t
+                - generic [ref=f20e211]: a
+                - generic [ref=f20e212]: "n"
+                - generic [ref=f20e213]: d
+              - generic [ref=f20e214]:
+                - generic [ref=f20e215]: F
+                - generic [ref=f20e216]: o
+                - generic [ref=f20e217]: r
+          - paragraph [ref=f20e218]: The principles behind every product we ship — how we work, what we protect, and why founders trust us with their vision.
+        - generic [ref=f20e219]:
+          - img "What We Stand For" [ref=f20e221]
+          - list [ref=f20e222]:
+            - listitem [ref=f20e223]:
+              - generic [ref=f20e227]: "01"
+              - heading "Speed Without Sacrifice" [level=3] [ref=f20e228]
+              - paragraph [ref=f20e229]: We move fast, but never at the expense of quality. Every line of code is built to last.
+            - listitem [ref=f20e230]:
+              - generic [ref=f20e234]: "02"
+              - heading "Founder-First Mentality" [level=3] [ref=f20e235]
+              - paragraph [ref=f20e236]: We’ve been in your shoes. We build what you need to succeed, not what pads our invoice.
+            - listitem [ref=f20e237]:
+              - generic [ref=f20e242]: "03"
+              - heading "Radical Transparency" [level=3] [ref=f20e243]
+              - paragraph [ref=f20e244]: No hidden fees. No surprises. You know exactly what you’re getting and when.
+            - listitem [ref=f20e245]:
+              - generic [ref=f20e250]: "04"
+              - heading "Ownership & Accountability" [level=3] [ref=f20e251]
+              - paragraph [ref=f20e252]: Your success is our success. We don’t disappear after launch — we’re partners.
+    - region [ref=f20e253]:
+      - generic [ref=f20e254]:
+        - generic [ref=f20e255]:
+          - paragraph [ref=f20e256]: The Team
+          - heading "Meet the Team" [level=2] [ref=f20e257]:
+            - generic [ref=f20e259]:
+              - generic [ref=f20e260]:
+                - generic [ref=f20e261]: M
+                - generic [ref=f20e262]: e
+                - generic [ref=f20e263]: e
+                - generic [ref=f20e264]: t
+              - generic [ref=f20e265]:
+                - generic [ref=f20e266]: t
+                - generic [ref=f20e267]: h
+                - generic [ref=f20e268]: e
+              - generic [ref=f20e269]:
+                - generic [ref=f20e270]: T
+                - generic [ref=f20e271]: e
+                - generic [ref=f20e272]: a
+                - generic [ref=f20e273]: m
+        - list [ref=f20e274]:
+          - listitem [ref=f20e275]:
+            - generic [ref=f20e276]:
+              - generic [ref=f20e277]: RW
+              - generic [ref=f20e278]:
+                - heading "Rishad Wahid" [level=3] [ref=f20e279]
+                - paragraph [ref=f20e280]: Founder & CEO
+            - paragraph [ref=f20e281]: Serial entrepreneur with 10+ years building digital products. Passionate about helping founders bring their visions to life.
+            - paragraph [ref=f20e282]: Toronto, Canada
+          - listitem [ref=f20e286]:
+            - generic [ref=f20e287]:
+              - generic [ref=f20e288]: DT
+              - generic [ref=f20e289]:
+                - heading "Development Team" [level=3] [ref=f20e290]
+                - paragraph [ref=f20e291]: Engineering
+            - paragraph [ref=f20e292]: World-class engineers specializing in React, Next.js, Laravel, and mobile development. Fast, reliable, and detail-oriented.
+            - paragraph [ref=f20e293]: Dhaka, Bangladesh
+          - listitem [ref=f20e297]:
+            - generic [ref=f20e298]:
+              - generic [ref=f20e299]: DT
+              - generic [ref=f20e300]:
+                - heading "Design Team" [level=3] [ref=f20e301]
+                - paragraph [ref=f20e302]: UI/UX Design
+            - paragraph [ref=f20e303]: Creative designers who understand that great UX is invisible. We make complex simple and beautiful functional.
+            - paragraph [ref=f20e304]: Global
+          - listitem [ref=f20e308]:
+            - generic [ref=f20e309]:
+              - generic [ref=f20e310]: MT
+              - generic [ref=f20e311]:
+                - heading "Marketing Team" [level=3] [ref=f20e312]
+                - paragraph [ref=f20e313]: Growth & SEO
+            - paragraph [ref=f20e314]: "Data-driven marketers who’ve helped startups rank #1 for competitive keywords. We don’t just build — we grow."
+            - paragraph [ref=f20e315]: Toronto & Dhaka
+    - region [ref=f20e319]:
+      - generic [ref=f20e321]:
+        - heading "Discover our top services" [level=2] [ref=f20e322]:
+          - generic [ref=f20e324]:
+            - generic [ref=f20e325]:
+              - generic [ref=f20e326]: D
+              - generic [ref=f20e327]: i
+              - generic [ref=f20e328]: s
+              - generic [ref=f20e329]: c
+              - generic [ref=f20e330]: o
+              - generic [ref=f20e331]: v
+              - generic [ref=f20e332]: e
+              - generic [ref=f20e333]: r
+            - generic [ref=f20e334]:
+              - generic [ref=f20e335]: o
+              - generic [ref=f20e336]: u
+              - generic [ref=f20e337]: r
+            - generic [ref=f20e338]:
+              - generic [ref=f20e339]: t
+              - generic [ref=f20e340]: o
+              - generic [ref=f20e341]: p
+            - generic [ref=f20e342]:
+              - generic [ref=f20e343]: s
+              - generic [ref=f20e344]: e
+              - generic [ref=f20e345]: r
+              - generic [ref=f20e346]: v
+              - generic [ref=f20e347]: i
+              - generic [ref=f20e348]: c
+              - generic [ref=f20e349]: e
+              - generic [ref=f20e350]: s
+        - paragraph [ref=f20e351]: Our strategy includes consistently evolving, to ensure we’re producing exceptional SEO for business.
+      - generic [ref=f20e353]:
+        - group "10 / 14" [ref=f20e354]:
+          - link "Email Marketing Your website has to impress your visitors within just a few seconds" [ref=f20e355] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e357]:
+              - heading "Email Marketing" [level=5] [ref=f20e358]
+              - generic [ref=f20e359]: Your website has to impress your visitors within just a few seconds
+        - group "11 / 14" [ref=f20e360]:
+          - link "Social Media Get more website traffic, more customers for your social chanel" [ref=f20e361] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e363]:
+              - heading "Social Media" [level=5] [ref=f20e364]
+              - generic [ref=f20e365]: Get more website traffic, more customers for your social chanel
+        - group "12 / 14" [ref=f20e366]:
+          - link "Website Design and Development Your website has to impress your visitors within just a few seconds. If it runs slow, if it feels outdated" [ref=f20e367] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e369]:
+              - heading "Website Design and Development" [level=5] [ref=f20e370]
+              - generic [ref=f20e371]: Your website has to impress your visitors within just a few seconds. If it runs slow, if it feels outdated
+        - group "13 / 14" [ref=f20e372]:
+          - link "TVC/ Viral Clip Optimized your website on google result with PPC Marketing" [ref=f20e373] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e375]:
+              - heading "TVC/ Viral Clip" [level=5] [ref=f20e376]
+              - generic [ref=f20e377]: Optimized your website on google result with PPC Marketing
+        - group "14 / 14" [ref=f20e378]:
+          - link "PPC Ads Optimized your website on google result with PPC Marketing" [ref=f20e379] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e381]:
+              - heading "PPC Ads" [level=5] [ref=f20e382]
+              - generic [ref=f20e383]: Optimized your website on google result with PPC Marketing
+        - group "1 / 14" [ref=f20e384]:
+          - link "Content Strategy You can provide the answers that your potential customers are trying to find, so you can become the industry." [ref=f20e385] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e387]:
+              - heading "Content Strategy" [level=5] [ref=f20e388]
+              - generic [ref=f20e389]: You can provide the answers that your potential customers are trying to find, so you can become the industry.
+        - group "2 / 14" [ref=f20e390]:
+          - link "Google/FB Ads Get more website traffic, more customers & more online visibility with powerful SEO services." [ref=f20e391] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e393]:
+              - heading "Google/FB Ads" [level=5] [ref=f20e394]
+              - generic [ref=f20e395]: Get more website traffic, more customers & more online visibility with powerful SEO services.
+        - group "3 / 14" [ref=f20e396]:
+          - link "Email Marketing Your website has to impress your visitors within just a few seconds" [ref=f20e397] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e399]:
+              - heading "Email Marketing" [level=5] [ref=f20e400]
+              - generic [ref=f20e401]: Your website has to impress your visitors within just a few seconds
+        - group "4 / 14" [ref=f20e402]:
+          - link "Social Media Get more website traffic, more customers for your social chanel" [ref=f20e403] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e405]:
+              - heading "Social Media" [level=5] [ref=f20e406]
+              - generic [ref=f20e407]: Get more website traffic, more customers for your social chanel
+        - group "5 / 14" [ref=f20e408]:
+          - link "Website Design and Development Your website has to impress your visitors within just a few seconds. If it runs slow, if it feels outdated" [ref=f20e409] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e411]:
+              - heading "Website Design and Development" [level=5] [ref=f20e412]
+              - generic [ref=f20e413]: Your website has to impress your visitors within just a few seconds. If it runs slow, if it feels outdated
+        - group "6 / 14" [ref=f20e414]:
+          - link "TVC/ Viral Clip Optimized your website on google result with PPC Marketing" [ref=f20e415] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e417]:
+              - heading "TVC/ Viral Clip" [level=5] [ref=f20e418]
+              - generic [ref=f20e419]: Optimized your website on google result with PPC Marketing
+        - group "7 / 14" [ref=f20e420]:
+          - link "PPC Ads Optimized your website on google result with PPC Marketing" [ref=f20e421] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e423]:
+              - heading "PPC Ads" [level=5] [ref=f20e424]
+              - generic [ref=f20e425]: Optimized your website on google result with PPC Marketing
+        - group "8 / 14" [ref=f20e426]:
+          - link "Content Strategy You can provide the answers that your potential customers are trying to find, so you can become the industry." [ref=f20e427] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e429]:
+              - heading "Content Strategy" [level=5] [ref=f20e430]
+              - generic [ref=f20e431]: You can provide the answers that your potential customers are trying to find, so you can become the industry.
+        - group "9 / 14" [ref=f20e432]:
+          - link "Google/FB Ads Get more website traffic, more customers & more online visibility with powerful SEO services." [ref=f20e433] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/services/
+            - generic [ref=f20e435]:
+              - heading "Google/FB Ads" [level=5] [ref=f20e436]
+              - generic [ref=f20e437]: Get more website traffic, more customers & more online visibility with powerful SEO services.
+      - link "See All Our Services" [ref=f20e440] [cursor=pointer]:
+        - /url: http://localhost/sklentr/sklentr-v3/services/
+    - region [ref=f20e443]:
+      - generic [ref=f20e444]:
+        - generic [ref=f20e445]:
+          - paragraph [ref=f20e446]: Our Offices
+          - heading "Global Presence" [level=2] [ref=f20e447]
+        - list [ref=f20e448]:
+          - listitem [ref=f20e449]:
+            - generic [ref=f20e454]: Headquarters
+            - heading "Toronto, Canada" [level=3] [ref=f20e455]
+            - paragraph [ref=f20e456]: Client relationships, strategy, and project management
+          - listitem [ref=f20e457]:
+            - generic [ref=f20e462]: Development Center
+            - heading "Dhaka, Bangladesh" [level=3] [ref=f20e463]
+            - paragraph [ref=f20e464]: Engineering, design, and technical implementation
+        - paragraph [ref=f20e465]: Canadian management. Global talent. The best of both worlds.
+    - region [ref=f20e466]:
+      - generic [ref=f20e468]:
+        - paragraph [ref=f20e469]: Let’s build
+        - heading "Ready to launch your MVP in weeks?" [level=2] [ref=f20e471]
+        - paragraph [ref=f20e472]: Book a free 30-minute consultation. No pressure, no jargon — just a clear plan and timeline.
+        - link "Book a Free Consultation" [ref=f20e474] [cursor=pointer]:
+          - /url: https://calendly.com/sklentr
+          - text: Book a Free Consultation
+          - generic [ref=f20e475]: →
+        - generic [ref=f20e476]:
+          - generic [ref=f20e477]: Or reach us directly
+          - list [ref=f20e478]:
+            - listitem [ref=f20e479]:
+              - link "WhatsApp" [ref=f20e480] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f20e483]:
+              - link "info@sklentr.com" [ref=f20e484] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f20e488]:
+              - link "+1 647-997-0557" [ref=f20e489] [cursor=pointer]:
+                - /url: tel:+16479970557
+  - contentinfo [ref=f20e492]:
+    - generic [ref=f20e493]:
+      - generic [ref=f20e494]:
+        - heading "Get founder-grade MVP & Startup Visa tips straight to your inbox." [level=2] [ref=f20e495]
+        - generic [ref=f20e497]:
+          - generic [ref=f20e498]: you@company.com
+          - textbox "you@company.com" [ref=f20e499]
+          - button "Subscribe" [ref=f20e500] [cursor=pointer]:
+            - text: Subscribe
+            - generic [ref=f20e501]: →
+      - generic [ref=f20e502]:
+        - navigation "Services" [ref=f20e503]:
+          - heading "Services" [level=3] [ref=f20e504]
+          - list [ref=f20e505]:
+            - listitem [ref=f20e506]:
+              - link "MVP Development" [ref=f20e507] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f20e508]:
+              - link "Website Design" [ref=f20e509] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f20e510]:
+              - link "SEO & Marketing" [ref=f20e511] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f20e512]:
+              - link "Paid Ads" [ref=f20e513] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f20e514]:
+              - link "Video Production" [ref=f20e515] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f20e516]:
+              - link "Business Consultation" [ref=f20e517] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f20e518]:
+              - link "Startup Visa" [ref=f20e519] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+        - navigation "Company" [ref=f20e520]:
+          - heading "Company" [level=3] [ref=f20e521]
+          - list [ref=f20e522]:
+            - listitem [ref=f20e523]:
+              - link "About" [ref=f20e524] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/about/
+            - listitem [ref=f20e525]:
+              - link "Portfolio" [ref=f20e526] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+            - listitem [ref=f20e527]:
+              - link "Blog" [ref=f20e528] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/blog/
+            - listitem [ref=f20e529]:
+              - link "Pricing" [ref=f20e530] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#pricing
+            - listitem [ref=f20e531]:
+              - link "Contact" [ref=f20e532] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#contact
+        - navigation "Resources" [ref=f20e533]:
+          - heading "Resources" [level=3] [ref=f20e534]
+          - list [ref=f20e535]:
+            - listitem [ref=f20e536]:
+              - link "Startup Visa" [ref=f20e537] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+            - listitem [ref=f20e538]:
+              - link "FAQ" [ref=f20e539] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#faq
+            - listitem [ref=f20e540]:
+              - link "How We Work" [ref=f20e541] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#how-we-work
+            - listitem [ref=f20e542]:
+              - link "Privacy Policy" [ref=f20e543] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/privacy-policy/
+            - listitem [ref=f20e544]:
+              - link "Terms" [ref=f20e545] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/terms/
+        - generic [ref=f20e546]:
+          - heading "Contact Us" [level=3] [ref=f20e547]
+          - list [ref=f20e548]:
+            - listitem [ref=f20e549]:
+              - link "+1 647-997-0557" [ref=f20e553] [cursor=pointer]:
+                - /url: tel:+16479970557
+            - listitem [ref=f20e554]:
+              - link "info@sklentr.com" [ref=f20e559] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f20e560]:
+              - link "WhatsApp" [ref=f20e564] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f20e565]:
+              - generic [ref=f20e570]: Toronto, Ontario, Canada
+      - generic [ref=f20e571]:
+        - paragraph [ref=f20e572]: © 2026 Sklentr V3 — Toronto-based MVP studio. All rights reserved.
+        - generic [ref=f20e573]:
+          - generic [ref=f20e574]: Follow Us
+          - link "LinkedIn" [ref=f20e575] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/sklentr/
+    - generic [ref=f20e581]:
+      - generic [ref=f20e582]: S
+      - generic [ref=f20e583]: K
+      - generic [ref=f20e584]: L
+      - generic [ref=f20e589]: "N"
+      - generic [ref=f20e590]: T
+      - generic [ref=f20e591]: R

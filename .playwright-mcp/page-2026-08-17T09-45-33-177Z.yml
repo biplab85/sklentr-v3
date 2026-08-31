@@ -1,0 +1,292 @@
+- generic [ref=f44e1]:
+  - generic [ref=f44e2]:
+    - navigation "Toolbar":
+      - menu:
+        - group [ref=f44e3]:
+          - menuitem "About WordPress" [ref=f44e4] [cursor=pointer]
+        - group [ref=f44e7]:
+          - menuitem "Sklentr V3" [ref=f44e8] [cursor=pointer]
+        - group [ref=f44e9]:
+          - menuitem "Customize" [ref=f44e10] [cursor=pointer]
+        - group [ref=f44e11]:
+          - menuitem "0 Comments in moderation" [ref=f44e12] [cursor=pointer]:
+            - generic [ref=f44e14]: "0"
+        - group [ref=f44e16]:
+          - menuitem "New" [ref=f44e17] [cursor=pointer]
+        - group [ref=f44e20]:
+          - menuitem "Edit Page" [ref=f44e21] [cursor=pointer]
+      - menu [ref=f44e22]:
+        - group [ref=f44e23]:
+          - menuitem "Howdy, admin" [ref=f44e24] [cursor=pointer]
+        - group [ref=f44e25]:
+          - menuitem "Search" [ref=f44e26]:
+            - generic [ref=f44e27]:
+              - textbox "Search" [ref=f44e28] [cursor=pointer]
+              - generic [ref=f44e29]: Search
+  - link "Skip to content" [ref=f44e30] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=f44e31]:
+    - generic [ref=f44e32]:
+      - link "Sklentr V3" [ref=f44e33] [cursor=pointer]:
+        - /url: http://localhost/sklentr/sklentr-v3/
+        - generic [ref=f44e34]:
+          - generic [ref=f44e35]: SKL
+          - generic [ref=f44e36]: ≡
+          - generic [ref=f44e37]: NTR
+      - navigation "Primary" [ref=f44e39]:
+        - list [ref=f44e40]:
+          - listitem [ref=f44e41]:
+            - link "Services" [ref=f44e42] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/services/
+          - listitem [ref=f44e49]:
+            - link "Startup Visa" [ref=f44e50] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/startup-visa/
+          - listitem [ref=f44e55]:
+            - link "Portfolio" [ref=f44e56] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+          - listitem [ref=f44e61]:
+            - link "Pricing" [ref=f44e62] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/pricing/
+          - listitem [ref=f44e67]:
+            - link "About" [ref=f44e68] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/about/
+          - listitem [ref=f44e72]:
+            - link "Blog" [ref=f44e73] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/blog/
+      - link "Book a Call" [ref=f44e80] [cursor=pointer]:
+        - /url: https://calendly.com/sklentr
+  - main [ref=f44e84]:
+    - region [ref=f44e85]:
+      - generic [ref=f44e87]:
+        - paragraph [ref=f44e88]: The Sklentr Blog
+        - heading "Insights for Founders" [level=1] [ref=f44e90]
+        - paragraph [ref=f44e91]: Strategies, guides, and lessons from building MVPs for startups across Canada. No fluff, just actionable insights.
+    - region "Featured article" [ref=f44e92]:
+      - link "How to Validate Your Startup Idea Before Building Featured Strategy How to Validate Your Startup Idea Before Building Before investing time and money into development, here’s how to test if your idea has real market potential. Rishad Wahid 2 min read Read Article" [ref=f44e94] [cursor=pointer]:
+        - /url: http://localhost/sklentr/sklentr-v3/how-to-validate-your-startup-idea-before-building/
+        - generic [ref=f44e95]:
+          - img "How to Validate Your Startup Idea Before Building" [ref=f44e96]
+          - generic [ref=f44e97]: Featured
+        - generic [ref=f44e98]:
+          - generic [ref=f44e99]: Strategy
+          - heading "How to Validate Your Startup Idea Before Building" [level=2] [ref=f44e100]
+          - paragraph [ref=f44e101]: Before investing time and money into development, here’s how to test if your idea has real market potential.
+          - generic [ref=f44e102]:
+            - generic [ref=f44e103]: Rishad Wahid
+            - generic [ref=f44e107]: 2 min read
+          - generic [ref=f44e111]: Read Article
+    - region [ref=f44e114]:
+      - generic [ref=f44e115]:
+        - generic [ref=f44e116]:
+          - heading "All Posts" [level=2] [ref=f44e117]:
+            - generic [ref=f44e119]:
+              - generic [ref=f44e120]:
+                - generic [ref=f44e121]: A
+                - generic [ref=f44e122]: l
+                - generic [ref=f44e123]: l
+              - generic [ref=f44e124]:
+                - generic [ref=f44e125]: P
+                - generic [ref=f44e126]: o
+                - generic [ref=f44e127]: s
+                - generic [ref=f44e128]: t
+                - generic [ref=f44e129]: s
+          - tablist "Filter posts by category" [ref=f44e130]:
+            - button "All" [pressed] [ref=f44e131] [cursor=pointer]
+            - button "Strategy" [ref=f44e132] [cursor=pointer]
+            - button "Development" [ref=f44e133] [cursor=pointer]
+            - button "Startup Visa" [ref=f44e134] [cursor=pointer]
+            - button "Mindset" [ref=f44e135] [cursor=pointer]
+            - button "Marketing" [ref=f44e136] [cursor=pointer]
+            - button "Case Study" [ref=f44e137] [cursor=pointer]
+        - generic [ref=f44e138]:
+          - link "How to Validate Your Startup Idea Before Building Strategy How to Validate Your Startup Idea Before Building Before investing time and money into development, here’s how to test if your idea has real market potential. Rishad Wahid January 20, 2026 2 min read" [ref=f44e139] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/how-to-validate-your-startup-idea-before-building/
+            - generic [ref=f44e140]:
+              - img "How to Validate Your Startup Idea Before Building" [ref=f44e141]
+              - generic [ref=f44e142]: Strategy
+            - generic [ref=f44e143]:
+              - heading "How to Validate Your Startup Idea Before Building" [level=3] [ref=f44e144]
+              - paragraph [ref=f44e145]: Before investing time and money into development, here’s how to test if your idea has real market potential.
+              - generic [ref=f44e146]:
+                - generic [ref=f44e147]: Rishad Wahid
+                - generic [ref=f44e152]: January 20, 2026
+                - generic [ref=f44e154]: 2 min read
+          - 'link "The 2-Week MVP: What’s Actually Possible Development The 2-Week MVP: What’s Actually Possible Breaking down what you can realistically build in two weeks and how to prioritize features that matter. Sklentr Team January 15, 2026 1 min read" [ref=f44e155] [cursor=pointer]':
+            - /url: http://localhost/sklentr/sklentr-v3/the-2-week-mvp-whats-actually-possible/
+            - generic [ref=f44e156]:
+              - 'img "The 2-Week MVP: What’s Actually Possible" [ref=f44e157]'
+              - generic [ref=f44e158]: Development
+            - generic [ref=f44e159]:
+              - 'heading "The 2-Week MVP: What’s Actually Possible" [level=3] [ref=f44e160]'
+              - paragraph [ref=f44e161]: Breaking down what you can realistically build in two weeks and how to prioritize features that matter.
+              - generic [ref=f44e162]:
+                - generic [ref=f44e163]: Sklentr Team
+                - generic [ref=f44e168]: January 15, 2026
+                - generic [ref=f44e170]: 1 min read
+          - 'link "Startup Visa Canada: Technical Requirements Explained Startup Visa Startup Visa Canada: Technical Requirements Explained A comprehensive guide to the technical documentation and MVP requirements for your visa application. Sklentr Team January 10, 2026 1 min read" [ref=f44e171] [cursor=pointer]':
+            - /url: http://localhost/sklentr/sklentr-v3/startup-visa-canada-technical-requirements-explained/
+            - generic [ref=f44e172]:
+              - 'img "Startup Visa Canada: Technical Requirements Explained" [ref=f44e173]'
+              - generic [ref=f44e174]: Startup Visa
+            - generic [ref=f44e175]:
+              - 'heading "Startup Visa Canada: Technical Requirements Explained" [level=3] [ref=f44e176]'
+              - paragraph [ref=f44e177]: A comprehensive guide to the technical documentation and MVP requirements for your visa application.
+              - generic [ref=f44e178]:
+                - generic [ref=f44e179]: Sklentr Team
+                - generic [ref=f44e184]: January 10, 2026
+                - generic [ref=f44e186]: 1 min read
+          - link "Why Your MVP Doesn’t Need to Be Perfect Mindset Why Your MVP Doesn’t Need to Be Perfect Perfectionism kills startups. Here’s why shipping fast matters more than shipping perfect. Rishad Wahid January 5, 2026 1 min read" [ref=f44e187] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/why-your-mvp-doesnt-need-to-be-perfect/
+            - generic [ref=f44e188]:
+              - img "Why Your MVP Doesn’t Need to Be Perfect" [ref=f44e189]
+              - generic [ref=f44e190]: Mindset
+            - generic [ref=f44e191]:
+              - heading "Why Your MVP Doesn’t Need to Be Perfect" [level=3] [ref=f44e192]
+              - paragraph [ref=f44e193]: Perfectionism kills startups. Here’s why shipping fast matters more than shipping perfect.
+              - generic [ref=f44e194]:
+                - generic [ref=f44e195]: Rishad Wahid
+                - generic [ref=f44e200]: January 5, 2026
+                - generic [ref=f44e202]: 1 min read
+          - 'link "SEO for Startups: A No-BS Guide Marketing SEO for Startups: A No-BS Guide Forget the fluff. Here’s what actually moves the needle for startup SEO in 2026. Sklentr Team December 28, 2025 1 min read" [ref=f44e203] [cursor=pointer]':
+            - /url: http://localhost/sklentr/sklentr-v3/seo-for-startups-a-no-bs-guide/
+            - generic [ref=f44e204]:
+              - 'img "SEO for Startups: A No-BS Guide" [ref=f44e205]'
+              - generic [ref=f44e206]: Marketing
+            - generic [ref=f44e207]:
+              - 'heading "SEO for Startups: A No-BS Guide" [level=3] [ref=f44e208]'
+              - paragraph [ref=f44e209]: Forget the fluff. Here’s what actually moves the needle for startup SEO in 2026.
+              - generic [ref=f44e210]:
+                - generic [ref=f44e211]: Sklentr Team
+                - generic [ref=f44e216]: December 28, 2025
+                - generic [ref=f44e218]: 1 min read
+          - link "How We Built an MVP in 10 Days Case Study How We Built an MVP in 10 Days A behind-the-scenes look at our fastest project ever. What made it possible and what we learned. Rishad Wahid December 20, 2025 1 min read" [ref=f44e219] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/how-we-built-an-mvp-in-10-days/
+            - generic [ref=f44e220]:
+              - img "How We Built an MVP in 10 Days" [ref=f44e221]
+              - generic [ref=f44e222]: Case Study
+            - generic [ref=f44e223]:
+              - heading "How We Built an MVP in 10 Days" [level=3] [ref=f44e224]
+              - paragraph [ref=f44e225]: A behind-the-scenes look at our fastest project ever. What made it possible and what we learned.
+              - generic [ref=f44e226]:
+                - generic [ref=f44e227]: Rishad Wahid
+                - generic [ref=f44e232]: December 20, 2025
+                - generic [ref=f44e234]: 1 min read
+    - region [ref=f44e235]:
+      - generic [ref=f44e237]:
+        - paragraph [ref=f44e238]: Let’s build
+        - heading "Ready to launch your MVP in weeks?" [level=2] [ref=f44e240]
+        - paragraph [ref=f44e241]: Book a free 30-minute consultation. No pressure, no jargon — just a clear plan and timeline.
+        - link "Book a Free Consultation" [ref=f44e243] [cursor=pointer]:
+          - /url: https://calendly.com/sklentr
+          - text: Book a Free Consultation
+          - generic [ref=f44e244]: →
+        - generic [ref=f44e245]:
+          - generic [ref=f44e246]: Or reach us directly
+          - list [ref=f44e247]:
+            - listitem [ref=f44e248]:
+              - link "WhatsApp" [ref=f44e249] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f44e252]:
+              - link "info@sklentr.com" [ref=f44e253] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f44e257]:
+              - link "+1 647-997-0557" [ref=f44e258] [cursor=pointer]:
+                - /url: tel:+16479970557
+  - contentinfo [ref=f44e261]:
+    - generic [ref=f44e262]:
+      - generic [ref=f44e263]:
+        - heading "Get founder-grade MVP & Startup Visa tips straight to your inbox." [level=2] [ref=f44e264]
+        - generic [ref=f44e266]:
+          - generic [ref=f44e267]: you@company.com
+          - textbox "you@company.com" [ref=f44e268]
+          - button "Subscribe" [ref=f44e269] [cursor=pointer]:
+            - text: Subscribe
+            - generic [ref=f44e270]: →
+      - generic [ref=f44e271]:
+        - navigation "Services" [ref=f44e272]:
+          - heading "Services" [level=3] [ref=f44e273]
+          - list [ref=f44e274]:
+            - listitem [ref=f44e275]:
+              - link "MVP Development" [ref=f44e276] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f44e277]:
+              - link "Website Design" [ref=f44e278] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f44e279]:
+              - link "SEO & Marketing" [ref=f44e280] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f44e281]:
+              - link "Paid Ads" [ref=f44e282] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f44e283]:
+              - link "Video Production" [ref=f44e284] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f44e285]:
+              - link "Business Consultation" [ref=f44e286] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f44e287]:
+              - link "Startup Visa" [ref=f44e288] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+        - navigation "Company" [ref=f44e289]:
+          - heading "Company" [level=3] [ref=f44e290]
+          - list [ref=f44e291]:
+            - listitem [ref=f44e292]:
+              - link "About" [ref=f44e293] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/about/
+            - listitem [ref=f44e294]:
+              - link "Portfolio" [ref=f44e295] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+            - listitem [ref=f44e296]:
+              - link "Blog" [ref=f44e297] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/blog/
+            - listitem [ref=f44e298]:
+              - link "Pricing" [ref=f44e299] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#pricing
+            - listitem [ref=f44e300]:
+              - link "Contact" [ref=f44e301] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#contact
+        - navigation "Resources" [ref=f44e302]:
+          - heading "Resources" [level=3] [ref=f44e303]
+          - list [ref=f44e304]:
+            - listitem [ref=f44e305]:
+              - link "Startup Visa" [ref=f44e306] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+            - listitem [ref=f44e307]:
+              - link "FAQ" [ref=f44e308] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#faq
+            - listitem [ref=f44e309]:
+              - link "How We Work" [ref=f44e310] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#how-we-work
+            - listitem [ref=f44e311]:
+              - link "Privacy Policy" [ref=f44e312] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/privacy-policy/
+            - listitem [ref=f44e313]:
+              - link "Terms" [ref=f44e314] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/terms/
+        - generic [ref=f44e315]:
+          - heading "Contact Us" [level=3] [ref=f44e316]
+          - list [ref=f44e317]:
+            - listitem [ref=f44e318]:
+              - link "+1 647-997-0557" [ref=f44e322] [cursor=pointer]:
+                - /url: tel:+16479970557
+            - listitem [ref=f44e323]:
+              - link "info@sklentr.com" [ref=f44e328] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f44e329]:
+              - link "WhatsApp" [ref=f44e333] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f44e334]:
+              - generic [ref=f44e339]: Toronto, Ontario, Canada
+      - generic [ref=f44e340]:
+        - paragraph [ref=f44e341]: © 2026 Sklentr V3 — Toronto-based MVP studio. All rights reserved.
+        - generic [ref=f44e342]:
+          - generic [ref=f44e343]: Follow Us
+          - link "LinkedIn" [ref=f44e344] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/sklentr/
+    - generic [ref=f44e350]:
+      - generic [ref=f44e351]: S
+      - generic [ref=f44e352]: K
+      - generic [ref=f44e353]: L
+      - generic [ref=f44e358]: "N"
+      - generic [ref=f44e359]: T
+      - generic [ref=f44e360]: R

@@ -1,0 +1,16 @@
+// =====================================================================
+// Abstracts — mixins (breakpoints + a11y helpers)
+// Breakpoints mirror CLAUDE.md §8.
+// =====================================================================
+
+@mixin bp-max($px) {
+  @media (max-width: $px) { @content; }
+}
+
+@mixin bp-min($px) {
+  @media (min-width: $px) { @content; }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) { @content; }
+}

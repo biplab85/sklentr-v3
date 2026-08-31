@@ -1,0 +1,243 @@
+// =====================================================================
+// SECTION 12 — About / Team Snapshot — "collage" layout
+// Inspired by the Quiety "Since 2013" section, rebuilt in Sklentr's on-brand
+// colours: heading (top-left) · founder quote card with a cut-out portrait that
+// goes grayscale → colour on hover (bottom-left) · numbered highlight card
+// (top-right) · story + CTA + socials (bottom-right) · a hand-drawn squiggle.
+// Micro-animations: reveal fades, char-fill heading, photo colour-on-hover +
+// zoom, floating portrait, card hover lifts. Content is dynamic.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.about {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6F8FB 100%);
+  padding-block: clamp(72px, 9vw, 128px);
+}
+
+.about__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.about__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: .5;
+
+  &--gold  { width: 440px; height: 440px; top: -140px; left: -110px; background: radial-gradient(circle, rgba(243, 179, 81, .16), transparent 70%); }
+  &--green { width: 420px; height: 420px; bottom: -150px; right: -80px; background: radial-gradient(circle, rgba(30, 255, 133, .1), transparent 70%); }
+}
+
+// ---- Collage grid (2×2, staggered) ----
+.about__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: clamp(30px, 4vw, 52px);
+  align-items: start;
+}
+.about__head       { grid-column: 1; grid-row: 1; align-self: center; }
+.about__quote-wrap { grid-column: 1; grid-row: 2; }
+.about__highlight  { grid-column: 2; grid-row: 1; margin-top: clamp(16px, 3vw, 40px); }
+.about__foot       { grid-column: 2; grid-row: 2; }
+
+@include bp-max(880px) {
+  .about__inner { grid-template-columns: 1fr; }
+  .about__head, .about__quote-wrap, .about__highlight, .about__foot {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 0;
+  }
+}
+
+// ---- Heading ----
+.about__eyebrow { margin: 0 0 14px; }
+.about__title {
+  margin: 0;
+  max-width: 16ch;
+  color: var(--ink-950);
+  font-size: var(--fs-h2);
+}
+
+// ---- Quote card + cut-out portrait ----
+.about__quote-wrap {
+  position: relative;
+  max-width: 560px;
+  padding-right: clamp(64px, 8vw, 104px);   // space for the portrait to pop out
+}
+.about__quote {
+  position: relative;
+  margin: 0;
+  padding: clamp(24px, 3vw, 34px);
+  padding-right: clamp(96px, 11vw, 132px);   // keep text clear of the portrait
+  border-radius: var(--radius-xl);
+  background: linear-gradient(150deg, var(--brand-gold) 0%, #FFCC79 100%);
+  color: var(--ink-950);
+  box-shadow: 0 24px 50px rgba(243, 179, 81, .3);
+}
+.about__quote-mark {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 54px;
+  line-height: .5;
+  color: rgba(11, 17, 32, .32);
+}
+.about__quote-text {
+  margin: 0 0 18px;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, .94rem + .4vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ink-950);
+}
+.about__quote-by { display: flex; flex-direction: column; }
+.about__quote-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--ink-950);
+}
+.about__quote-role { font-size: 13px; color: rgba(11, 17, 32, .6); }
+
+.about__photo {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 2;
+  width: clamp(148px, 16vw, 196px);
+  aspect-ratio: 1;
+  padding: 5px;                               // gradient ring thickness
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-gold));
+  box-shadow: 0 20px 44px rgba(11, 17, 32, .22);
+  transform: translateY(-50%);
+  animation: aboutPhotoFloat 6s var(--ease-inout) infinite;
+
+  // Playful accent circle peeking out behind.
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -14px;
+    bottom: -10px;
+    width: 64%;
+    height: 64%;
+    border-radius: 50%;
+    background: rgba(30, 255, 133, .5);
+  }
+
+  &:hover { animation-play-state: paused; }
+}
+.about__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  filter: grayscale(1) contrast(1.02);        // black & white by default
+  transition: filter .5s var(--ease-out), transform .5s var(--ease-out);
+}
+.about__photo:hover .about__photo-img { filter: grayscale(0); transform: scale(1.05); }  // colour + zoom on hover
+@keyframes aboutPhotoFloat {
+  0%, 100% { transform: translateY(-50%); }
+  50%      { transform: translateY(calc(-50% - 10px)); }
+}
+
+// ---- Numbered highlight card (dark) ----
+.about__highlight {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 26px);
+  padding: clamp(24px, 3vw, 34px);
+  border-radius: var(--radius-xl);
+  color: var(--color-text-on-dark);
+  background:
+    radial-gradient(120% 90% at 12% 6%, #17253f 0%, transparent 56%),
+    linear-gradient(160deg, #101d33 0%, #0B1120 100%);
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: 0 26px 60px rgba(11, 17, 32, .26);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+
+  &:hover { transform: translateY(-4px); box-shadow: 0 34px 72px rgba(11, 17, 32, .34); }
+}
+.about__hl-num {
+  flex: none;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(3rem, 2rem + 3vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--brand-gold);
+}
+.about__hl-title {
+  margin: 0 0 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.about__hl-desc { margin: 0; font-size: 15px; line-height: 1.55; color: #AAB8CC; }
+
+// ---- Story + actions ----
+.about__foot { max-width: 520px; }
+.about__story {
+  margin: 0 0 28px;
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  color: var(--slate-600);
+}
+.about__actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 36px);
+  flex-wrap: wrap;
+}
+.about__social { display: flex; align-items: center; gap: 14px; }
+.about__social-label { font-size: 14px; font-weight: 600; color: var(--slate-500); }
+.about__social-list { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.about__social-link {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--slate-500);
+  background: #fff;
+  border: 1px solid var(--slate-200);
+  transition: color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+
+  svg { width: 18px; height: 18px; }
+
+  &:hover {
+    color: var(--brand-gold-deep);
+    border-color: rgba(243, 179, 81, .5);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+// ---- Decorative squiggle ----
+.about__squiggle {
+  position: absolute;
+  right: clamp(16px, 4vw, 72px);
+  bottom: clamp(20px, 5vw, 56px);
+  z-index: -1;
+  width: clamp(110px, 13vw, 180px);
+  height: auto;
+  opacity: .55;
+  pointer-events: none;
+
+  @include bp-max(880px) { display: none; }
+}
+
+// ---- Reduced motion ----
+@include reduced-motion {
+  .about__photo { animation: none; }
+  .about__photo-img,
+  .about__photo:hover .about__photo-img { transition: none; }
+}

@@ -1,0 +1,21 @@
+/*
+Theme Name: Sklentr
+Theme URI: https://www.sklentr.com/
+Description: Custom hand-coded WordPress theme for SKL Entr (Sklentr) — a Toronto-based MVP development studio. No page builder. Styles are authored in SCSS (scss/) and compiled by Dart Sass to assets/css/main.css (npm run build / watch). Design tokens live in scss/abstracts/_tokens.scss and are emitted as CSS custom properties (the design-system source of truth, per CLAUDE.md).
+Author: SKL Entr
+Author URI: https://www.sklentr.com/
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+Text Domain: sklentr
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/*
+ * This file intentionally contains only the WordPress theme header above.
+ * All actual styles are authored in SCSS under /scss and compiled to
+ * /assets/css/main.css, which is what the theme enqueues (see functions.php).
+ * Do not add rules here — edit the SCSS partials and run `npm run build`.
+ */

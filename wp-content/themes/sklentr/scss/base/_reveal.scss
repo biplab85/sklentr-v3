@@ -1,0 +1,28 @@
+// =====================================================================
+// Base — scroll reveal (paired with assets/js/reveal.js)
+// The hidden state is only applied once JS adds `.reveal-init`, so content is
+// never hidden for no-JS / reduced-motion users.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+[data-reveal] {
+  transition: opacity .6s var(--ease-out), transform .6s var(--ease-out);
+}
+[data-reveal].reveal-init {
+  opacity: 0;
+  transform: translateY(22px);
+}
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@include reduced-motion {
+  [data-reveal],
+  [data-reveal].reveal-init,
+  [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

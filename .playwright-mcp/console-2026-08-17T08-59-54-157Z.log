@@ -1,0 +1,4 @@
+[     217ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ http://localhost/sklentr/sklentr-v3/wp-admin/load-scripts.php?c=1&load%5Bchunk_0%5D=jquery-core,jquery-migrate,utils,moxiejs,plupload&ver=7.0.4:4
+[   16613ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ http://localhost/sklentr/sklentr-v3/wp-admin/load-scripts.php?c=1&load%5Bchunk_0%5D=jquery-core,jquery-migrate,utils&ver=7.0.4:4
+[   19332ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ http://localhost/sklentr/sklentr-v3/wp-admin/load-scripts.php?c=1&load%5Bchunk_0%5D=jquery-core,jquery-migrate,utils,moxiejs,plupload&ver=7.0.4:4
+[   36657ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ http://localhost/sklentr/sklentr-v3/wp-admin/load-scripts.php?c=1&load%5Bchunk_0%5D=jquery-core,jquery-migrate,utils&ver=7.0.4:4

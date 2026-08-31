@@ -1,0 +1,161 @@
+// =====================================================================
+// BLOG DETAILS (/blog-details) — single article: dark header + cover,
+// light body with sticky TOC + social share rail, related grid.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+body.blogdetailpage .site-main { padding-top: 0; }   // dark header paints under the fixed header
+
+$bd-text:  #475569;   // slate-600 body
+$bd-muted: #64748B;   // slate-500 meta
+
+// ---------------------------------------------------------------- HEADER (dark)
+.bd-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: var(--ink-950);
+  padding-block: clamp(120px, 12vw, 168px) clamp(40px, 5vw, 64px);
+  text-align: center;
+
+  &__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  &__glow {
+    position: absolute; border-radius: 50%; filter: blur(130px); opacity: .4;
+    &--gold  { width: 40vw; height: 26vw; top: -12vw; left: 6%;  background: radial-gradient(circle, rgba(243,179,81,.3), transparent 66%); }
+    &--green { width: 30vw; height: 22vw; top: -6vw;  right: 6%; background: radial-gradient(circle, rgba(30,255,133,.16), transparent 68%); }
+  }
+
+  &__back {
+    display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px;
+    font-family: var(--font-body); font-weight: 600; font-size: 14px; text-decoration: none;
+    color: #AAB8CC;
+    transition: color var(--dur-fast) var(--ease-out), gap var(--dur-fast) var(--ease-out);
+    svg { width: 17px; height: 17px; }
+    &:hover { color: #fff; gap: 12px; }
+  }
+  &__cat {
+    display: inline-block; margin-bottom: 16px;
+    font-family: var(--font-body); font-weight: 700; font-size: 12px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--brand-green);
+  }
+  &__title {
+    max-width: 20ch; margin: 0 auto;
+    font-family: var(--font-heading); font-weight: 800;
+    font-size: clamp(2rem, 1.2rem + 3.4vw, 3.4rem); line-height: 1.12; letter-spacing: -.02em;
+    color: #fff; text-wrap: balance;
+  }
+  &__meta {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 22px;
+    margin-top: clamp(20px, 2.5vw, 28px);
+    .bl-meta { color: #AAB8CC; svg { color: #7C8AA0; } }
+  }
+}
+
+// cover image — overlaps the dark header into the light body
+.bd-cover {
+  background: linear-gradient(180deg, var(--ink-950) 0 50%, var(--white) 50% 100%);
+  .bd-cover__frame {
+    border-radius: var(--radius-xl); overflow: hidden;
+    aspect-ratio: 16 / 7; box-shadow: 0 30px 60px rgba(0,0,0,.35);
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    @include bp-max(680px) { aspect-ratio: 16 / 10; }
+  }
+}
+
+// ---------------------------------------------------------------- BODY (light)
+.bd-main {
+  background: var(--white);
+  padding-block: clamp(40px, 5vw, 64px) clamp(56px, 7vw, 96px);
+}
+.bd-layout {
+  display: grid; grid-template-columns: 260px minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px); align-items: start;
+  @include bp-max(900px) { grid-template-columns: 1fr; gap: 32px; }
+}
+
+// --- sticky TOC + share rail
+// The aside grid cell must fill the row height (the grid uses align-items:start,
+// which otherwise sizes it to content — leaving the inner sticky no room to travel).
+.bd-aside {
+  @include bp-min(901px) { align-self: stretch; }
+}
+.bd-aside__sticky {
+  @include bp-min(901px) { position: sticky; top: calc(var(--header-h) + 28px); }
+}
+.bd-toc {
+  &__title {
+    margin: 0 0 14px; font-family: var(--font-body); font-weight: 700;
+    font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--slate-400);
+  }
+  &__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; border-left: 1px solid var(--slate-200); }
+  &__link {
+    display: block; padding: 7px 0 7px 16px; margin-left: -1px;
+    border-left: 2px solid transparent;
+    font-size: 14px; line-height: 1.45; color: var(--slate-500); text-decoration: none;
+    transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+    &:hover { color: var(--slate-900); }
+    &.is-active { color: var(--brand-gold-deep); border-left-color: var(--brand-gold); font-weight: 600; }
+  }
+}
+.bd-share {
+  margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--slate-200);
+  &__title {
+    margin: 0 0 12px; font-family: var(--font-body); font-weight: 700;
+    font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--slate-400);
+  }
+  &__links { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  &__btn {
+    display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+    color: var(--slate-600); background: var(--slate-100); border: 1px solid var(--slate-200);
+    cursor: pointer; text-decoration: none;
+    transition: color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+    svg { width: 17px; height: 17px; }
+    &:hover { color: var(--ink-950); border-color: transparent; transform: translateY(-2px);
+      background: var(--brand-gold); }
+  }
+  &__copied { font-size: 12px; font-weight: 600; color: var(--brand-green-deep); }
+  &__copied[hidden] { display: none; }
+}
+
+// --- article body typography
+.bd-body {
+  max-width: 72ch;
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.8; color: $bd-text;
+
+  .bd-lead {
+    font-size: clamp(1.15rem, 1.05rem + .4vw, 1.35rem); line-height: 1.6;
+    color: var(--slate-800, #1f2b3d); font-weight: 500; margin: 0 0 28px;
+  }
+  p { margin: 0 0 22px; }
+  h2 {
+    margin: 42px 0 14px; scroll-margin-top: calc(var(--header-h) + 24px);
+    font-family: var(--font-heading); font-weight: 700; font-size: clamp(1.4rem, 1.1rem + 1vw, 1.85rem);
+    line-height: 1.25; letter-spacing: -.01em; color: var(--slate-900);
+  }
+  ul { margin: 0 0 22px; padding-left: 0; list-style: none; }
+  li {
+    position: relative; padding-left: 28px; margin-bottom: 12px;
+    &::before {
+      content: ""; position: absolute; left: 4px; top: .62em; width: 8px; height: 8px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--brand-gold), var(--brand-green));
+    }
+  }
+  blockquote {
+    margin: 30px 0; padding: 20px 26px; border-radius: var(--radius-md);
+    border-left: 4px solid var(--brand-gold);
+    background: var(--slate-50);
+    font-family: var(--font-heading); font-weight: 600; font-style: normal;
+    font-size: clamp(1.1rem, 1rem + .5vw, 1.35rem); line-height: 1.5; letter-spacing: -.01em;
+    color: var(--slate-900);
+  }
+  a { color: var(--brand-gold-deep); text-decoration: underline; text-underline-offset: 2px; }
+}
+
+// ---------------------------------------------------------------- RELATED
+.bd-related {
+  background: var(--slate-50);
+  padding-block: clamp(52px, 7vw, 90px);
+}
+.bd-related__title {
+  margin: 0 0 clamp(28px, 3.5vw, 44px);
+  font-family: var(--font-heading); font-weight: 800;
+  font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.4rem); letter-spacing: -.02em; color: var(--slate-900);
+}

@@ -1,0 +1,411 @@
+// =====================================================================
+// SECTION 16 — Mega-footer (dark anchor), Ritovex-style layout.
+//   1. Newsletter hero row (heading + underline field)
+//   2. 4-column grid (3 link columns + contact w/ icons)
+//   3. Middle bar (credit + social icons)
+//   4. Giant decorative wordmark
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  color: #94A3B8;
+  background: var(--ink-950);
+  border-top: 1px solid var(--ink-700);
+  padding-top: clamp(48px, 6vw, 88px);
+}
+
+// ---- 1 — Newsletter hero row ----
+.footer-news {
+  display: grid;
+  grid-template-columns: 1.1fr auto;
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+  padding-bottom: clamp(36px, 4.5vw, 60px);
+  border-bottom: 1px solid var(--ink-700);
+
+  @include bp-max(860px) { grid-template-columns: 1fr; gap: 24px; }
+}
+.footer-news__title {
+  margin: 0;
+  max-width: 22ch;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1rem + 1.8vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.footer-news__form { min-width: min(440px, 100%); }
+.footer-news__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 0 12px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1.5px solid rgba(255, 255, 255, .22);
+  border-radius: 0;
+  transition: border-color var(--dur-base) var(--ease-out);
+
+  &:focus-within { border-bottom-color: var(--brand-gold); }
+}
+.footer-news__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 4px 0;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 16px;
+
+  &::placeholder { color: #6B7686; }
+  &:focus { outline: none; }
+}
+.footer-news__submit {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--brand-gold);
+  transition: color var(--dur-fast, 150ms) var(--ease-out);
+
+  &:hover { color: #fff; }
+  &:hover .footer-news__arrow { transform: translateX(4px); }
+}
+.footer-news__arrow { transition: transform var(--dur-base) var(--ease-out); }
+.footer-news__success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand-green);
+
+  &[hidden] { display: none; }
+
+  &::before {
+    content: "";
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--brand-green);
+    box-shadow: 0 0 8px rgba(30, 255, 133, .6);
+  }
+}
+
+// ---- Mobile only: boxed input + filled button (no underline row) ----
+// Desktop keeps the underline field + text-link submit above — untouched.
+@include bp-max(560px) {
+  .footer-news__row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 0;
+    border-bottom: 0;
+
+    &:focus-within { border-bottom-color: transparent; }
+  }
+  .footer-news__input {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 13px 16px;
+    text-align: left;
+    background: rgba(255, 255, 255, .04);
+    border: 1.5px solid rgba(255, 255, 255, .22);
+    border-radius: var(--radius-md);
+    transition: border-color var(--dur-base) var(--ease-out),
+                background var(--dur-base) var(--ease-out);
+
+    &:focus {
+      outline: none;
+      border-color: var(--brand-gold);
+      background: rgba(255, 255, 255, .06);
+    }
+  }
+  .footer-news__submit {
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    background: var(--brand-gold);
+    color: var(--ink-950);
+    transition: background var(--dur-base) var(--ease-out),
+                color var(--dur-base) var(--ease-out),
+                transform var(--dur-base) var(--ease-out);
+
+    &:hover {
+      background: var(--brand-gold-deep);
+      color: #fff;
+    }
+    &:active { transform: translateY(1px); }
+  }
+}
+
+// ---- 2 — Column grid ----
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.3fr;
+  gap: clamp(28px, 3.5vw, 56px);
+  padding-block: clamp(44px, 5vw, 76px);
+
+  @include bp-max(1024px) { grid-template-columns: 1fr 1fr; gap: 40px; }
+  @include bp-max(560px)  { grid-template-columns: 1fr; gap: 34px; }
+}
+.footer-col__title {
+  margin: 0 0 20px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li { margin-bottom: 13px; }
+
+  a {
+    font-size: 15px;
+    color: #94A3B8;
+    transition: color var(--dur-base) var(--ease-out), padding-left var(--dur-base) var(--ease-out);
+
+    &:hover { color: #fff; padding-left: 4px; }
+  }
+}
+
+// ---- Contact column (icon rows) ----
+.footer-contact__list { margin: 0; padding: 0; list-style: none; }
+.footer-contact__item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #C7D2E1;
+
+  a {
+    color: #C7D2E1;
+    transition: color var(--dur-base) var(--ease-out);
+    &:hover { color: #fff; }
+  }
+}
+.footer-contact__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: var(--brand-gold);
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .12);
+
+  svg { width: 17px; height: 17px; }
+
+  .footer-contact__item--address & { margin-top: 1px; }
+}
+
+// ---- 3 — Middle bar ----
+.footer-mid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 28px;
+  padding-block: clamp(22px, 2.5vw, 32px);
+  border-top: 1px solid var(--ink-700);
+}
+.footer-mid__credit { margin: 0; font-size: 14px; color: #7B879A; }
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.footer-social__label {
+  margin-right: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+.footer-social__link {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #C7D2E1;
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .12);
+  transition: color var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+
+  svg { width: 16px; height: 16px; }
+
+  &:hover {
+    color: #0B1120;
+    background: var(--brand-gold);
+    border-color: var(--brand-gold);
+    transform: translateY(-2px);
+  }
+}
+
+// ---- 4 — Giant decorative wordmark ----
+.footer-mega-wrap {
+  overflow: hidden;
+  padding: clamp(8px, 1.5vw, 24px) 0 0;
+  margin-bottom: -68px;
+  text-align: center;
+}
+.footer-mega {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(4rem, 19vw, 22rem);
+  line-height: .82;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  user-select: none;
+}
+.footer-mega__part {
+  // Metallic silver "venetian" stripe, clipped to the glyphs (Ritovex look).
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, .95) 0px,
+    rgba(255, 255, 255, .95) 3px,
+    rgba(148, 163, 184, .30) 5px,
+    rgba(148, 163, 184, .30) 9px
+  );
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+          color: transparent;
+}
+.footer-mega__eq {
+  // Three green bars (not the 2-bar "=" glyph), vertically centred on the word.
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: .11em;
+  padding-inline: .12em;
+
+  i {
+    display: block;
+    width: .6em;
+    height: .11em;
+    border-radius: .03em;
+    background: var(--brand-green);
+    box-shadow: 0 0 .2em rgba(30, 255, 133, .5);
+  }
+}
+
+// ---- Per-letter staggered reveal (reuses the generic [data-reveal] observer) ----
+// The wordmark itself must NOT fade as one block, so each glyph can appear in
+// turn: S · K · L · = · N · T · R. Only this element is affected.
+.footer-mega[data-reveal],
+.footer-mega[data-reveal].reveal-init,
+.footer-mega[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.footer-mega__char {
+  transition: opacity .5s var(--ease-out), transform .5s var(--ease-out);
+}
+.footer-mega.reveal-init .footer-mega__char {
+  opacity: 0;
+  transform: translateY(.16em) scale(.94);
+}
+.footer-mega.is-revealed .footer-mega__char {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(var(--i, 0) * 110ms);
+}
+@include reduced-motion {
+  .footer-mega__char { opacity: 1; transform: none; transition: none; }
+}
+
+// ---- Mobile only: collapse the 4 columns into accordions ----
+// Progressive enhancement — footer-accordion.js adds `.is-accordion` ONLY at
+// <=560px and removes it above, so desktop (UI, content, IDs) is never touched.
+// Without JS the columns stay fully expanded (the default), so links remain
+// reachable. This whole block is inside the mobile breakpoint AND gated on the
+// JS-only `.is-accordion` class.
+@include bp-max(560px) {
+  .footer-cols.is-accordion {
+    gap: 0;
+    border-top: 1px solid var(--ink-700);
+
+    .footer-col { border-bottom: 1px solid var(--ink-700); }
+
+    .footer-col__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0;
+      padding: 18px 2px;
+      cursor: pointer;
+      -webkit-user-select: none;
+              user-select: none;
+
+      &::after {
+        content: "";
+        flex: none;
+        width: 9px;
+        height: 9px;
+        margin-right: 4px;
+        border-right: 2px solid #94A3B8;
+        border-bottom: 2px solid #94A3B8;
+        transform: translateY(-2px) rotate(45deg);
+        transition: transform var(--dur-base) var(--ease-out);
+      }
+    }
+
+    // Collapsible panel = the element right after the title (the <ul>).
+    .footer-col__title + * {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height var(--dur-slow) var(--ease-out),
+                  opacity var(--dur-base) var(--ease-out),
+                  margin var(--dur-base) var(--ease-out);
+    }
+
+    .footer-col.is-open .footer-col__title::after {
+      transform: translateY(1px) rotate(-135deg);
+    }
+    .footer-col.is-open .footer-col__title + * {
+      max-height: 520px;
+      opacity: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include reduced-motion {
+    .footer-cols.is-accordion .footer-col__title::after,
+    .footer-cols.is-accordion .footer-col__title + * { transition: none; }
+  }
+}

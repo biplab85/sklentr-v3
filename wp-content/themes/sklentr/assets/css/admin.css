@@ -1,0 +1,286 @@
+/**
+ * Sklentr — wp-admin styling.
+ *
+ * Loaded ONLY on Sklentr admin screens (Settings page + Sklentr CPT editors)
+ * via the admin_enqueue_scripts hook in functions.php. Never enqueued on the
+ * front end, so it cannot affect the public site.
+ *
+ * Purpose: give the settings labels room to breathe (core's .form-table th has
+ * padding-left:0, which pins them to the card border) and unify field styling.
+ */
+
+/* ==========================================================================
+   1 — Settings page: cards
+   ========================================================================== */
+
+.skl-opt-page {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.skl-opt-page > .skl-opt-page__head,
+.skl-opt-sec > .skl-opt-sec__head {
+	transition: background .15s ease;
+}
+
+.skl-opt-page__body {
+	padding: 14px 16px 16px;
+}
+
+.skl-opt-sec {
+	transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.skl-opt-sec[open] {
+	border-color: #c3c4c7;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+/* ==========================================================================
+   2 — Settings page: field rows
+   The fix — core sets `th { padding: 20px 10px 20px 0 }`, so the label sits
+   flush against the card's left border.
+   ========================================================================== */
+
+.skl-opt-sec .form-table {
+	padding: 6px 20px 16px;
+	border-collapse: separate;
+}
+
+.skl-opt-sec .form-table th {
+	width: 240px;
+	padding: 18px 26px 18px 16px;
+	vertical-align: top;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #1d2327;
+	word-break: normal;
+	overflow-wrap: break-word;
+}
+
+.skl-opt-sec .form-table td {
+	padding: 14px 16px 14px 0;
+	vertical-align: top;
+}
+
+/* Hairline between rows so long sections stay scannable. */
+.skl-opt-sec .form-table tr + tr th,
+.skl-opt-sec .form-table tr + tr td {
+	border-top: 1px solid #f0f0f1;
+}
+
+.skl-opt-sec .form-table tr:hover th {
+	color: #135e96;
+}
+
+/* ==========================================================================
+   3 — Inputs (settings page + Sklentr meta boxes)
+   ========================================================================== */
+
+.skl-opt-sec .form-table input[type="text"],
+.skl-opt-sec .form-table input[type="url"],
+.skl-opt-sec .form-table textarea,
+.skl-meta input[type="text"],
+.skl-meta textarea,
+.skl-meta select {
+	padding: 7px 12px;
+	border: 1px solid #c3c4c7;
+	border-radius: 6px;
+	box-shadow: none;
+	line-height: 1.5;
+	transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.skl-opt-sec .form-table input[type="text"],
+.skl-opt-sec .form-table input[type="url"] {
+	width: 100%;
+	max-width: 480px;
+}
+
+.skl-opt-sec .form-table textarea,
+.skl-meta textarea {
+	width: 100%;
+	max-width: 620px;
+	min-height: 62px;
+	padding: 10px 12px;
+}
+
+.skl-opt-sec .form-table input[type="text"]:focus,
+.skl-opt-sec .form-table input[type="url"]:focus,
+.skl-opt-sec .form-table textarea:focus,
+.skl-meta input[type="text"]:focus,
+.skl-meta textarea:focus,
+.skl-meta select:focus {
+	border-color: #2271b1;
+	box-shadow: 0 0 0 3px rgba(34, 113, 177, .12);
+	outline: 2px solid transparent; /* Keeps a visible ring in forced-colours mode. */
+}
+
+/* ==========================================================================
+   4 — CPT meta boxes ("Details" on Sklentr post types)
+   ========================================================================== */
+
+.skl-meta {
+	padding: 4px 4px 0;
+}
+
+.skl-meta__field {
+	margin: 0 0 20px;
+}
+
+.skl-meta__label {
+	display: block;
+	margin: 0 0 6px;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #1d2327;
+}
+
+.skl-meta select {
+	min-width: 240px;
+	height: auto;
+}
+
+.skl-meta__note {
+	margin: 4px 0 0;
+	padding: 12px 14px;
+	border-radius: 6px;
+	background: #f6f7f7;
+	color: #50575e;
+	font-size: 12.5px;
+	line-height: 1.6;
+}
+
+/* Side-column meta boxes ("Article details" on blog posts) — narrower column,
+   so the field stacks tighter than in the wide "Details" box. */
+.skl-meta--side {
+	padding: 0;
+}
+
+.skl-meta--side .skl-meta__field {
+	margin-bottom: 16px;
+}
+
+.skl-meta--side .skl-meta__field:last-child {
+	margin-bottom: 4px;
+}
+
+.skl-meta--side input[type="text"] {
+	margin-bottom: 6px;
+}
+
+.skl-meta--side .description {
+	display: block;
+	font-size: 12px;
+	line-height: 1.5;
+	color: #646970;
+}
+
+/* Meta box chrome across all Sklentr editors. */
+.skl-admin #poststuff .postbox {
+	border-color: #c3c4c7;
+	border-radius: 8px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.skl-admin #poststuff .postbox > .postbox-header {
+	border-bottom-color: #f0f0f1;
+	border-radius: 8px 8px 0 0;
+}
+
+.skl-admin #poststuff .postbox-header h2 {
+	padding: 12px 16px;
+	font-size: 14px;
+}
+
+/* ==========================================================================
+   5 — List tables (Portfolio Projects, Subscribers, and every other
+   Sklentr CPT). Scoped to .skl-admin so no other list table is touched.
+   ========================================================================== */
+
+.skl-admin .wrap > h1.wp-heading-inline {
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.skl-admin .wp-list-table {
+	border-color: #c3c4c7;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+}
+
+.skl-admin .wp-list-table thead th,
+.skl-admin .wp-list-table thead td {
+	padding-top: 14px;
+	padding-bottom: 14px;
+	background: #f6f7f7;
+	font-size: 13px;
+}
+
+.skl-admin .wp-list-table thead th:first-child,
+.skl-admin .wp-list-table tbody th:first-child,
+.skl-admin .wp-list-table tbody td:first-child,
+.skl-admin .wp-list-table tfoot th:first-child {
+	padding-left: 16px;
+}
+
+.skl-admin .wp-list-table tbody td,
+.skl-admin .wp-list-table tbody th {
+	padding-top: 14px;
+	padding-bottom: 14px;
+	vertical-align: middle;
+	line-height: 1.5;
+}
+
+/* Align the checkbox with the row title's first line, exactly as core does on
+   the Posts screen (core: vertical-align:top + padding-top:11px against an 8px
+   cell). Our rows use 14px top padding, so the checkbox offsets to match. */
+.skl-admin .wp-list-table .check-column {
+	padding-top: 17px;
+	padding-bottom: 0;
+	vertical-align: top;
+}
+
+.skl-admin .wp-list-table .check-column input[type="checkbox"] {
+	margin: 0;
+}
+
+.skl-admin .wp-list-table thead .check-column,
+.skl-admin .wp-list-table tfoot .check-column {
+	padding-top: 0;
+	vertical-align: middle;
+}
+
+.skl-admin .wp-list-table tbody tr:hover {
+	background: #f6f7f7;
+}
+
+.skl-admin .wp-list-table .row-title {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/* ==========================================================================
+   6 — Narrow screens: stack the label above the field like core does
+   ========================================================================== */
+
+@media screen and (max-width: 782px) {
+	.skl-opt-sec .form-table th,
+	.skl-opt-sec .form-table td {
+		display: block;
+		width: auto;
+		padding: 12px 4px;
+		border-top: 0;
+	}
+
+	.skl-opt-sec .form-table th {
+		padding-bottom: 4px;
+	}
+
+	.skl-opt-sec .form-table tr + tr th {
+		border-top: 1px solid #f0f0f1;
+		padding-top: 16px;
+	}
+}

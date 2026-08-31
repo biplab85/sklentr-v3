@@ -1,0 +1,278 @@
+// =====================================================================
+// SECTION 04 — Services (dark anchor, row-list — matches sklentr.com)
+// Number · bold title · description + green "+" tags · circular icon.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.services {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(90% 60% at 80% 0%, rgba(30, 255, 133, .06) 0%, transparent 60%),
+    var(--ink-950);
+  color: var(--color-text-on-dark);
+  padding-block: clamp(72px, 9vw, 130px);
+}
+
+.services__head {
+  max-width: 760px;
+  margin: 0 auto clamp(40px, 5vw, 64px);
+  text-align: center;
+}
+.services__eyebrow { margin: 0 0 14px; } // colour/size from .skl-eyebrow
+.services__title {
+  margin: 0;
+  color: #fff;
+  font-size: var(--fs-h2);
+}
+.services__intro {
+  margin: 18px auto 0;
+  max-width: 56ch;
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  color: #AAB8CC;
+}
+
+// ---- Decorative IT icons (left & right, behind content) ----
+.services__deco {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.services .skl-container { position: relative; z-index: 1; } // keep content (and hover card) above the deco
+.services__deco-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .18);
+  color: var(--brand-green);
+  opacity: 0.2;
+  animation: heroFloat 9s var(--ease-inout) infinite;
+
+  svg { width: 26px; height: 26px; }
+
+  // Left (4) — staggered insets & heights (no row icons on the left).
+  &--l1 { left: -14px; top: 8%;  animation-delay: -1s; }
+  &--l2 { left: 2%;    top: 31%; animation-delay: -3s; }
+  &--l3 { left: -20px; top: 53%; animation-delay: -5s; }
+  &--l4 { left: 1%;    top: 79%; animation-delay: -7s; }
+  // Right (4) — interleaved with the left (different heights) + varied edge insets.
+  &--r1 { right: -8px;  top: 18%; animation-delay: -2s; }
+  &--r2 { right: -20px; top: 43%; animation-delay: -6s; }
+  &--r3 { right: -10px; top: 65%; animation-delay: -4s; }
+  &--r4 { right: -16px; top: 90%; animation-delay: -8s; }
+}
+@include bp-max(1280px) { .services__deco { display: none; } } // no room in the margins on narrower screens
+
+// ---- Row list ----
+.services__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, .09);
+}
+
+.service-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px minmax(200px, 260px) 1fr 60px;
+  align-items: start;
+  gap: 32px;
+  padding: 34px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, .09);
+  transition: background var(--dur-base) var(--ease-out);
+
+  &:hover { background: rgba(255, 255, 255, .015); }
+}
+
+// ---- Hover-reveal preview (SVG + image), fixed spot, fades in (Quiety style) ----
+.service-row__reveal {
+  position: absolute;
+  top: 50%;
+  left: 66%;
+  z-index: 4;
+  min-width: 350px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;   // image banner on top, content below
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0;
+  text-align: center;
+  padding: 0;               // image goes edge-to-edge (top/left/right)
+  overflow: hidden;         // clip the banner to the rounded corners
+  border-radius: 26px;
+  // opaque card so nothing behind it shows through
+  background:
+    radial-gradient(120% 130% at 16% 12%, rgba(30, 255, 133, .18), rgba(11, 17, 32, 0) 60%),
+    var(--ink-900);
+  border: 1px solid rgba(255, 255, 255, .13);
+  box-shadow: 0 44px 100px rgba(0, 0, 0, .64);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(-4deg) scale(.94);
+  transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
+
+  @include bp-max(1280px) { left: 50%; } // keep the big card on-screen on narrower desktops
+}
+.service-row:hover .service-row__reveal {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(-4deg) scale(1);
+}
+// Top — real title-related photo (replaces the old SVG icon).
+.service-row__reveal-svg {
+  color: var(--brand-green);
+
+  svg { width: 88px; height: 88px; }
+  img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+}
+// Bottom — content (the only padded area; space sits below the image).
+.service-row__reveal-content {
+  max-width: 100%;
+  padding: 26px 24px 32px;
+}
+.service-row__reveal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+
+  li {
+    font-size: 13px;
+    font-weight: 500;
+    color: #C7D2E1;
+    background: rgba(30, 255, 133, .08);
+    border: 1px solid rgba(30, 255, 133, .22);
+    padding: 6px 13px;
+    border-radius: var(--radius-pill);
+  }
+}
+.service-row__reveal-title {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.15;
+  color: #fff;
+}
+.service-row__reveal-desc {
+  display: block;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: #AAB8CC;
+}
+
+// No hover on touch → hide the preview (rows still show desc + tags inline).
+@include bp-max(768px) {
+  .service-row__reveal { display: none; }
+}
+// Reduced motion: reveal instantly, no fade/scale drift.
+@include reduced-motion {
+  .service-row__reveal { transition: none; }
+  .service-row:hover .service-row__reveal { transform: translate(-50%, -50%) rotate(-4deg); }
+}
+
+.service-row__num {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: #55627A;
+  padding-top: 4px;
+}
+
+.service-row__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 1.1rem + .7vw, 1.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.service-row__desc {
+  margin: 0 0 16px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #AAB8CC;
+}
+.service-row__tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14.5px;
+    color: #C7D2E1;
+
+    &::before {
+      content: "+";
+      color: var(--brand-green);
+      font-weight: 700;
+    }
+  }
+}
+
+.service-row__icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .12);
+  color: var(--brand-green);
+  transition: border-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out);
+
+  svg { width: 24px; height: 24px; }
+}
+.service-row:hover .service-row__icon {
+  border-color: rgba(30, 255, 133, .5);
+  background: rgba(30, 255, 133, .08);
+  box-shadow: 0 0 22px rgba(30, 255, 133, .18);
+}
+
+// ---- Section CTA ----
+.services__cta {
+  margin: clamp(40px, 5vw, 56px) 0 0;
+  text-align: center;
+}
+
+// ---- Responsive ----
+@include bp-max(768px) {
+  .service-row {
+    grid-template-columns: 40px 1fr 48px;
+    grid-template-areas:
+      "num  title icon"
+      ".    body  body";
+    gap: 8px 18px;
+    padding: 28px 4px;
+  }
+  .service-row__num  { grid-area: num; }
+  .service-row__title { grid-area: title; align-self: center; }
+  .service-row__icon { grid-area: icon; width: 44px; height: 44px; svg { width: 20px; height: 20px; } }
+  .service-row__body { grid-area: body; margin-top: 14px; }
+}

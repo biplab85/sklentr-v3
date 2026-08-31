@@ -1,0 +1,760 @@
+// =====================================================================
+// STANDALONE ABOUT PAGE  (/about)
+// Premium, editorial. A DARK "Quiety index-26"-style hero (full-width
+// centered headline with a hand-drawn accent swoosh, then a floating-card
+// collage + copy/CTA/stats two-column band) → light editorial Story →
+// numbered Values cards → monogram Team cards → dark Global-Presence
+// offices band → shared Final-CTA. Scoped to .ab-* / body.aboutpage.
+// Tokens only (CLAUDE.md §11). Every string is settings-driven (ab_* keys).
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+// Hero paints full-bleed behind the transparent fixed header on this page.
+body.aboutpage .site-main { padding-top: 0; }
+
+// Shared eyebrow + section header ------------------------------------------
+.ab-eyebrow { color: var(--brand-gold-deep);
+  &--on-dark { color: var(--brand-gold); } }
+
+.ab-section-head {
+  max-width: 720px;
+  margin: 0 auto clamp(40px, 5vw, 66px);
+  text-align: center;
+
+  &__title {
+    margin: 12px 0 0;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: var(--fs-h2);
+    letter-spacing: -.02em;
+    color: var(--slate-900);
+    &--on-dark { color: #fff; }
+  }
+}
+
+// =====================================================================
+// 01 · HERO — Quiety index-26 style, dark. Centered headline + swoosh,
+// then [ floating-card collage ] · [ copy + CTAs + stats ].
+// =====================================================================
+.ab-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--color-text-on-dark);
+  background:
+    radial-gradient(120% 90% at 50% -12%, #17233d 0%, var(--ink-950) 60%),
+    var(--ink-950);
+  padding-top: calc(var(--header-h) + clamp(38px, 6vw, 80px));
+  padding-bottom: clamp(48px, 7vw, 96px);
+
+  &__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  &__grid  { position: absolute; inset: 0; opacity: .7; }
+  &__glow {
+    position: absolute; border-radius: 50%; filter: blur(100px); opacity: .5;
+    &--gold  { width: 44vw; height: 34vw; top: -14vw; left: -6vw;  background: radial-gradient(circle, rgba(243,179,81,.4), transparent 66%); }
+    &--green { width: 40vw; height: 32vw; bottom: -18vw; right: -8vw; background: radial-gradient(circle, rgba(30,255,133,.22), transparent 68%); }
+  }
+
+  // ---- Row 1: centered headline ----
+  &__head { max-width: 1000px; margin: 0 auto; text-align: center; }
+  &__eyebrow { justify-content: center; margin: 0 0 16px; }
+  &__title {
+    margin: 0;
+    font-family: var(--font-heading); font-weight: 800;
+    font-size: clamp(2.4rem, 1.25rem + 4.7vw, 4.5rem);
+    line-height: 1.08; letter-spacing: -.03em; color: #fff;
+  }
+  &__accent { position: relative; color: var(--brand-gold); white-space: nowrap; }
+  &__swoosh {
+    position: absolute; left: -3%; width: 106%; bottom: -.36em; height: .42em; overflow: visible;
+    path {
+      stroke-dasharray: 340; stroke-dashoffset: 340;
+      animation: abSwoosh 1s var(--ease-out) .4s forwards;
+    }
+  }
+
+  // ---- Row 2: two-column band ----
+  &__body {
+    display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+    gap: clamp(28px, 4vw, 64px); margin-top: clamp(30px, 4vw, 56px);
+
+    @include bp-max(940px) { grid-template-columns: 1fr; gap: clamp(30px, 6vw, 48px); }
+  }
+
+  // ---- Left: floating-card collage ----
+  &__visual {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    min-height: clamp(320px, 32vw, 430px);
+    @include bp-max(560px) { min-height: 340px; }
+  }
+  &__blob {
+    position: absolute; width: 74%; height: 74%;
+    border-radius: 44% 56% 60% 40% / 50% 44% 56% 50%;
+    background: linear-gradient(150deg, rgba(243,179,81,.24), rgba(30,255,133,.16));
+    filter: blur(6px);
+  }
+
+  // Central "global presence" arc card
+  &__card {
+    position: relative; z-index: 2;
+    width: min(80%, 340px);
+    padding: clamp(20px, 2.2vw, 26px);
+    background: linear-gradient(165deg, rgba(30,41,59,.9), rgba(15,23,42,.82));
+    border: 1px solid var(--ink-700);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(6px);
+  }
+  &__card-kicker { display: inline-block; font-family: var(--font-heading); font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--brand-gold); }
+  &__card-note   { display: block; margin-top: 8px; font-size: 12px; color: #AAB8CC; }
+  &__map { position: relative; margin: 12px 0 4px; svg { display: block; width: 100%; height: auto; } }
+  &__arc { stroke-dashoffset: 220; animation: abArcDraw 1.6s var(--ease-out) .6s forwards; }
+  &__pin { transform-box: fill-box; transform-origin: center; }
+  &__pin--a { filter: drop-shadow(0 0 10px rgba(243,179,81,.7)); animation: abPulse 2.6s ease-in-out infinite; }
+  &__pin--b { filter: drop-shadow(0 0 10px rgba(30,255,133,.7)); animation: abPulse 2.6s ease-in-out infinite .5s; }
+  &__pin-label { position: absolute; font-family: var(--font-heading); font-weight: 700; font-size: 12px; color: #fff;
+    &--a { left: 4%;  bottom: 18%; }
+    &--b { right: 2%; top: 32%; } }
+
+  // Floating mini-cards (dark glass, colored accents)
+  &__float {
+    position: absolute; z-index: 3;
+    padding: 12px 14px; border-radius: var(--radius-md);
+    background: rgba(20,29,48,.92);
+    border: 1px solid var(--ink-700);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(6px);
+  }
+  &__float--chart {
+    top: 6%; left: 0; display: flex; align-items: center; gap: 12px;
+    animation: abFloatA 5s ease-in-out infinite;
+  }
+  &__float--ring {
+    bottom: 4%; right: 0; display: flex; flex-direction: column; align-items: center; gap: 4px;
+    padding: 14px 16px 12px;
+    animation: abFloatB 5.6s ease-in-out infinite .4s;
+  }
+  &__mini-bars { display: inline-flex; align-items: flex-end; gap: 4px; height: 30px;
+    i { display: block; width: 6px; border-radius: 3px; background: var(--brand-gold);
+      &:nth-child(1) { height: 40%; opacity: .55; }
+      &:nth-child(2) { height: 72%; opacity: .8; }
+      &:nth-child(3) { height: 100%; background: var(--brand-green); } } }
+  &__float-num { display: block; font-family: var(--font-heading); font-weight: 800; font-size: 1.25rem; line-height: 1; color: #fff; }
+  &__float-lab { display: block; margin-top: 3px; font-size: 11px; color: #AAB8CC; }
+
+  &__ring { width: 88px; height: 88px; transform: rotate(-90deg); }
+  &__ring-track { fill: none; stroke: rgba(255,255,255,.14); stroke-width: 6; }
+  &__ring-bar   { fill: none; stroke: var(--brand-green); stroke-width: 6; stroke-linecap: round;
+    stroke-dasharray: var(--c); stroke-dashoffset: var(--c);
+    animation: abRing 1.2s var(--ease-out) .6s forwards; }
+  &__ring-wrap  { position: relative; display: grid; place-items: center; }
+  &__ring-val   { position: absolute; inset: 0; display: grid; place-items: center;
+    font-family: var(--font-heading); font-weight: 800; font-size: 1.05rem; color: #fff; }
+  &__ring-lab   { font-size: 11px; color: #AAB8CC; }
+
+  // ---- Right: copy + CTAs + stats ----
+  &__sub { margin: 0; max-width: 46ch; font-size: var(--fs-body-lg); line-height: 1.7; color: var(--color-text-on-dark); }
+  &__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: clamp(22px, 2.6vw, 30px); }
+  &__play {
+    display: inline-flex; align-items: center; gap: 12px;
+    color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 15px;
+    &-icon {
+      display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+      color: #fff; border: 1.5px solid rgba(255,255,255,.4);
+      transition: background var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+      svg { width: 16px; height: 16px; margin-left: 2px; }
+    }
+    &:hover .ab-hero__play-icon { background: var(--brand-gold); color: var(--ink-950); border-color: var(--brand-gold); }
+  }
+}
+
+// ---- Mobile only: the two floating overlay cards (--chart / --ring) crowd the
+// narrow map card and clip its "EST. 2025" kicker + "Canadian management" note.
+// They're decorative (the whole visual is aria-hidden) and their 50+/100%
+// figures also appear in the stats list below, so hide them on mobile and let
+// the central map card go full width. Desktop is never affected.
+@include bp-max(560px) {
+  .ab-hero__float { display: none; }
+  .ab-hero__card { width: min(100%, 360px); }
+}
+
+@keyframes abSwoosh  { to { stroke-dashoffset: 0; } }
+@keyframes abArcDraw { to { stroke-dashoffset: 0; } }
+@keyframes abRing    { to { stroke-dashoffset: var(--off); } }
+@keyframes abPulse   { 0%,100% { transform: scale(1); } 50% { transform: scale(1.28); } }
+@keyframes abFloatA  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes abFloatB  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(9px); } }
+
+// Stats row (right column)
+.ab-hero__stats {
+  display: flex; flex-wrap: wrap;
+  gap: clamp(20px, 3vw, 42px);
+  margin: clamp(26px, 3vw, 40px) 0 0; padding: 0; list-style: none;
+}
+.ab-stat {
+  &__num {
+    display: block;
+    font-family: var(--font-heading); font-weight: 800;
+    font-size: clamp(1.7rem, 1.2rem + 1.6vw, 2.4rem);
+    line-height: 1; letter-spacing: -.02em; color: #fff;
+  }
+  &__count { font-variant-numeric: tabular-nums; }
+  &__label { display: block; margin-top: 8px; font-size: 13px; line-height: 1.4; color: #AAB8CC; }
+}
+
+// =====================================================================
+// 02 · OUR STORY (premium editorial split: copy + framed photo w/ floats)
+// =====================================================================
+.ab-story {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fff 0%, #FBFCFE 100%);
+  padding-block: clamp(64px, 8vw, 130px);
+
+  // faint atmospheric wash, upper-right
+  &::before {
+    content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none;
+    background: radial-gradient(38% 46% at 88% 6%, rgba(243,179,81,.06), transparent 70%);
+  }
+}
+// premium eyebrow with a short gradient lead-line
+.ab-story .ab-eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  &::before {
+    content: ""; width: 26px; height: 2px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--brand-gold-deep), var(--brand-green-deep));
+  }
+}
+.ab-story__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  gap: clamp(32px, 5vw, 76px);
+  align-items: center;
+
+  @include bp-max(900px) {
+    grid-template-columns: 1fr;
+    gap: clamp(40px, 7vw, 52px);
+  }
+}
+.ab-story__title {
+  margin: 14px 0 26px;
+  font-family: var(--font-heading); font-weight: 800;
+  font-size: var(--fs-h2); letter-spacing: -.02em; line-height: 1.1;
+  color: var(--slate-900);
+  text-wrap: balance;
+}
+.ab-story__accent {
+  color: var(--brand-gold-deep);
+}
+.ab-story__body {
+  p {
+    margin: 0 0 20px;
+    font-size: var(--fs-body-lg); line-height: 1.75; color: var(--slate-600);
+    &:last-child { margin-bottom: 0; }
+  }
+  p:first-child {
+    font-size: clamp(1.15rem, 1.02rem + .5vw, 1.4rem); line-height: 1.6; font-weight: 500;
+    color: var(--slate-800, #1f2b3d);
+  }
+}
+
+// --- Media column: framed photo + floating badge + floating stat card
+.ab-story__media {
+  position: relative;
+
+  @include bp-max(900px) { max-width: 560px; margin-inline: auto; width: 100%; }
+
+  // soft brand glow behind the frame
+  &::before {
+    content: ""; position: absolute; z-index: -1;
+    inset: -9% -7% -11% -9%;
+    background:
+      radial-gradient(42% 42% at 18% 20%, rgba(243,179,81,.20), transparent 70%),
+      radial-gradient(48% 48% at 86% 88%, rgba(30,255,133,.18), transparent 70%);
+    filter: blur(8px);
+  }
+}
+// Layered depth decorations behind the photo (each parallaxes independently).
+.ab-story__deco {
+  position: absolute; z-index: -1; pointer-events: none;
+  will-change: transform;
+  @include bp-max(560px) { display: none; }
+}
+.ab-story__deco--dots {
+  top: -24px; left: -24px; width: 118px; height: 118px;
+  background-image: radial-gradient(rgba(15,23,42,.16) 1.4px, transparent 1.6px);
+  background-size: 14px 14px;
+  opacity: .7;
+  -webkit-mask: radial-gradient(120% 120% at 100% 100%, transparent 38%, #000 64%);
+          mask: radial-gradient(120% 120% at 100% 100%, transparent 38%, #000 64%);
+}
+.ab-story__deco--ring {
+  inset: 30px -30px -30px 30px;
+  border-radius: var(--radius-xl);
+  padding: 1.5px;
+  background: linear-gradient(135deg, rgba(243,179,81,.6), rgba(30,255,133,.42));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+}
+.ab-story__frame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 600 / 450;
+  box-shadow: 0 24px 60px rgba(15,23,42,.18);
+  will-change: transform;
+
+  img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .7s var(--ease-out);
+  }
+  // hairline + depth wash
+  &::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    box-shadow: inset 0 0 0 1px rgba(15,23,42,.07);
+    background: linear-gradient(155deg, rgba(11,17,32,0) 55%, rgba(11,17,32,.20) 100%);
+  }
+}
+.ab-story__media:hover .ab-story__frame img { transform: scale(1.045); }
+
+// Floating "Est. 2023 · Toronto" pill — bottom-left, overlapping.
+.ab-story__badge {
+  position: absolute; z-index: 2;
+  will-change: transform;
+  left: clamp(-14px, -1.4vw, -8px);
+  bottom: clamp(18px, 3vw, 30px);
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 11px 20px; border-radius: var(--radius-pill);
+  font-family: var(--font-heading); font-weight: 700; font-size: 13px; letter-spacing: .02em;
+  color: var(--ink-950); background: var(--brand-green);
+  box-shadow: 0 12px 28px rgba(16,185,129,.34);
+}
+.ab-story__badge-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--ink-950); opacity: .55;
+  animation: ab-story-pulse 2.4s var(--ease-out) infinite;
+}
+@keyframes ab-story-pulse {
+  0%, 100% { transform: scale(1); opacity: .55; }
+  50%      { transform: scale(1.35); opacity: .25; }
+}
+
+
+// =====================================================================
+// 03 · VALUES (numbered premium cards, alt light-grey band)
+// =====================================================================
+.ab-values {
+  background: var(--slate-50);
+  padding-block: clamp(64px, 8vw, 120px);
+}
+.ab-values__intro {
+  max-width: 62ch;
+  margin: 16px auto 0;
+  font-size: clamp(1rem, .95rem + .3vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--slate-600);
+}
+
+// Two-column band: left media, right 2×2 card grid (Ritovex-style).
+.ab-values__cols {
+  margin-top: clamp(36px, 4.5vw, 64px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(24px, 3vw, 56px);
+  align-items: center;
+
+  @include bp-max(900px) { grid-template-columns: 1fr; gap: clamp(24px, 4vw, 40px); }
+}
+
+// Left image — masked into a "notched card" shape (rounded rect with a rounded
+// rectangular notch cut top-right + a mirrored notch bottom-left). SVG mask is
+// aspect-locked (584/516) so it scales uniformly and the corners stay crisp.
+.ab-values__media {
+  --notch-mask: url("../images/values/about-notch-mask.svg");
+  position: relative;
+  aspect-ratio: 584 / 516;
+  -webkit-mask: var(--notch-mask) center / 100% 100% no-repeat;
+          mask: var(--notch-mask) center / 100% 100% no-repeat;
+  // drop-shadow (not box-shadow) so the shadow follows the masked notched edges
+  filter: drop-shadow(0 18px 44px rgba(15,23,42,.16));
+  transition: transform var(--dur-base) var(--ease-out);
+
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  // subtle brand wash so any photo sits on-palette
+  &::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(160deg, rgba(11,17,32,0) 45%, rgba(11,17,32,.28) 100%);
+  }
+  &:hover { transform: scale(1.015); }
+}
+// (ring not used with the masked notch — box-shadow can't follow a mask edge)
+.ab-values__media-ring { display: none; }
+
+.ab-values__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 1.8vw, 24px);
+  list-style: none; margin: 0; padding: 0;
+
+  @include bp-max(560px) { grid-template-columns: 1fr; }
+}
+.ab-value {
+  // parallax offsets (set by about-values.js) + hover lift, composed on one transform.
+  --px: 0px; --py: 0px; --lift: 0px;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+  padding: clamp(22px, 2.2vw, 30px);
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transform: translate3d(var(--px), calc(var(--py) + var(--lift)), 0);
+  will-change: transform;
+  transition: transform 220ms var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+
+  &:hover {
+    --lift: -6px;
+    box-shadow: var(--shadow-md);
+    border-color: rgba(243,179,81,.5);
+  }
+
+  // Icon boxes mirror the Services "Built to launch" perks: a distinct shape +
+  // colour tint per card, with a stroke line icon (currentColor) inside.
+  &__icon {
+    display: grid; place-items: center;
+    width: 54px; height: 54px; margin-bottom: 20px;
+    color: var(--brand-gold-deep);
+    background: linear-gradient(135deg, rgba(243,179,81,.24), rgba(30,255,133,.16));
+    border-radius: var(--radius-md);
+    transition: transform var(--dur-base) var(--ease-out);
+    svg { width: 26px; height: 26px; }
+  }
+  &:nth-child(1) &__icon {                 // 1 · Soft squircle · gold
+    border-radius: 34%;
+    color: var(--brand-gold-deep);
+    background: linear-gradient(135deg, rgba(243,179,81,.28), rgba(224,145,43,.16));
+  }
+  &:nth-child(2) &__icon {                 // 2 · Hexagon · green
+    border-radius: 0;
+    clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    color: var(--brand-green-deep);
+    background: linear-gradient(135deg, rgba(30,255,133,.26), rgba(16,185,129,.16));
+  }
+  &:nth-child(3) &__icon {                 // 3 · Circle · blue
+    border-radius: 50%;
+    color: #2563EB;
+    background: linear-gradient(135deg, rgba(96,140,246,.26), rgba(37,99,235,.16));
+  }
+  &:nth-child(4) &__icon {                 // 4 · Organic blob · violet
+    border-radius: 63% 37% 47% 53% / 55% 52% 48% 45%;
+    color: #7C3AED;
+    background: linear-gradient(135deg, rgba(139,92,246,.26), rgba(124,58,237,.16));
+  }
+  &:hover &__icon { transform: scale(1.07); }
+  &__num {
+    position: absolute; top: 16px; right: 20px;
+    font-family: var(--font-heading); font-weight: 800; font-size: 2.4rem;
+    line-height: 1; letter-spacing: -.02em; color: var(--slate-100);
+  }
+  &__title {
+    margin: 0 0 10px; font-family: var(--font-heading); font-weight: 700;
+    font-size: 1.2rem; letter-spacing: -.01em; color: var(--slate-900);
+  }
+  &__text { margin: 0; font-size: 15px; line-height: 1.6; color: var(--slate-600); }
+}
+
+// =====================================================================
+// 04 · TEAM (monogram cards)
+// =====================================================================
+.ab-team {
+  background: var(--white);
+  padding-block: clamp(64px, 8vw, 120px);
+}
+.ab-team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(18px, 2vw, 26px);
+  list-style: none; margin: 0; padding: 0;
+
+  @include bp-max(1024px) { grid-template-columns: repeat(2, 1fr); }
+  @include bp-max(560px)  { grid-template-columns: 1fr; }
+}
+.ab-member {
+  position: relative;
+  display: flex; flex-direction: column;
+  padding: clamp(24px, 2.4vw, 32px);
+  background: linear-gradient(180deg, #fff 0%, #F7F9FC 100%);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 10px rgba(15,23,42,.05);
+  overflow: hidden;
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+
+  // top gradient accent — grows in on hover
+  &::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--brand-gold), var(--brand-green));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform var(--dur-slow) var(--ease-out);
+  }
+  // soft warm corner glow — fades in on hover
+  &::after {
+    content: ""; position: absolute; top: -35%; right: -25%; width: 55%; height: 75%;
+    background: radial-gradient(circle, rgba(243,179,81,.16), transparent 70%);
+    opacity: 0; pointer-events: none;
+    transition: opacity var(--dur-base) var(--ease-out);
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 48px rgba(15,23,42,.13);
+    border-color: rgba(243,179,81,.45);
+    &::before { transform: scaleX(1); }
+    &::after  { opacity: 1; }
+    .ab-member__avatar { transform: scale(1.06) rotate(-3deg); box-shadow: 0 14px 30px rgba(11,17,32,.32); }
+  }
+
+  &__top { display: flex; align-items: center; gap: 16px; }
+
+  // Premium avatar: dark ink coin, gold→green gradient ring, gold monogram.
+  &__avatar {
+    position: relative;
+    display: grid; place-items: center; flex: 0 0 auto; width: 58px; height: 58px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background:
+      linear-gradient(160deg, #16213A 0%, #0B1120 100%) padding-box,
+      linear-gradient(135deg, var(--brand-gold), var(--brand-green)) border-box;
+    font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem; letter-spacing: .02em;
+    color: var(--brand-gold);
+    box-shadow: 0 10px 22px rgba(11,17,32,.26);
+    transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out);
+
+    // glossy top-light sheen
+    &::before {
+      content: ""; position: absolute; inset: 2px; border-radius: 50%; pointer-events: none;
+      background: radial-gradient(58% 50% at 32% 24%, rgba(255,255,255,.22), transparent 62%);
+    }
+  }
+  &__id { min-width: 0; }
+  &__name { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em; color: var(--slate-900); }
+  &__role {
+    display: inline-block; margin: 9px 0 0;
+    padding: 4px 12px; border-radius: var(--radius-pill);
+    font-size: 12px; font-weight: 600; letter-spacing: .02em;
+    color: var(--brand-gold-deep);
+    background: rgba(243,179,81,.12); border: 1px solid rgba(243,179,81,.24);
+  }
+  &__bio  { margin: 20px 0 0; font-size: 14px; line-height: 1.65; color: var(--slate-600); }
+  &__loc  {
+    display: flex; align-items: center; gap: 8px;
+    margin: auto 0 0; padding-top: 18px; border-top: 1px solid var(--slate-200);
+    font-size: 13px; font-weight: 500; color: var(--slate-500);
+    svg { width: 15px; height: 15px; color: var(--brand-gold-deep); }
+  }
+}
+
+// =====================================================================
+// 04b · TOP SERVICES (iteck "Discover our top services" — Swiper slider)
+// Faithful clone: lavender cards, purple accent, 3D icons, centred scale ladder.
+// =====================================================================
+.ab-svc {
+  // soft light gradient wash + faint accent glow at the top
+  background:
+    radial-gradient(58% 45% at 50% 0%, rgba(102,64,244,.07), transparent 70%),
+    linear-gradient(180deg, #FFFFFF 0%, #F4F5FC 55%, #EEF0FA 100%);
+  padding-block: clamp(60px, 8vw, 100px);
+  overflow: hidden;
+}
+.ab-svc__head { text-align: center; max-width: 680px; margin-inline: auto; }
+.ab-svc__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(2rem, 1.25rem + 2.6vw, 2.8125rem);   // ~45px
+  line-height: 1.25; letter-spacing: -.01em;
+  color: #000;
+}
+.ab-svc__mark {
+  display: inline-block;
+  color: #fff;
+  background: #6640F4;
+  padding: 0 .3em;
+  border-radius: 12px;
+  transform: rotate(-2deg);
+}
+.ab-svc__sub {
+  margin: 18px auto 0; max-width: 560px;
+  font-family: var(--font-body);
+  font-size: 15px; line-height: 1.7; color: #667085;
+}
+
+// --- slider ---
+// Staggered "valley" wave: the centred card rises + scales up (1.1), and cards
+// descend + shrink toward the edges. Driven continuously from each slide's
+// Swiper progress in about-services.js (transform set on the inner card).
+.ab-svc__slider.swiper {
+  margin-top: clamp(30px, 3.5vw, 50px);
+  padding-top: 26px;
+  padding-bottom: 120px;               // headroom for the descended (+100px) cards
+  overflow: hidden;
+}
+.ab-svc__slider .swiper-wrapper { align-items: flex-start; }
+.ab-svc__slider .swiper-slide {
+  height: auto; display: flex; box-sizing: border-box;
+  transition: padding .5s cubic-bezier(.22,.61,.36,1);   // JS eases the horizontal inset (keeps a gap as the centre card scales up)
+}
+
+.ab-svc-card {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  width: 100%; box-sizing: border-box;
+  padding: 30px 8%;
+  background: #F1F2FA;
+  border: 1px solid #e5e5e5;
+  border-radius: 30px;
+  color: #000; text-decoration: none;
+  will-change: transform;
+  transform: translateY(0) scale(1);   // JS overrides per-slide (wave)
+  transition: transform .5s cubic-bezier(.22,.61,.36,1), filter .5s ease, box-shadow .5s ease;
+}
+// Solid accent border — fades in only on the centred (active) card.
+.ab-svc-card::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  padding: 2px;
+  background: #efd5ad;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .45s ease;
+}
+.ab-svc__slider .swiper-slide-active .ab-svc-card::after { opacity: 1; }
+.ab-svc__slider .swiper-slide-active .ab-svc-card { box-shadow: 0 26px 50px rgba(102,64,244,.16); }
+
+.ab-svc-card__icon {
+  display: grid; place-items: center; height: 100px; margin-bottom: 25px;
+  img {
+    max-height: 100px; max-width: 100px; width: auto; object-fit: contain;
+    // Inactive icons are black & white; the active (centred) card restores colour.
+    filter: grayscale(1) drop-shadow(5px 15px 20px rgba(7,57,114,.33));   // 3D icon shadow (reference)
+    transition: filter .45s ease;
+  }
+}
+// Only the centred (active) slide keeps its icon in full colour.
+.ab-svc__slider .swiper-slide-active .ab-svc-card__icon img {
+  filter: grayscale(0) drop-shadow(5px 15px 20px rgba(7,57,114,.33));
+}
+.ab-svc-card__title {
+  margin: 0 0 15px;
+  font-family: var(--font-body); font-weight: 700; font-size: 15px; line-height: 1.35; color: #000;
+}
+.ab-svc-card__text {
+  display: block;
+  font-family: var(--font-body); font-size: 11px; line-height: 22px; color: #666;
+}
+
+// --- CTA button ---
+.ab-svc__cta { text-align: center; margin-top: clamp(28px, 3.5vw, 48px); }
+.ab-svc__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 28px; border-radius: 800px;
+  // Match the header "Book a Call" CTA — solid brand gold on ink.
+  background: var(--brand-gold); color: var(--ink-950);
+  font-family: var(--font-body); font-weight: 600; font-size: 15px; text-decoration: none;
+  box-shadow: 0 10px 26px rgba(243, 179, 81, .30);
+  transition: transform var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+  svg { width: 18px; height: 18px; }
+  &:hover {
+    background: #ffce80; color: var(--ink-950);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(243, 179, 81, .42);
+  }
+}
+// =====================================================================
+// 05 · OFFICES (Global Presence — dark band)
+// =====================================================================
+.ab-offices {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--ink-950);
+  color: var(--color-text-on-dark);
+  padding-block: clamp(64px, 8vw, 120px);
+
+  &__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+  &__glow {
+    position: absolute; border-radius: 50%; filter: blur(110px); opacity: .42;
+    &--gold  { width: 40vw; height: 30vw; top: -12vw; left: 8%;  background: radial-gradient(circle, rgba(243,179,81,.4), transparent 66%); }
+    &--green { width: 34vw; height: 26vw; bottom: -14vw; right: 6%; background: radial-gradient(circle, rgba(30,255,133,.26), transparent 68%); }
+  }
+}
+.ab-offices__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(18px, 2.4vw, 28px);
+  max-width: 900px; margin-inline: auto;
+  list-style: none; padding: 0;
+
+  @include bp-max(680px) { grid-template-columns: 1fr; }
+}
+.ab-office {
+  position: relative;
+  padding: clamp(26px, 3vw, 38px);
+  background: linear-gradient(165deg, rgba(30,41,59,.66), rgba(15,23,42,.5));
+  border: 1px solid var(--ink-700);
+  border-radius: var(--radius-xl);
+  transition: transform var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out);
+
+  &:hover { transform: translateY(-4px); border-color: rgba(243,179,81,.5); }
+
+  &__pin {
+    display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 18px;
+    border-radius: var(--radius-md);
+    color: var(--brand-gold);
+    background: rgba(243,179,81,.12); border: 1px solid rgba(243,179,81,.26);
+    svg { width: 24px; height: 24px; }
+  }
+  &__tag {
+    display: inline-block; margin-bottom: 12px;
+    font-family: var(--font-body); font-weight: 600; font-size: 12px;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--brand-green-deep);
+  }
+  &__city { margin: 0; font-family: var(--font-heading); font-weight: 700; font-size: 1.4rem; letter-spacing: -.01em; color: #fff; }
+  &__desc { margin: 12px 0 0; font-size: 15px; line-height: 1.6; color: #AAB8CC; }
+}
+.ab-offices__tagline {
+  margin: clamp(34px, 4vw, 52px) auto 0; max-width: 44ch; text-align: center;
+  font-family: var(--font-heading); font-weight: 700;
+  font-size: clamp(1.15rem, 1rem + .7vw, 1.55rem); line-height: 1.4; letter-spacing: -.01em;
+  color: #fff;
+}
+
+// =====================================================================
+// Reduced motion — kill the hero flourishes; final states stay visible.
+// =====================================================================
+@include reduced-motion {
+  .ab-hero__swoosh path { animation: none; stroke-dashoffset: 0; }
+  .ab-hero__arc { animation: none; stroke-dashoffset: 0; }
+  .ab-hero__pin--a, .ab-hero__pin--b,
+  .ab-hero__float--chart, .ab-hero__float--ring { animation: none; }
+  .ab-hero__ring-bar { animation: none; stroke-dashoffset: var(--off); }
+  .ab-value, .ab-value:hover,
+  .ab-member, .ab-member:hover,
+  .ab-member__avatar, .ab-member::before, .ab-member::after,
+  .ab-office, .ab-office:hover { transition: none; }
+  .ab-value { --px: 0px !important; --py: 0px !important; }
+  .ab-values__media { animation: none; }
+  .ab-story__badge-dot { animation: none; }
+  .ab-story__frame img,
+  .ab-story__media:hover .ab-story__frame img { transition: none; transform: none; }
+  .ab-story [data-story-speed] { transform: none !important; }
+  .ab-svc-card { transition: none; }
+}

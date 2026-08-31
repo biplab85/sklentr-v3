@@ -1,0 +1,1307 @@
+- generic [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - navigation "Toolbar":
+      - menu:
+        - group [ref=f4e3]:
+          - menuitem "About WordPress" [ref=f4e4] [cursor=pointer]
+        - group [ref=f4e7]:
+          - menuitem "Sklentr V3" [ref=f4e8] [cursor=pointer]
+        - group [ref=f4e9]:
+          - menuitem "Customize" [ref=f4e10] [cursor=pointer]
+        - group [ref=f4e11]:
+          - menuitem "0 Comments in moderation" [ref=f4e12] [cursor=pointer]:
+            - generic [ref=f4e14]: "0"
+        - group [ref=f4e16]:
+          - menuitem "New" [ref=f4e17] [cursor=pointer]
+        - group [ref=f4e20]:
+          - menuitem "Edit Page" [ref=f4e21] [cursor=pointer]
+      - menu [ref=f4e22]:
+        - group [ref=f4e23]:
+          - menuitem "Howdy, admin" [ref=f4e24] [cursor=pointer]
+        - group [ref=f4e25]:
+          - menuitem "Search" [ref=f4e26]:
+            - generic [ref=f4e27]:
+              - textbox "Search" [ref=f4e28] [cursor=pointer]
+              - generic [ref=f4e29]: Search
+  - link "Skip to content" [ref=f4e30] [cursor=pointer]:
+    - /url: "#content"
+  - banner [ref=f4e31]:
+    - generic [ref=f4e32]:
+      - link "Sklentr V3" [ref=f4e33] [cursor=pointer]:
+        - /url: http://localhost/sklentr/sklentr-v3/
+        - generic [ref=f4e34]:
+          - generic [ref=f4e35]: SKL
+          - generic [ref=f4e36]: ≡
+          - generic [ref=f4e37]: NTR
+      - navigation "Primary" [ref=f4e39]:
+        - list [ref=f4e40]:
+          - listitem [ref=f4e41]:
+            - link "Services" [ref=f4e42] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/services/
+          - listitem [ref=f4e49]:
+            - link "Startup Visa" [ref=f4e50] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/startup-visa/
+          - listitem [ref=f4e55]:
+            - link "Portfolio" [ref=f4e56] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+          - listitem [ref=f4e61]:
+            - link "Pricing" [ref=f4e62] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/pricing/
+          - listitem [ref=f4e67]:
+            - link "About" [ref=f4e68] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/about/
+          - listitem [ref=f4e72]:
+            - link "Blog" [ref=f4e73] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/blog/
+      - link "Book a Call" [ref=f4e80] [cursor=pointer]:
+        - /url: https://calendly.com/sklentr
+  - main [ref=f4e84]:
+    - region [ref=f4e85]:
+      - generic:
+        - generic: Figma
+        - generic: React
+        - generic: Funded ✓
+        - generic: Ship →
+      - generic [ref=f4e86]:
+        - paragraph [ref=f4e87]: Toronto-based MVP Studio
+        - heading "Launch-ready MVPs in weeks, not months." [level=1] [ref=f4e89]
+        - paragraph [ref=f4e90]: We build MVPs that get you funded, validated, and to market — fast.
+        - generic [ref=f4e91]:
+          - link "Book a Free Consultation" [ref=f4e92] [cursor=pointer]:
+            - /url: "#contact"
+            - text: Book a Free Consultation
+            - generic [ref=f4e93]: →
+          - link "See our work" [ref=f4e94] [cursor=pointer]:
+            - /url: "#work"
+        - paragraph [ref=f4e95]: Canadian expertise. Competitive pricing. No excuses.
+        - img "Sample MVP launch plan" [ref=f4e98]:
+          - generic [ref=f4e99]:
+            - generic [ref=f4e104]: MVP Launch Plan
+            - generic [ref=f4e105]:
+              - generic [ref=f4e106]: Building…
+              - generic [ref=f4e108]: On track
+          - generic [ref=f4e109]:
+            - list [ref=f4e112]:
+              - listitem [ref=f4e113]:
+                - generic [ref=f4e114]: Wk 1
+                - generic [ref=f4e115]: Discovery ✓
+              - listitem [ref=f4e116]:
+                - generic [ref=f4e117]: Wk 2–3
+                - generic [ref=f4e118]: Design ✓
+              - listitem [ref=f4e119]:
+                - generic [ref=f4e120]: Wk 4–5
+                - generic [ref=f4e121]: Build
+              - listitem [ref=f4e122]:
+                - generic [ref=f4e123]: Wk 6
+                - generic [ref=f4e124]: Launch
+            - generic [ref=f4e125]:
+              - generic [ref=f4e126]:
+                - generic [ref=f4e127]: 0 wks
+                - generic [ref=f4e128]: to launch
+              - generic [ref=f4e129]:
+                - generic [ref=f4e130]: Fixed
+                - generic [ref=f4e131]: transparent price
+              - generic [ref=f4e132]:
+                - generic [ref=f4e133]: 0%
+                - generic [ref=f4e134]: Canadian mgmt
+    - region [ref=f4e135]:
+      - generic [ref=f4e136]:
+        - heading "Sklentr by the numbers" [level=2] [ref=f4e137]
+        - list [ref=f4e138]:
+          - listitem [ref=f4e139]:
+            - generic [ref=f4e140]:
+              - generic [ref=f4e141]: "0"
+              - generic [ref=f4e142]: +
+            - generic [ref=f4e143]: Projects shipped
+          - listitem [ref=f4e144]:
+            - generic [ref=f4e145]:
+              - generic [ref=f4e146]: "0"
+              - generic [ref=f4e147]: +
+            - generic [ref=f4e148]: Startup Visa MVPs
+          - listitem [ref=f4e149]:
+            - generic [ref=f4e150]:
+              - generic [ref=f4e151]: "0"
+              - generic [ref=f4e152]: "%"
+            - generic [ref=f4e153]: On-time delivery
+          - listitem [ref=f4e154]:
+            - generic [ref=f4e155]:
+              - generic [ref=f4e156]: "0"
+              - generic [ref=f4e157]: "-day"
+            - generic [ref=f4e158]: Avg. delivery
+          - listitem [ref=f4e159]:
+            - generic [ref=f4e160]:
+              - generic [ref=f4e161]: "0"
+              - generic [ref=f4e162]: "%"
+            - generic [ref=f4e163]: Source-code ownership
+        - generic [ref=f4e164]:
+          - paragraph [ref=f4e165]: Trusted by founders building
+          - generic [ref=f4e167]:
+            - list [ref=f4e168]:
+              - listitem [ref=f4e169]: AI Farming
+              - listitem [ref=f4e170]: Get Takaful
+              - listitem [ref=f4e171]: KindredCare
+              - listitem [ref=f4e172]: Agile Sourcing
+              - listitem [ref=f4e173]: GAinData
+            - list [ref=f4e174]:
+              - listitem [ref=f4e175]: AI Farming
+              - listitem [ref=f4e176]: Get Takaful
+              - listitem [ref=f4e177]: KindredCare
+              - listitem [ref=f4e178]: Agile Sourcing
+              - listitem [ref=f4e179]: GAinData
+    - region [ref=f4e180]:
+      - generic [ref=f4e181]:
+        - generic [ref=f4e182]:
+          - paragraph [ref=f4e183]: Why founders come to us
+          - heading "Building an MVP shouldn’t take months — or cost a fortune." [level=2] [ref=f4e184]:
+            - generic [ref=f4e186]:
+              - generic [ref=f4e187]:
+                - generic [ref=f4e188]: B
+                - generic [ref=f4e189]: u
+                - generic [ref=f4e190]: i
+                - generic [ref=f4e191]: l
+                - generic [ref=f4e192]: d
+                - generic [ref=f4e193]: i
+                - generic [ref=f4e194]: "n"
+                - generic [ref=f4e195]: g
+              - generic [ref=f4e196]:
+                - generic [ref=f4e197]: a
+                - generic [ref=f4e198]: "n"
+              - generic [ref=f4e199]:
+                - generic [ref=f4e200]: M
+                - generic [ref=f4e201]: V
+                - generic [ref=f4e202]: P
+              - generic [ref=f4e203]:
+                - generic [ref=f4e204]: s
+                - generic [ref=f4e205]: h
+                - generic [ref=f4e206]: o
+                - generic [ref=f4e207]: u
+                - generic [ref=f4e208]: l
+                - generic [ref=f4e209]: d
+                - generic [ref=f4e210]: "n"
+                - generic [ref=f4e211]: ’
+                - generic [ref=f4e212]: t
+              - generic [ref=f4e213]:
+                - generic [ref=f4e214]: t
+                - generic [ref=f4e215]: a
+                - generic [ref=f4e216]: k
+                - generic [ref=f4e217]: e
+              - generic [ref=f4e218]:
+                - generic [ref=f4e219]: m
+                - generic [ref=f4e220]: o
+                - generic [ref=f4e221]: "n"
+                - generic [ref=f4e222]: t
+                - generic [ref=f4e223]: h
+                - generic [ref=f4e224]: s
+              - generic [ref=f4e225]: —
+              - generic [ref=f4e227]:
+                - generic [ref=f4e228]: o
+                - generic [ref=f4e229]: r
+              - generic [ref=f4e230]:
+                - generic [ref=f4e231]: c
+                - generic [ref=f4e232]: o
+                - generic [ref=f4e233]: s
+                - generic [ref=f4e234]: t
+              - generic [ref=f4e235]: a
+              - generic [ref=f4e237]:
+                - generic [ref=f4e238]: f
+                - generic [ref=f4e239]: o
+                - generic [ref=f4e240]: r
+                - generic [ref=f4e241]: t
+                - generic [ref=f4e242]: u
+                - generic [ref=f4e243]: "n"
+                - generic [ref=f4e244]: e
+                - generic [ref=f4e245]: .
+          - paragraph [ref=f4e246]: Most founders reach us already burned by an agency. Here’s what usually goes wrong — and how we do it differently.
+        - list [ref=f4e247]:
+          - listitem [ref=f4e248]:
+            - generic [ref=f4e254]:
+              - heading "Too slow" [level=3] [ref=f4e255]
+              - paragraph [ref=f4e256]: Agencies take 6+ months while your funding window quietly closes.
+          - listitem [ref=f4e258]:
+            - generic [ref=f4e264]:
+              - heading "Too expensive" [level=3] [ref=f4e265]
+              - paragraph [ref=f4e266]: $50k+ quotes just for a first version — before you’ve validated a thing.
+          - listitem [ref=f4e268]:
+            - generic [ref=f4e275]:
+              - heading "Wrong deliverable" [level=3] [ref=f4e276]
+              - paragraph [ref=f4e277]: Months later you get something you didn’t ask for — and can’t even edit.
+        - paragraph [ref=f4e279]:
+          - link "See how we work" [ref=f4e280] [cursor=pointer]:
+            - /url: "#how-we-work"
+            - text: See how we work
+            - generic [ref=f4e281]: →
+    - region [ref=f4e282]:
+      - generic [ref=f4e283]:
+        - generic [ref=f4e284]:
+          - paragraph [ref=f4e285]: Services
+          - heading "Everything you need to launch." [level=2] [ref=f4e286]:
+            - generic [ref=f4e288]:
+              - generic [ref=f4e289]:
+                - generic [ref=f4e290]: E
+                - generic [ref=f4e291]: v
+                - generic [ref=f4e292]: e
+                - generic [ref=f4e293]: r
+                - generic [ref=f4e294]: "y"
+                - generic [ref=f4e295]: t
+                - generic [ref=f4e296]: h
+                - generic [ref=f4e297]: i
+                - generic [ref=f4e298]: "n"
+                - generic [ref=f4e299]: g
+              - generic [ref=f4e300]:
+                - generic [ref=f4e301]: "y"
+                - generic [ref=f4e302]: o
+                - generic [ref=f4e303]: u
+              - generic [ref=f4e304]:
+                - generic [ref=f4e305]: "n"
+                - generic [ref=f4e306]: e
+                - generic [ref=f4e307]: e
+                - generic [ref=f4e308]: d
+              - generic [ref=f4e309]:
+                - generic [ref=f4e310]: t
+                - generic [ref=f4e311]: o
+              - generic [ref=f4e312]:
+                - generic [ref=f4e313]: l
+                - generic [ref=f4e314]: a
+                - generic [ref=f4e315]: u
+                - generic [ref=f4e316]: "n"
+                - generic [ref=f4e317]: c
+                - generic [ref=f4e318]: h
+                - generic [ref=f4e319]: .
+        - list [ref=f4e320]:
+          - listitem [ref=f4e321]:
+            - generic [ref=f4e322]: "01"
+            - heading "MVP Development" [level=3] [ref=f4e323]
+            - generic [ref=f4e324]:
+              - paragraph [ref=f4e325]: Build your product fast with our expert team.
+              - list [ref=f4e326]:
+                - listitem [ref=f4e327]: + Web Apps
+                - listitem [ref=f4e328]: + Mobile Apps
+                - listitem [ref=f4e329]: + API Development
+            - generic:
+              - generic:
+                - generic: MVP Development
+                - generic: Build your product fast with our expert team.
+                - list:
+                  - listitem: Web Apps
+                  - listitem: Mobile Apps
+                  - listitem: API Development
+          - listitem [ref=f4e336]:
+            - generic [ref=f4e337]: "02"
+            - heading "Website Design" [level=3] [ref=f4e338]
+            - generic [ref=f4e339]:
+              - paragraph [ref=f4e340]: Professional websites that convert visitors.
+              - list [ref=f4e341]:
+                - listitem [ref=f4e342]: + WordPress
+                - listitem [ref=f4e343]: + Next.js
+                - listitem [ref=f4e344]: + Custom Development
+            - generic:
+              - generic:
+                - generic: Website Design
+                - generic: Professional websites that convert visitors.
+                - list:
+                  - listitem: WordPress
+                  - listitem: Next.js
+                  - listitem: Custom Development
+          - listitem [ref=f4e348]:
+            - generic [ref=f4e349]: "03"
+            - heading "SEO & Marketing" [level=3] [ref=f4e350]
+            - generic [ref=f4e351]:
+              - paragraph [ref=f4e352]: Get found and grow your audience online.
+              - list [ref=f4e353]:
+                - listitem [ref=f4e354]: + Search Optimization
+                - listitem [ref=f4e355]: + Social Media
+                - listitem [ref=f4e356]: + Content Strategy
+            - generic:
+              - generic:
+                - generic: SEO & Marketing
+                - generic: Get found and grow your audience online.
+                - list:
+                  - listitem: Search Optimization
+                  - listitem: Social Media
+                  - listitem: Content Strategy
+          - listitem [ref=f4e361]:
+            - generic [ref=f4e362]: "04"
+            - heading "Paid Ads" [level=3] [ref=f4e363]
+            - generic [ref=f4e364]:
+              - paragraph [ref=f4e365]: Drive targeted traffic with precision.
+              - list [ref=f4e366]:
+                - listitem [ref=f4e367]: + Google Ads
+                - listitem [ref=f4e368]: + Meta Ads
+                - listitem [ref=f4e369]: + Campaign Management
+            - generic:
+              - generic:
+                - generic: Paid Ads
+                - generic: Drive targeted traffic with precision.
+                - list:
+                  - listitem: Google Ads
+                  - listitem: Meta Ads
+                  - listitem: Campaign Management
+          - listitem [ref=f4e375]:
+            - generic [ref=f4e376]: "05"
+            - heading "Video Production" [level=3] [ref=f4e377]
+            - generic [ref=f4e378]:
+              - paragraph [ref=f4e379]: Engaging video content for your brand.
+              - list [ref=f4e380]:
+                - listitem [ref=f4e381]: + Promo Videos
+                - listitem [ref=f4e382]: + Social Content
+                - listitem [ref=f4e383]: + Product Demos
+            - generic:
+              - generic:
+                - generic: Video Production
+                - generic: Engaging video content for your brand.
+                - list:
+                  - listitem: Promo Videos
+                  - listitem: Social Content
+                  - listitem: Product Demos
+          - listitem [ref=f4e388]:
+            - generic [ref=f4e389]: "06"
+            - heading "Business Consultation" [level=3] [ref=f4e390]
+            - generic [ref=f4e391]:
+              - paragraph [ref=f4e392]: Strategic guidance to help you scale.
+              - list [ref=f4e393]:
+                - listitem [ref=f4e394]: + Market Research
+                - listitem [ref=f4e395]: + Product Strategy
+                - listitem [ref=f4e396]: + Growth Planning
+            - generic:
+              - generic:
+                - generic: Business Consultation
+                - generic: Strategic guidance to help you scale.
+                - list:
+                  - listitem: Market Research
+                  - listitem: Product Strategy
+                  - listitem: Growth Planning
+        - link "See Our Services" [ref=f4e404] [cursor=pointer]:
+          - /url: http://localhost/sklentr/sklentr-v3/services
+          - text: See Our Services
+          - generic [ref=f4e405]: →
+    - region [ref=f4e406]:
+      - generic [ref=f4e407]:
+        - generic [ref=f4e408]:
+          - paragraph [ref=f4e409]: Why Sklentr
+          - heading "Built different — on purpose." [level=2] [ref=f4e410]:
+            - generic [ref=f4e412]:
+              - generic [ref=f4e413]:
+                - generic [ref=f4e414]: B
+                - generic [ref=f4e415]: u
+                - generic [ref=f4e416]: i
+                - generic [ref=f4e417]: l
+                - generic [ref=f4e418]: t
+              - generic [ref=f4e419]:
+                - generic [ref=f4e420]: d
+                - generic [ref=f4e421]: i
+                - generic [ref=f4e422]: f
+                - generic [ref=f4e423]: f
+                - generic [ref=f4e424]: e
+                - generic [ref=f4e425]: r
+                - generic [ref=f4e426]: e
+                - generic [ref=f4e427]: "n"
+                - generic [ref=f4e428]: t
+              - generic [ref=f4e429]: —
+              - generic [ref=f4e431]:
+                - generic [ref=f4e432]: o
+                - generic [ref=f4e433]: "n"
+              - generic [ref=f4e434]:
+                - generic [ref=f4e435]: p
+                - generic [ref=f4e436]: u
+                - generic [ref=f4e437]: r
+                - generic [ref=f4e438]: p
+                - generic [ref=f4e439]: o
+                - generic [ref=f4e440]: s
+                - generic [ref=f4e441]: e
+                - generic [ref=f4e442]: .
+          - paragraph [ref=f4e443]: Four reasons founders trust us with their first product — and their next one.
+        - list [ref=f4e444]:
+          - listitem [ref=f4e445]:
+            - generic [ref=f4e446]:
+              - generic [ref=f4e447]: "01"
+              - heading "Speed without compromise" [level=3] [ref=f4e448]
+              - paragraph [ref=f4e449]: 14-day average delivery, 98% on-time. We move fast without cutting corners.
+              - list [ref=f4e450]:
+                - listitem [ref=f4e451]:
+                  - generic [ref=f4e455]: 14-day average delivery
+                - listitem [ref=f4e456]:
+                  - generic [ref=f4e460]: 98% on-time record
+                - listitem [ref=f4e461]:
+                  - generic [ref=f4e465]: Weekly progress demos
+          - listitem [ref=f4e469]:
+            - generic [ref=f4e470]:
+              - generic [ref=f4e471]: "02"
+              - heading "Radical transparency" [level=3] [ref=f4e472]
+              - paragraph [ref=f4e473]: Fixed, published pricing. No hidden costs and no surprise invoices — ever.
+              - list [ref=f4e474]:
+                - listitem [ref=f4e475]:
+                  - generic [ref=f4e479]: Published fixed pricing
+                - listitem [ref=f4e480]:
+                  - generic [ref=f4e484]: No hidden fees, ever
+                - listitem [ref=f4e485]:
+                  - generic [ref=f4e489]: You approve every scope
+          - listitem [ref=f4e494]:
+            - generic [ref=f4e495]:
+              - generic [ref=f4e496]: "03"
+              - heading "Canadian management, global talent" [level=3] [ref=f4e497]
+              - paragraph [ref=f4e498]: "Toronto strategy meets expert global delivery: premium quality at a competitive cost."
+              - list [ref=f4e499]:
+                - listitem [ref=f4e500]:
+                  - generic [ref=f4e504]: Toronto-based project leads
+                - listitem [ref=f4e505]:
+                  - generic [ref=f4e509]: Expert global engineering
+                - listitem [ref=f4e510]:
+                  - generic [ref=f4e514]: One accountable team
+          - listitem [ref=f4e519]:
+            - generic [ref=f4e520]:
+              - generic [ref=f4e521]: "04"
+              - heading "You own everything" [level=3] [ref=f4e522]
+              - paragraph [ref=f4e523]: 100% source-code ownership and a real post-launch partnership. It’s yours.
+              - list [ref=f4e524]:
+                - listitem [ref=f4e525]:
+                  - generic [ref=f4e529]: 100% source-code handover
+                - listitem [ref=f4e530]:
+                  - generic [ref=f4e534]: Full IP rights
+                - listitem [ref=f4e535]:
+                  - generic [ref=f4e539]: 1-month post-launch support
+        - paragraph [ref=f4e545]:
+          - link "Meet the team" [ref=f4e546] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/about
+            - text: Meet the team
+            - generic [ref=f4e547]: →
+    - region [ref=f4e548]:
+      - generic [ref=f4e550]:
+        - generic [ref=f4e551]:
+          - paragraph [ref=f4e552]: For Canada Startup Visa Applicants
+          - heading "Need an MVP for your Startup Visa? We’ve got you." [level=2] [ref=f4e556]:
+            - generic [ref=f4e557]:
+              - generic [ref=f4e558]: Need an MVP for your Startup Visa?
+              - generic [ref=f4e559]:
+                - generic [ref=f4e560]:
+                  - generic [ref=f4e561]: "N"
+                  - generic [ref=f4e562]: e
+                  - generic [ref=f4e563]: e
+                  - generic [ref=f4e564]: d
+                - generic [ref=f4e565]:
+                  - generic [ref=f4e566]: a
+                  - generic [ref=f4e567]: "n"
+                - generic [ref=f4e568]:
+                  - generic [ref=f4e569]: M
+                  - generic [ref=f4e570]: V
+                  - generic [ref=f4e571]: P
+                - generic [ref=f4e572]:
+                  - generic [ref=f4e573]: f
+                  - generic [ref=f4e574]: o
+                  - generic [ref=f4e575]: r
+                - generic [ref=f4e576]:
+                  - generic [ref=f4e577]: "y"
+                  - generic [ref=f4e578]: o
+                  - generic [ref=f4e579]: u
+                  - generic [ref=f4e580]: r
+                - generic [ref=f4e581]:
+                  - generic [ref=f4e582]: S
+                  - generic [ref=f4e583]: t
+                  - generic [ref=f4e584]: a
+                  - generic [ref=f4e585]: r
+                  - generic [ref=f4e586]: t
+                  - generic [ref=f4e587]: u
+                  - generic [ref=f4e588]: p
+                - generic [ref=f4e589]:
+                  - generic [ref=f4e590]: V
+                  - generic [ref=f4e591]: i
+                  - generic [ref=f4e592]: s
+                  - generic [ref=f4e593]: a
+                  - generic [ref=f4e594]: "?"
+            - generic [ref=f4e595]:
+              - generic [ref=f4e596]: We’ve got you.
+              - generic [ref=f4e597]:
+                - generic [ref=f4e598]:
+                  - generic [ref=f4e599]: W
+                  - generic [ref=f4e600]: e
+                  - generic [ref=f4e601]: ’
+                  - generic [ref=f4e602]: v
+                  - generic [ref=f4e603]: e
+                - generic [ref=f4e604]:
+                  - generic [ref=f4e605]: g
+                  - generic [ref=f4e606]: o
+                  - generic [ref=f4e607]: t
+                - generic [ref=f4e608]:
+                  - generic [ref=f4e609]: "y"
+                  - generic [ref=f4e610]: o
+                  - generic [ref=f4e611]: u
+                  - generic [ref=f4e612]: .
+          - paragraph [ref=f4e613]: Tight deadline. Limited budget. High stakes. We help startup visa applicants build working products that prove business viability — on time and on budget.
+          - link "Learn More" [ref=f4e615] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/startup-visa
+            - text: Learn More
+            - generic [ref=f4e616]: →
+        - list [ref=f4e617]:
+          - listitem [ref=f4e618]:
+            - img [ref=f4e625]:
+              - generic [ref=f4e626]: "01"
+            - heading "Working Product" [level=3] [ref=f4e627]
+            - paragraph [ref=f4e628]: Prove business viability
+          - listitem [ref=f4e629]:
+            - img [ref=f4e636]:
+              - generic [ref=f4e637]: "02"
+            - heading "Meet Deadlines" [level=3] [ref=f4e638]
+            - paragraph [ref=f4e639]: Timeline that fits your visa process
+          - listitem [ref=f4e640]:
+            - img [ref=f4e646]:
+              - generic [ref=f4e647]: "03"
+            - heading "Budget Friendly" [level=3] [ref=f4e648]
+            - paragraph [ref=f4e649]: Pricing that respects your runway
+    - region [ref=f4e650]:
+      - generic [ref=f4e652]:
+        - paragraph [ref=f4e653]: Featured Work
+        - heading "Real products, real outcomes." [level=2] [ref=f4e654]:
+          - generic [ref=f4e656]:
+            - generic [ref=f4e657]:
+              - generic [ref=f4e658]: R
+              - generic [ref=f4e659]: e
+              - generic [ref=f4e660]: a
+              - generic [ref=f4e661]: l
+            - generic [ref=f4e662]:
+              - generic [ref=f4e663]: p
+              - generic [ref=f4e664]: r
+              - generic [ref=f4e665]: o
+              - generic [ref=f4e666]: d
+              - generic [ref=f4e667]: u
+              - generic [ref=f4e668]: c
+              - generic [ref=f4e669]: t
+              - generic [ref=f4e670]: s
+              - generic [ref=f4e671]: ","
+            - generic [ref=f4e672]:
+              - generic [ref=f4e673]: r
+              - generic [ref=f4e674]: e
+              - generic [ref=f4e675]: a
+              - generic [ref=f4e676]: l
+            - generic [ref=f4e677]:
+              - generic [ref=f4e678]: o
+              - generic [ref=f4e679]: u
+              - generic [ref=f4e680]: t
+              - generic [ref=f4e681]: c
+              - generic [ref=f4e682]: o
+              - generic [ref=f4e683]: m
+              - generic [ref=f4e684]: e
+              - generic [ref=f4e685]: s
+              - generic [ref=f4e686]: .
+        - paragraph [ref=f4e687]: A few of the MVPs we’ve shipped for founders — live, funded, and in market.
+      - list [ref=f4e690]:
+        - listitem [ref=f4e691]:
+          - link "AI Farming AgriTech AI Farming In funding discussions Platform Marketplace" [ref=f4e692]:
+            - /url: http://localhost/sklentr/sklentr-v3/portfolio
+            - generic [ref=f4e693]:
+              - img "AI Farming" [ref=f4e694]
+              - generic [ref=f4e695]: AgriTech
+            - generic [ref=f4e697]:
+              - heading "AI Farming" [level=3] [ref=f4e698]
+              - generic [ref=f4e699]: In funding discussions
+              - list [ref=f4e700]:
+                - listitem [ref=f4e701]: Platform
+                - listitem [ref=f4e702]: Marketplace
+        - listitem [ref=f4e703]:
+          - 'link "Get Takaful FinTech / Blockchain Get Takaful #1 SEO rankings · weekly inquiries Shariah-compliant Blockchain" [ref=f4e704]':
+            - /url: http://localhost/sklentr/sklentr-v3/portfolio
+            - generic [ref=f4e705]:
+              - img "Get Takaful" [ref=f4e706]
+              - generic [ref=f4e707]: FinTech / Blockchain
+            - generic [ref=f4e709]:
+              - heading "Get Takaful" [level=3] [ref=f4e710]
+              - generic [ref=f4e711]: "#1 SEO rankings · weekly inquiries"
+              - list [ref=f4e712]:
+                - listitem [ref=f4e713]: Shariah-compliant
+                - listitem [ref=f4e714]: Blockchain
+        - listitem [ref=f4e715]:
+          - link "KindredCare Healthcare KindredCare MVP complete · onboarding live AI Matching Mobile" [ref=f4e716]:
+            - /url: http://localhost/sklentr/sklentr-v3/portfolio
+            - generic [ref=f4e717]:
+              - img "KindredCare" [ref=f4e718]
+              - generic [ref=f4e719]: Healthcare
+            - generic [ref=f4e721]:
+              - heading "KindredCare" [level=3] [ref=f4e722]
+              - generic [ref=f4e723]: MVP complete · onboarding live
+              - list [ref=f4e724]:
+                - listitem [ref=f4e725]: AI Matching
+                - listitem [ref=f4e726]: Mobile
+        - listitem [ref=f4e727]:
+          - link "Agile Sourcing Fashion Agile Sourcing Launched Design Validation Web App" [ref=f4e728]:
+            - /url: http://localhost/sklentr/sklentr-v3/portfolio
+            - generic [ref=f4e729]:
+              - img "Agile Sourcing" [ref=f4e730]
+              - generic [ref=f4e731]: Fashion
+            - generic [ref=f4e733]:
+              - heading "Agile Sourcing" [level=3] [ref=f4e734]
+              - generic [ref=f4e735]: Launched
+              - list [ref=f4e736]:
+                - listitem [ref=f4e737]: Design Validation
+                - listitem [ref=f4e738]: Web App
+        - listitem [ref=f4e739]:
+          - link "GAinData SaaS GAinData MVP launched AI Data Intelligence" [ref=f4e740]:
+            - /url: http://localhost/sklentr/sklentr-v3/portfolio
+            - generic [ref=f4e741]:
+              - img "GAinData" [ref=f4e742]
+              - generic [ref=f4e743]: SaaS
+            - generic [ref=f4e745]:
+              - heading "GAinData" [level=3] [ref=f4e746]
+              - generic [ref=f4e747]: MVP launched
+              - list [ref=f4e748]:
+                - listitem [ref=f4e749]: AI
+                - listitem [ref=f4e750]: Data Intelligence
+      - link "View All Work" [ref=f4e753] [cursor=pointer]:
+        - /url: http://localhost/sklentr/sklentr-v3/portfolio
+        - text: View All Work
+        - generic [ref=f4e754]: →
+    - region [ref=f4e755]:
+      - generic [ref=f4e756]:
+        - generic [ref=f4e757]:
+          - paragraph [ref=f4e758]: How We Work
+          - heading "A clear path from idea to launch." [level=2] [ref=f4e759]:
+            - generic [ref=f4e761]:
+              - generic [ref=f4e762]: A
+              - generic [ref=f4e764]:
+                - generic [ref=f4e765]: c
+                - generic [ref=f4e766]: l
+                - generic [ref=f4e767]: e
+                - generic [ref=f4e768]: a
+                - generic [ref=f4e769]: r
+              - generic [ref=f4e770]:
+                - generic [ref=f4e771]: p
+                - generic [ref=f4e772]: a
+                - generic [ref=f4e773]: t
+                - generic [ref=f4e774]: h
+              - generic [ref=f4e775]:
+                - generic [ref=f4e776]: f
+                - generic [ref=f4e777]: r
+                - generic [ref=f4e778]: o
+                - generic [ref=f4e779]: m
+              - generic [ref=f4e780]:
+                - generic [ref=f4e781]: i
+                - generic [ref=f4e782]: d
+                - generic [ref=f4e783]: e
+                - generic [ref=f4e784]: a
+              - generic [ref=f4e785]:
+                - generic [ref=f4e786]: t
+                - generic [ref=f4e787]: o
+              - generic [ref=f4e788]:
+                - generic [ref=f4e789]: l
+                - generic [ref=f4e790]: a
+                - generic [ref=f4e791]: u
+                - generic [ref=f4e792]: "n"
+                - generic [ref=f4e793]: c
+                - generic [ref=f4e794]: h
+                - generic [ref=f4e795]: .
+          - paragraph [ref=f4e796]: No black boxes — four simple steps, predictable from day one.
+        - list [ref=f4e798]:
+          - listitem [ref=f4e799]:
+            - generic [ref=f4e800]: "1"
+            - heading "Discovery" [level=3] [ref=f4e801]
+            - paragraph [ref=f4e802]: A free 30-min consultation to clarify your vision and scope.
+          - listitem [ref=f4e803]:
+            - generic [ref=f4e804]: "2"
+            - heading "Design" [level=3] [ref=f4e805]
+            - paragraph [ref=f4e806]: UI/UX design plus the technical architecture.
+          - listitem [ref=f4e807]:
+            - generic [ref=f4e808]: "3"
+            - heading "Build" [level=3] [ref=f4e809]
+            - paragraph [ref=f4e810]: Agile sprints with regular progress demos.
+          - listitem [ref=f4e811]:
+            - generic [ref=f4e812]: "4"
+            - heading "Launch" [level=3] [ref=f4e813]
+            - paragraph [ref=f4e814]: QA, deployment, and a month of post-launch support.
+        - link "Start With a Free Discovery Call" [ref=f4e816] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Start With a Free Discovery Call
+          - generic [ref=f4e817]: →
+    - region [ref=f4e818]:
+      - generic [ref=f4e819]:
+        - generic [ref=f4e820]:
+          - paragraph [ref=f4e821]: Pricing
+          - heading "Transparent pricing. No surprises." [level=2] [ref=f4e822]:
+            - generic [ref=f4e824]:
+              - generic [ref=f4e825]:
+                - generic [ref=f4e826]: T
+                - generic [ref=f4e827]: r
+                - generic [ref=f4e828]: a
+                - generic [ref=f4e829]: "n"
+                - generic [ref=f4e830]: s
+                - generic [ref=f4e831]: p
+                - generic [ref=f4e832]: a
+                - generic [ref=f4e833]: r
+                - generic [ref=f4e834]: e
+                - generic [ref=f4e835]: "n"
+                - generic [ref=f4e836]: t
+              - generic [ref=f4e837]:
+                - generic [ref=f4e838]: p
+                - generic [ref=f4e839]: r
+                - generic [ref=f4e840]: i
+                - generic [ref=f4e841]: c
+                - generic [ref=f4e842]: i
+                - generic [ref=f4e843]: "n"
+                - generic [ref=f4e844]: g
+                - generic [ref=f4e845]: .
+              - generic [ref=f4e846]:
+                - generic [ref=f4e847]: "N"
+                - generic [ref=f4e848]: o
+              - generic [ref=f4e849]:
+                - generic [ref=f4e850]: s
+                - generic [ref=f4e851]: u
+                - generic [ref=f4e852]: r
+                - generic [ref=f4e853]: p
+                - generic [ref=f4e854]: r
+                - generic [ref=f4e855]: i
+                - generic [ref=f4e856]: s
+                - generic [ref=f4e857]: e
+                - generic [ref=f4e858]: s
+                - generic [ref=f4e859]: .
+        - list [ref=f4e860]:
+          - listitem [ref=f4e861]:
+            - heading "Starter MVP" [level=3] [ref=f4e862]
+            - generic [ref=f4e863]:
+              - generic [ref=f4e864]: Starting at
+              - generic [ref=f4e865]:
+                - generic [ref=f4e866]: $5,000
+                - generic [ref=f4e867]: CAD
+            - generic [ref=f4e868]: 2 weeks
+            - list [ref=f4e872]:
+              - listitem [ref=f4e873]: 1-3 core features
+              - listitem [ref=f4e877]: Template-based design
+              - listitem [ref=f4e881]: Basic SEO setup
+              - listitem [ref=f4e885]: 2 weeks support
+            - link "Book a Free Consultation" [ref=f4e889] [cursor=pointer]:
+              - /url: https://calendly.com/sklentr
+              - text: Book a Free Consultation
+              - generic [ref=f4e890]: →
+          - listitem [ref=f4e891]:
+            - generic [ref=f4e892]: Popular
+            - heading "Growth MVP" [level=3] [ref=f4e893]
+            - generic [ref=f4e894]:
+              - generic [ref=f4e895]: Starting at
+              - generic [ref=f4e896]:
+                - generic [ref=f4e897]: $15,000
+                - generic [ref=f4e898]: CAD
+            - generic [ref=f4e899]: 4 weeks
+            - list [ref=f4e903]:
+              - listitem [ref=f4e904]: 5-7 features
+              - listitem [ref=f4e908]: Custom UI design
+              - listitem [ref=f4e912]: Full SEO included
+              - listitem [ref=f4e916]: 1 month support
+            - link "Book a Free Consultation" [ref=f4e920] [cursor=pointer]:
+              - /url: https://calendly.com/sklentr
+              - text: Book a Free Consultation
+              - generic [ref=f4e921]: →
+          - listitem [ref=f4e922]:
+            - heading "Full-Service" [level=3] [ref=f4e923]
+            - generic [ref=f4e924]:
+              - generic [ref=f4e925]: Starting at
+              - generic [ref=f4e926]:
+                - generic [ref=f4e927]: $30,000+
+                - generic [ref=f4e928]: CAD
+            - generic [ref=f4e929]: 8+ weeks
+            - list [ref=f4e933]:
+              - listitem [ref=f4e934]: Full product build
+              - listitem [ref=f4e938]: Custom UI/UX
+              - listitem [ref=f4e942]: Marketing included
+              - listitem [ref=f4e946]: 3 months support
+            - link "Book a Free Consultation" [ref=f4e950] [cursor=pointer]:
+              - /url: https://calendly.com/sklentr
+              - text: Book a Free Consultation
+              - generic [ref=f4e951]: →
+        - generic [ref=f4e952]:
+          - paragraph [ref=f4e953]: Every project starts with a free 30-minute consultation. We’ll scope your idea and recommend the right package.
+          - link "View Full Pricing" [ref=f4e954] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/pricing
+            - text: View Full Pricing
+            - generic [ref=f4e955]: →
+    - region [ref=f4e956]:
+      - generic [ref=f4e957]:
+        - generic [ref=f4e958]:
+          - paragraph [ref=f4e959]: Technology & AI
+          - heading "Modern stack. AI-native builds." [level=2] [ref=f4e960]:
+            - generic [ref=f4e962]:
+              - generic [ref=f4e963]:
+                - generic [ref=f4e964]: M
+                - generic [ref=f4e965]: o
+                - generic [ref=f4e966]: d
+                - generic [ref=f4e967]: e
+                - generic [ref=f4e968]: r
+                - generic [ref=f4e969]: "n"
+              - generic [ref=f4e970]:
+                - generic [ref=f4e971]: s
+                - generic [ref=f4e972]: t
+                - generic [ref=f4e973]: a
+                - generic [ref=f4e974]: c
+                - generic [ref=f4e975]: k
+                - generic [ref=f4e976]: .
+              - generic [ref=f4e977]:
+                - generic [ref=f4e978]: A
+                - generic [ref=f4e979]: I
+                - generic [ref=f4e980]: "-"
+                - generic [ref=f4e981]: "n"
+                - generic [ref=f4e982]: a
+                - generic [ref=f4e983]: t
+                - generic [ref=f4e984]: i
+                - generic [ref=f4e985]: v
+                - generic [ref=f4e986]: e
+              - generic [ref=f4e987]:
+                - generic [ref=f4e988]: b
+                - generic [ref=f4e989]: u
+                - generic [ref=f4e990]: i
+                - generic [ref=f4e991]: l
+                - generic [ref=f4e992]: d
+                - generic [ref=f4e993]: s
+                - generic [ref=f4e994]: .
+          - paragraph [ref=f4e995]: A consistent, modern toolchain — built to scale, and shipped fast.
+        - generic [ref=f4e996]:
+          - paragraph [ref=f4e997]: Next.js, React, TypeScript, Tailwind CSS, Laravel, Node.js, React Native, Flutter, PostgreSQL, WordPress
+          - generic [ref=f4e999]:
+            - generic [ref=f4e1000]:
+              - generic [ref=f4e1001]: Next.js
+              - generic [ref=f4e1006]: React
+              - generic [ref=f4e1013]: TypeScript
+              - generic [ref=f4e1019]: Tailwind CSS
+              - generic [ref=f4e1023]: Laravel
+              - generic [ref=f4e1028]: Node.js
+              - generic [ref=f4e1034]: React Native
+              - generic [ref=f4e1041]: Flutter
+              - generic [ref=f4e1045]: PostgreSQL
+              - generic [ref=f4e1051]: WordPress
+            - generic [ref=f4e1056]:
+              - generic [ref=f4e1057]: Next.js
+              - generic [ref=f4e1062]: React
+              - generic [ref=f4e1069]: TypeScript
+              - generic [ref=f4e1075]: Tailwind CSS
+              - generic [ref=f4e1079]: Laravel
+              - generic [ref=f4e1084]: Node.js
+              - generic [ref=f4e1090]: React Native
+              - generic [ref=f4e1097]: Flutter
+              - generic [ref=f4e1101]: PostgreSQL
+              - generic [ref=f4e1107]: WordPress
+          - generic [ref=f4e1113]:
+            - generic [ref=f4e1114]:
+              - generic [ref=f4e1115]: Next.js
+              - generic [ref=f4e1120]: React
+              - generic [ref=f4e1127]: TypeScript
+              - generic [ref=f4e1133]: Tailwind CSS
+              - generic [ref=f4e1137]: Laravel
+              - generic [ref=f4e1142]: Node.js
+              - generic [ref=f4e1148]: React Native
+              - generic [ref=f4e1155]: Flutter
+              - generic [ref=f4e1159]: PostgreSQL
+              - generic [ref=f4e1165]: WordPress
+            - generic [ref=f4e1170]:
+              - generic [ref=f4e1171]: Next.js
+              - generic [ref=f4e1176]: React
+              - generic [ref=f4e1183]: TypeScript
+              - generic [ref=f4e1189]: Tailwind CSS
+              - generic [ref=f4e1193]: Laravel
+              - generic [ref=f4e1198]: Node.js
+              - generic [ref=f4e1204]: React Native
+              - generic [ref=f4e1211]: Flutter
+              - generic [ref=f4e1215]: PostgreSQL
+              - generic [ref=f4e1221]: WordPress
+        - generic [ref=f4e1226]:
+          - generic [ref=f4e1227]:
+            - heading "AI-native, not bolted on." [level=3] [ref=f4e1231]
+            - paragraph [ref=f4e1232]: We weave Gemini, OpenAI, and Claude into real product workflows — powering features that matter, not gimmicks.
+          - list [ref=f4e1233]:
+            - listitem [ref=f4e1234]:
+              - generic [ref=f4e1238]: Google Gemini
+            - listitem [ref=f4e1239]:
+              - generic [ref=f4e1245]: OpenAI
+            - listitem [ref=f4e1246]:
+              - generic [ref=f4e1250]: Claude
+        - link "Explore Our Services" [ref=f4e1252] [cursor=pointer]:
+          - /url: http://localhost/sklentr/sklentr-v3/services
+          - text: Explore Our Services
+          - generic [ref=f4e1253]: →
+    - region [ref=f4e1254]:
+      - generic [ref=f4e1256]:
+        - generic [ref=f4e1257]:
+          - paragraph [ref=f4e1258]: About Sklentr
+          - heading "Since 2023, we’ve built launch-ready MVPs founders actually own." [level=2] [ref=f4e1259]:
+            - generic [ref=f4e1261]:
+              - generic [ref=f4e1262]:
+                - generic [ref=f4e1263]: S
+                - generic [ref=f4e1264]: i
+                - generic [ref=f4e1265]: "n"
+                - generic [ref=f4e1266]: c
+                - generic [ref=f4e1267]: e
+              - generic [ref=f4e1268]:
+                - generic [ref=f4e1269]: "2"
+                - generic [ref=f4e1270]: "0"
+                - generic [ref=f4e1271]: "2"
+                - generic [ref=f4e1272]: "3"
+                - generic [ref=f4e1273]: ","
+              - generic [ref=f4e1274]:
+                - generic [ref=f4e1275]: w
+                - generic [ref=f4e1276]: e
+                - generic [ref=f4e1277]: ’
+                - generic [ref=f4e1278]: v
+                - generic [ref=f4e1279]: e
+              - generic [ref=f4e1280]:
+                - generic [ref=f4e1281]: b
+                - generic [ref=f4e1282]: u
+                - generic [ref=f4e1283]: i
+                - generic [ref=f4e1284]: l
+                - generic [ref=f4e1285]: t
+              - generic [ref=f4e1286]:
+                - generic [ref=f4e1287]: l
+                - generic [ref=f4e1288]: a
+                - generic [ref=f4e1289]: u
+                - generic [ref=f4e1290]: "n"
+                - generic [ref=f4e1291]: c
+                - generic [ref=f4e1292]: h
+                - generic [ref=f4e1293]: "-"
+                - generic [ref=f4e1294]: r
+                - generic [ref=f4e1295]: e
+                - generic [ref=f4e1296]: a
+                - generic [ref=f4e1297]: d
+                - generic [ref=f4e1298]: "y"
+              - generic [ref=f4e1299]:
+                - generic [ref=f4e1300]: M
+                - generic [ref=f4e1301]: V
+                - generic [ref=f4e1302]: P
+                - generic [ref=f4e1303]: s
+              - generic [ref=f4e1304]:
+                - generic [ref=f4e1305]: f
+                - generic [ref=f4e1306]: o
+                - generic [ref=f4e1307]: u
+                - generic [ref=f4e1308]: "n"
+                - generic [ref=f4e1309]: d
+                - generic [ref=f4e1310]: e
+                - generic [ref=f4e1311]: r
+                - generic [ref=f4e1312]: s
+              - generic [ref=f4e1313]:
+                - generic [ref=f4e1314]: a
+                - generic [ref=f4e1315]: c
+                - generic [ref=f4e1316]: t
+                - generic [ref=f4e1317]: u
+                - generic [ref=f4e1318]: a
+                - generic [ref=f4e1319]: l
+                - generic [ref=f4e1320]: l
+                - generic [ref=f4e1321]: "y"
+              - generic [ref=f4e1322]:
+                - generic [ref=f4e1323]: o
+                - generic [ref=f4e1324]: w
+                - generic [ref=f4e1325]: "n"
+                - generic [ref=f4e1326]: .
+        - generic [ref=f4e1327]:
+          - figure "Rishad Wahid Founder & CEO, Sklentr" [ref=f4e1328]:
+            - generic [ref=f4e1329]: “
+            - blockquote [ref=f4e1330]: "We started Sklentr to give founders what agencies wouldn’t: speed, transparency, and code they actually own."
+            - generic [ref=f4e1331]:
+              - generic [ref=f4e1332]: Rishad Wahid
+              - generic [ref=f4e1333]: Founder & CEO, Sklentr
+          - img "Rishad Wahid" [ref=f4e1335]
+        - generic [ref=f4e1336]:
+          - generic [ref=f4e1337]: "01"
+          - generic [ref=f4e1338]:
+            - heading "Founder-led, start to finish" [level=3] [ref=f4e1339]
+            - paragraph [ref=f4e1340]: Toronto strategy paired with an expert global team — one accountable partner from first call to launch.
+        - generic [ref=f4e1341]:
+          - paragraph [ref=f4e1342]: Founded out of frustration with slow, overpriced agencies, Sklentr pairs Toronto-based project leadership with an expert global team — premium quality, fast, without the premium markup.
+          - generic [ref=f4e1343]:
+            - link "Meet the Full Team" [ref=f4e1344] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/about
+              - text: Meet the Full Team
+              - generic [ref=f4e1345]: →
+            - generic [ref=f4e1346]:
+              - generic [ref=f4e1347]: Follow Us
+              - list [ref=f4e1348]:
+                - listitem [ref=f4e1349]:
+                  - link "LinkedIn" [ref=f4e1350] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=f4e1353]:
+                  - link "X" [ref=f4e1354] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=f4e1357]:
+                  - link "Facebook" [ref=f4e1358] [cursor=pointer]:
+                    - /url: "#"
+                - listitem [ref=f4e1361]:
+                  - link "Instagram" [ref=f4e1362] [cursor=pointer]:
+                    - /url: "#"
+    - region [ref=f4e1367]:
+      - generic [ref=f4e1368]:
+        - generic [ref=f4e1369]:
+          - generic [ref=f4e1370]:
+            - paragraph [ref=f4e1371]: Insights
+            - heading "Playbooks for founders, not fluff." [level=2] [ref=f4e1372]:
+              - generic [ref=f4e1374]:
+                - generic [ref=f4e1375]:
+                  - generic [ref=f4e1376]: P
+                  - generic [ref=f4e1377]: l
+                  - generic [ref=f4e1378]: a
+                  - generic [ref=f4e1379]: "y"
+                  - generic [ref=f4e1380]: b
+                  - generic [ref=f4e1381]: o
+                  - generic [ref=f4e1382]: o
+                  - generic [ref=f4e1383]: k
+                  - generic [ref=f4e1384]: s
+                - generic [ref=f4e1385]:
+                  - generic [ref=f4e1386]: f
+                  - generic [ref=f4e1387]: o
+                  - generic [ref=f4e1388]: r
+                - generic [ref=f4e1389]:
+                  - generic [ref=f4e1390]: f
+                  - generic [ref=f4e1391]: o
+                  - generic [ref=f4e1392]: u
+                  - generic [ref=f4e1393]: "n"
+                  - generic [ref=f4e1394]: d
+                  - generic [ref=f4e1395]: e
+                  - generic [ref=f4e1396]: r
+                  - generic [ref=f4e1397]: s
+                  - generic [ref=f4e1398]: ","
+                - generic [ref=f4e1399]:
+                  - generic [ref=f4e1400]: "n"
+                  - generic [ref=f4e1401]: o
+                  - generic [ref=f4e1402]: t
+                - generic [ref=f4e1403]:
+                  - generic [ref=f4e1404]: f
+                  - generic [ref=f4e1405]: l
+                  - generic [ref=f4e1406]: u
+                  - generic [ref=f4e1407]: f
+                  - generic [ref=f4e1408]: f
+                  - generic [ref=f4e1409]: .
+            - paragraph [ref=f4e1410]: Practical takes on validation, MVPs, and the Canada Startup Visa — from the team shipping them.
+          - link "Read All Insights" [ref=f4e1411] [cursor=pointer]:
+            - /url: http://localhost/sklentr/sklentr-v3/blog/
+            - text: Read All Insights
+            - generic [ref=f4e1412]: →
+        - list [ref=f4e1413]:
+          - listitem [ref=f4e1414]:
+            - link "Hello world! Uncategorized August 17, 2026 1 min read Hello world! Welcome to WordPress. This is your first post. Edit or delete it, then start writing! Read More" [ref=f4e1415] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/hello-world/
+              - generic [ref=f4e1416]:
+                - img "Hello world!" [ref=f4e1417]
+                - generic [ref=f4e1418]: Uncategorized
+              - generic [ref=f4e1419]:
+                - generic [ref=f4e1420]:
+                  - time [ref=f4e1421]: August 17, 2026
+                  - text: 1 min read
+                - heading "Hello world!" [level=3] [ref=f4e1423]
+                - paragraph [ref=f4e1424]: Welcome to WordPress. This is your first post. Edit or delete it, then start writing!
+                - generic [ref=f4e1425]:
+                  - text: Read More
+                  - generic [ref=f4e1426]: →
+          - listitem [ref=f4e1427]:
+            - link "How to Validate Your Startup Idea Before Building Strategy January 20, 2026 2 min read How to Validate Your Startup Idea Before Building Before investing time and money into development, here’s how to test if your idea has real market potential. Read More" [ref=f4e1428] [cursor=pointer]:
+              - /url: http://localhost/sklentr/sklentr-v3/how-to-validate-your-startup-idea-before-building/
+              - generic [ref=f4e1429]:
+                - img "How to Validate Your Startup Idea Before Building" [ref=f4e1430]
+                - generic [ref=f4e1431]: Strategy
+              - generic [ref=f4e1432]:
+                - generic [ref=f4e1433]:
+                  - time [ref=f4e1434]: January 20, 2026
+                  - text: 2 min read
+                - heading "How to Validate Your Startup Idea Before Building" [level=3] [ref=f4e1436]
+                - paragraph [ref=f4e1437]: Before investing time and money into development, here’s how to test if your idea has real market potential.
+                - generic [ref=f4e1438]:
+                  - text: Read More
+                  - generic [ref=f4e1439]: →
+          - listitem [ref=f4e1440]:
+            - 'link "The 2-Week MVP: What’s Actually Possible Development January 15, 2026 1 min read The 2-Week MVP: What’s Actually Possible Breaking down what you can realistically build in two weeks and how to prioritize features that matter. Read More" [ref=f4e1441] [cursor=pointer]':
+              - /url: http://localhost/sklentr/sklentr-v3/the-2-week-mvp-whats-actually-possible/
+              - generic [ref=f4e1442]:
+                - 'img "The 2-Week MVP: What’s Actually Possible" [ref=f4e1443]'
+                - generic [ref=f4e1444]: Development
+              - generic [ref=f4e1445]:
+                - generic [ref=f4e1446]:
+                  - time [ref=f4e1447]: January 15, 2026
+                  - text: 1 min read
+                - 'heading "The 2-Week MVP: What’s Actually Possible" [level=3] [ref=f4e1449]'
+                - paragraph [ref=f4e1450]: Breaking down what you can realistically build in two weeks and how to prioritize features that matter.
+                - generic [ref=f4e1451]:
+                  - text: Read More
+                  - generic [ref=f4e1452]: →
+    - region [ref=f4e1453]:
+      - generic [ref=f4e1455]:
+        - generic [ref=f4e1456]:
+          - paragraph [ref=f4e1457]: FAQ
+          - heading "Questions? Answered." [level=2] [ref=f4e1458]:
+            - generic [ref=f4e1460]:
+              - generic [ref=f4e1461]:
+                - generic [ref=f4e1462]: Q
+                - generic [ref=f4e1463]: u
+                - generic [ref=f4e1464]: e
+                - generic [ref=f4e1465]: s
+                - generic [ref=f4e1466]: t
+                - generic [ref=f4e1467]: i
+                - generic [ref=f4e1468]: o
+                - generic [ref=f4e1469]: "n"
+                - generic [ref=f4e1470]: s
+                - generic [ref=f4e1471]: "?"
+              - generic [ref=f4e1472]:
+                - generic [ref=f4e1473]: A
+                - generic [ref=f4e1474]: "n"
+                - generic [ref=f4e1475]: s
+                - generic [ref=f4e1476]: w
+                - generic [ref=f4e1477]: e
+                - generic [ref=f4e1478]: r
+                - generic [ref=f4e1479]: e
+                - generic [ref=f4e1480]: d
+                - generic [ref=f4e1481]: .
+          - paragraph [ref=f4e1482]: The things founders ask us most — before the first call.
+          - generic [ref=f4e1483]:
+            - heading "Still have questions?" [level=3] [ref=f4e1488]
+            - paragraph [ref=f4e1489]: Book a free 30-minute call — no pressure, just a clear plan and timeline.
+            - link "Book a Free Call" [ref=f4e1490] [cursor=pointer]:
+              - /url: "#contact"
+              - text: Book a Free Call
+              - generic [ref=f4e1491]: →
+        - generic [ref=f4e1492]:
+          - generic [ref=f4e1493]:
+            - heading [level=3] [ref=f4e1494]:
+              - button "How can you deliver an MVP in 2–4 weeks?" [ref=f4e1495] [cursor=pointer]
+            - region [ref=f4e1500]:
+              - paragraph [ref=f4e1502]: Ruthless scope and a proven stack. We build one sharp value loop first — the core feature, done well — and defer everything non-essential. A fixed scope agreed up front plus daily, visible progress keeps it on time.
+          - generic [ref=f4e1503]:
+            - heading [level=3] [ref=f4e1504]:
+              - button "What does “Canadian management, global talent” mean for me?" [ref=f4e1505] [cursor=pointer]
+            - region [ref=f4e1510]:
+              - paragraph [ref=f4e1512]: Toronto-based project leads own strategy, communication, and accountability, while an expert global team handles engineering and design. You get premium quality and clear communication — without the premium markup.
+          - generic [ref=f4e1513]:
+            - heading [level=3] [ref=f4e1514]:
+              - button "Do I own the source code?" [ref=f4e1515] [cursor=pointer]
+            - region [ref=f4e1520]:
+              - paragraph [ref=f4e1522]: Yes — 100%. You receive full source-code ownership and IP rights on delivery. No lock-in and no licensing games.
+          - generic [ref=f4e1523]:
+            - heading [level=3] [ref=f4e1524]:
+              - button "What’s included in each pricing tier — are there hidden costs?" [ref=f4e1525] [cursor=pointer]
+            - region [ref=f4e1530]:
+              - paragraph [ref=f4e1532]: Pricing is fixed and published. Each tier lists exactly what’s included, and you approve the scope before we start. No surprise invoices, ever.
+          - generic [ref=f4e1533]:
+            - heading [level=3] [ref=f4e1534]:
+              - button "Can you help with a Canada Startup Visa application?" [ref=f4e1535] [cursor=pointer]
+            - region [ref=f4e1540]:
+              - paragraph [ref=f4e1542]: Absolutely — it’s our specialty. We build working MVPs that prove business viability to designated organizations, on a timeline that fits your visa process.
+          - generic [ref=f4e1543]:
+            - heading [level=3] [ref=f4e1544]:
+              - button "What happens after launch?" [ref=f4e1545] [cursor=pointer]
+            - region [ref=f4e1550]:
+              - paragraph [ref=f4e1552]: Every project includes a post-launch support window (2 weeks to 3 months, depending on tier). We’re a partner, not a vendor — many clients stay on for the next build.
+          - generic [ref=f4e1553]:
+            - heading [level=3] [ref=f4e1554]:
+              - button "Which technologies do you use?" [ref=f4e1555] [cursor=pointer]
+            - region [ref=f4e1560]:
+              - paragraph [ref=f4e1562]: A modern, consistent stack — Next.js, React, Laravel, React Native, Flutter, PostgreSQL, WordPress — with AI (Gemini, OpenAI, Claude) woven into product workflows where it adds real value.
+    - region [ref=f4e1563]:
+      - generic [ref=f4e1565]:
+        - paragraph [ref=f4e1566]: Let’s build
+        - heading "Ready to launch your MVP in weeks?" [level=2] [ref=f4e1568]
+        - paragraph [ref=f4e1569]: Book a free 30-minute consultation. No pressure, no jargon — just a clear plan and timeline.
+        - link "Book a Free Consultation" [ref=f4e1571] [cursor=pointer]:
+          - /url: https://calendly.com/sklentr
+          - text: Book a Free Consultation
+          - generic [ref=f4e1572]: →
+        - generic [ref=f4e1573]:
+          - generic [ref=f4e1574]: Or reach us directly
+          - list [ref=f4e1575]:
+            - listitem [ref=f4e1576]:
+              - link "WhatsApp" [ref=f4e1577] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f4e1580]:
+              - link "info@sklentr.com" [ref=f4e1581] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f4e1585]:
+              - link "+1 647-997-0557" [ref=f4e1586] [cursor=pointer]:
+                - /url: tel:+16479970557
+  - contentinfo [ref=f4e1589]:
+    - generic [ref=f4e1590]:
+      - generic [ref=f4e1591]:
+        - heading "Get founder-grade MVP & Startup Visa tips straight to your inbox." [level=2] [ref=f4e1592]
+        - generic [ref=f4e1594]:
+          - generic [ref=f4e1595]: you@company.com
+          - textbox "you@company.com" [ref=f4e1596]
+          - button "Subscribe" [ref=f4e1597] [cursor=pointer]:
+            - text: Subscribe
+            - generic [ref=f4e1598]: →
+      - generic [ref=f4e1599]:
+        - navigation "Services" [ref=f4e1600]:
+          - heading "Services" [level=3] [ref=f4e1601]
+          - list [ref=f4e1602]:
+            - listitem [ref=f4e1603]:
+              - link "MVP Development" [ref=f4e1604] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f4e1605]:
+              - link "Website Design" [ref=f4e1606] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f4e1607]:
+              - link "SEO & Marketing" [ref=f4e1608] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f4e1609]:
+              - link "Paid Ads" [ref=f4e1610] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f4e1611]:
+              - link "Video Production" [ref=f4e1612] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f4e1613]:
+              - link "Business Consultation" [ref=f4e1614] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#services
+            - listitem [ref=f4e1615]:
+              - link "Startup Visa" [ref=f4e1616] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+        - navigation "Company" [ref=f4e1617]:
+          - heading "Company" [level=3] [ref=f4e1618]
+          - list [ref=f4e1619]:
+            - listitem [ref=f4e1620]:
+              - link "About" [ref=f4e1621] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/about/
+            - listitem [ref=f4e1622]:
+              - link "Portfolio" [ref=f4e1623] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/portfolio/
+            - listitem [ref=f4e1624]:
+              - link "Blog" [ref=f4e1625] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/blog/
+            - listitem [ref=f4e1626]:
+              - link "Pricing" [ref=f4e1627] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#pricing
+            - listitem [ref=f4e1628]:
+              - link "Contact" [ref=f4e1629] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#contact
+        - navigation "Resources" [ref=f4e1630]:
+          - heading "Resources" [level=3] [ref=f4e1631]
+          - list [ref=f4e1632]:
+            - listitem [ref=f4e1633]:
+              - link "Startup Visa" [ref=f4e1634] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#startup-visa
+            - listitem [ref=f4e1635]:
+              - link "FAQ" [ref=f4e1636] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#faq
+            - listitem [ref=f4e1637]:
+              - link "How We Work" [ref=f4e1638] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/#how-we-work
+            - listitem [ref=f4e1639]:
+              - link "Privacy Policy" [ref=f4e1640] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/privacy-policy/
+            - listitem [ref=f4e1641]:
+              - link "Terms" [ref=f4e1642] [cursor=pointer]:
+                - /url: http://localhost/sklentr/sklentr-v3/terms/
+        - generic [ref=f4e1643]:
+          - heading "Contact Us" [level=3] [ref=f4e1644]
+          - list [ref=f4e1645]:
+            - listitem [ref=f4e1646]:
+              - link "+1 647-997-0557" [ref=f4e1650] [cursor=pointer]:
+                - /url: tel:+16479970557
+            - listitem [ref=f4e1651]:
+              - link "info@sklentr.com" [ref=f4e1656] [cursor=pointer]:
+                - /url: mailto:info@sklentr.com
+            - listitem [ref=f4e1657]:
+              - link "WhatsApp" [ref=f4e1661] [cursor=pointer]:
+                - /url: https://wa.me/16479970557
+            - listitem [ref=f4e1662]:
+              - generic [ref=f4e1667]: Toronto, Ontario, Canada
+      - generic [ref=f4e1668]:
+        - paragraph [ref=f4e1669]: © 2026 Sklentr V3 — Toronto-based MVP studio. All rights reserved.
+        - generic [ref=f4e1670]:
+          - generic [ref=f4e1671]: Follow Us
+          - link "LinkedIn" [ref=f4e1672] [cursor=pointer]:
+            - /url: "#"
+          - link "X" [ref=f4e1677] [cursor=pointer]:
+            - /url: "#"
+          - link "Facebook" [ref=f4e1680] [cursor=pointer]:
+            - /url: "#"
+          - link "Instagram" [ref=f4e1683] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f4e1688]:
+      - generic [ref=f4e1689]: S
+      - generic [ref=f4e1690]: K
+      - generic [ref=f4e1691]: L
+      - generic [ref=f4e1696]: "N"
+      - generic [ref=f4e1697]: T
+      - generic [ref=f4e1698]: R

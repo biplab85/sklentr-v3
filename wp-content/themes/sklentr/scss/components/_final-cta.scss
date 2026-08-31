@@ -1,0 +1,168 @@
+// =====================================================================
+// SECTION 15 — Final CTA Band (light gradient)
+// The closing ask: big headline, subhead, one primary CTA, and direct-contact
+// links. Soft gold/green glow drifts slowly behind a light gradient wash.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.final-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  text-align: center;
+  color: var(--color-text);
+  background:
+    radial-gradient(120% 90% at 50% -10%, #FFFFFF 0%, #EEF2F7 65%) no-repeat,
+    var(--slate-50);
+  padding-block: clamp(80px, 11vw, 10px);
+}
+
+// ---- Ambient atmosphere ----
+.final-cta__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.final-cta__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+
+  &--gold {
+    width: 640px; height: 640px;
+    top: -180px; left: 50%;
+    background: radial-gradient(circle, rgba(243, 179, 81, .22) 0%, rgba(243, 179, 81, 0) 70%);
+    transform: translateX(-60%);
+    animation: ctaGlowGold 14s var(--ease-inout) infinite;
+  }
+  &--green {
+    width: 560px; height: 560px;
+    bottom: -180px; right: 8%;
+    background: radial-gradient(circle, rgba(30, 255, 133, .16) 0%, rgba(30, 255, 133, 0) 70%);
+    animation: ctaGlowGreen 16s var(--ease-inout) infinite;
+  }
+}
+@keyframes ctaGlowGold  { 0%, 100% { transform: translateX(-60%) translateY(0); } 50% { transform: translateX(-42%) translateY(30px); } }
+@keyframes ctaGlowGreen { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-40px) translateX(-24px); } }
+
+.final-cta__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, .04) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(120% 80% at 50% 40%, #000 25%, transparent 72%);
+          mask-image: radial-gradient(120% 80% at 50% 40%, #000 25%, transparent 72%);
+}
+
+// ---- Content ----
+.final-cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin-inline: auto;
+}
+
+.final-cta__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 22px;
+  padding: 7px 16px 7px 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  color: var(--slate-700);
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-xs);
+}
+.final-cta__eyebrow-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--brand-green);
+  box-shadow: 0 0 0 4px rgba(30, 255, 133, .18);
+}
+
+.final-cta__title {
+  margin: 0 auto 22px;
+  max-width: 16ch;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 1.4rem + 4vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--slate-900);
+}
+.final-cta__accent { color: var(--brand-gold-deep); }
+
+.final-cta__subtitle {
+  margin: 0 auto 30px;
+  max-width: 54ch;
+  font-size: clamp(1.0625rem, 1rem + .3vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--slate-600);
+}
+
+// ---- Primary CTA ----
+.final-cta__actions { margin-bottom: 26px; }
+.final-cta__primary {
+  --_btn-x: 40px;
+  padding-block: 19px;
+  font-size: 16.5px;
+}
+
+// ---- Direct contact ----
+.final-cta__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.final-cta__contact-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: var(--slate-500);
+}
+.final-cta__contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.final-cta__contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  border: 1px solid var(--slate-200);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--slate-700);
+  box-shadow: var(--shadow-xs);
+  transition: color var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+
+  svg { width: 17px; height: 17px; }
+
+  &:hover {
+    color: var(--brand-gold-deep);
+    background: var(--white);
+    border-color: rgba(224, 145, 43, .5);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-2px);
+  }
+}
+
+@include reduced-motion {
+  .final-cta__glow { animation: none; }
+}

@@ -1,0 +1,239 @@
+// =====================================================================
+// SECTION 08 — How We Work (Process) — iteck "process section" match.
+// A minimal 4-across staircase: each step fronted by an oversized LIGHT-GREY
+// numeral; steps 1 & 3 ride the top rail, 2 & 4 drop down. A faint grey
+// connector (horizontal top rail + short vertical drop-ticks at the dropped
+// steps) threads them. Desktop = the staircase; mobile = a vertical timeline.
+//
+// Scroll interaction (added, purely additive — see the reveal block near the
+// bottom): steps reveal cumulatively one at a time on scroll-down and hide in
+// reverse on scroll-up. No-JS / reduced-motion show all four at once.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+$wire: rgba(148, 148, 148, .34);   // faint neutral-grey connector (iteck-like)
+$ghost: #E5E7EB;                   // light-grey ghost numeral
+
+.process {
+  position: relative;
+  background: var(--white);
+  padding-block: clamp(72px, 9vw, 128px);
+
+  // Geometry shared by the staircase + connector (kept in lockstep).
+  --ghost-h: 84px;   // ghost-numeral band height (rail sits at its centre)
+  --zig:     108px;  // vertical drop of the even (lowered) steps
+}
+
+.process__head {
+  max-width: 720px;
+  margin: 0 auto clamp(56px, 7vw, 88px);
+  text-align: center;
+}
+.process__eyebrow { margin: 0 0 14px; }
+.process__title {
+  margin: 0 0 16px;
+  color: var(--ink-950);
+  font-size: var(--fs-h2);
+}
+.process__intro {
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  color: var(--slate-600);
+}
+
+// ---------------------------------------------------------------------
+// Staircase
+// ---------------------------------------------------------------------
+.process__timeline {
+  max-width: 1160px;
+  margin-inline: auto;
+}
+
+.process__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--count), 1fr);
+  gap: clamp(8px, 1.5vw, 20px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  // Horizontal top rail — runs through the centres of the raised numerals
+  // (first column centre → last column centre).
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: calc(var(--ghost-h) / 2);
+    left: calc(50% / var(--count));
+    right: calc(50% / var(--count));
+    height: 1px;
+    background: $wire;
+  }
+}
+
+.process-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  // The zigzag: even (1-based) steps drop so the rail can branch down to them.
+  &:nth-child(even) {
+    margin-top: var(--zig);
+
+    // Short vertical drop-tick from the rail toward the lowered numeral
+    // (floats above it, exactly like the reference).
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 50%;
+      top: calc(var(--ghost-h) / 2 - var(--zig));
+      width: 1px;
+      height: 74px;
+      background: $wire;
+    }
+  }
+}
+
+// ---- Ghost numeral (the hero graphic) — flat light grey, no accent ----
+.process-step__num {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 6px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(2.75rem, 1.9rem + 2.6vw, 3.375rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #898989;
+  background: #f9f9f9;
+  border: 4px solid #f1f1f1;
+  border-radius: 100%;
+}
+
+.process-step__title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 1.1rem + 1.1vw, 1.875rem);    // → 30px
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink-950);
+}
+.process-step__desc {
+  margin: 15px auto 0;
+  max-width: 30ch;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--slate-500);
+}
+
+// ---- Section CTA ----
+.process__cta {
+  margin: clamp(56px, 7vw, 92px) 0 0;
+  text-align: center;
+}
+
+// ---------------------------------------------------------------------
+// Mobile: collapse the staircase into a left-anchored vertical timeline.
+// ---------------------------------------------------------------------
+@include bp-max(860px) {
+  .process__timeline { max-width: 460px; }
+
+  .process__steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    &::before {          // vertical rail down the left, behind the numerals
+      top: 30px;
+      bottom: 30px;
+      left: 33px;
+      right: auto;
+      width: 1px;
+      height: auto;
+    }
+  }
+
+  .process-step {
+    // Numeral in a left column spanning both rows; title + desc stacked right.
+    display: grid;
+    grid-template-columns: 66px 1fr;
+    grid-template-areas:
+      "num title"
+      "num desc";
+    align-items: start;
+    column-gap: 20px;
+    text-align: left;
+    padding-bottom: 40px;
+
+    &:nth-child(even) {
+      margin-top: 0;              // no zigzag when stacked
+      &::before { display: none; } // no drop-ticks in the vertical layout
+    }
+    &:last-child { padding-bottom: 0; }
+  }
+
+  .process-step__num {
+    grid-area: num;
+    align-self: start;
+    width: 66px;
+    height: 66px;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+  }
+  .process-step__title { grid-area: title; align-self: center; }
+  .process-step__desc { grid-area: desc; margin: 6px 0 0; max-width: none; }
+}
+
+// ---------------------------------------------------------------------
+// Scroll-triggered CUMULATIVE reveal (added — purely additive).
+// assets/js/process.js adds `.is-reveal` to the steps container (motion only),
+// then toggles `.is-shown` on each step as scrolling reaches it. Steps
+// accumulate on the way down and hide in reverse on the way up. The revealed
+// state is identical to the untouched design; only the hidden/entering state
+// is new. No-JS / reduced-motion never get `.is-reveal`, so all four show.
+// ---------------------------------------------------------------------
+.process__steps.is-reveal .process-step {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s var(--ease-out), transform .6s var(--ease-out);
+  will-change: opacity, transform;
+}
+.process__steps.is-reveal .process-step.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+// The connector line grows/shrinks in sync with the revealed steps
+// (25 → 50 → 75 → 100%). JS sets --seq = revealedCount / total. Desktop only —
+// the horizontal rail. At 100% (all revealed) it equals the untouched rail, so
+// nothing else about the design changes. The mobile vertical rail is left as-is.
+@include bp-min(861px) {
+  .process__steps.is-reveal::before {
+    right: auto;
+    width: calc((100% - 100% / var(--count)) * var(--seq, 0.25));
+    transition: width .6s var(--ease-out);
+  }
+}
+
+// ---------------------------------------------------------------------
+// Reduced motion: everything visible, no reveal transitions.
+// ---------------------------------------------------------------------
+@include reduced-motion {
+  .process__steps.is-reveal .process-step,
+  .process__steps.is-reveal .process-step.is-shown {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

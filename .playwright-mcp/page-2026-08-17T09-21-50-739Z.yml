@@ -1,0 +1,337 @@
+- generic [ref=f39e2]:
+  - navigation "Main menu":
+    - link "Skip to main content" [ref=f39e3] [cursor=pointer]:
+      - /url: "#wpbody-content"
+    - link "Skip to toolbar" [ref=f39e4] [cursor=pointer]:
+      - /url: "#wp-toolbar"
+    - list [ref=f39e7]:
+      - listitem [ref=f39e8]:
+        - link "Dashboard" [ref=f39e9] [cursor=pointer]:
+          - /url: index.php
+          - generic [ref=f39e10]: 
+        - list [ref=f39e12]:
+          - listitem [ref=f39e13]:
+            - link "Home" [ref=f39e14] [cursor=pointer]:
+              - /url: index.php
+          - listitem [ref=f39e15]:
+            - link "Updates" [ref=f39e16] [cursor=pointer]:
+              - /url: update-core.php
+      - listitem [ref=f39e17]
+      - listitem [ref=f39e19]:
+        - link "Posts" [ref=f39e20] [cursor=pointer]:
+          - /url: edit.php
+          - generic [ref=f39e21]: 
+        - list [ref=f39e23]:
+          - listitem [ref=f39e24]:
+            - link "All Posts" [ref=f39e25] [cursor=pointer]:
+              - /url: edit.php
+          - listitem [ref=f39e26]:
+            - link "Add Post" [ref=f39e27] [cursor=pointer]:
+              - /url: post-new.php
+          - listitem [ref=f39e28]:
+            - link "Categories" [ref=f39e29] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=category
+          - listitem [ref=f39e30]:
+            - link "Tags" [ref=f39e31] [cursor=pointer]:
+              - /url: edit-tags.php?taxonomy=post_tag
+      - listitem [ref=f39e32]:
+        - link "Media" [ref=f39e33] [cursor=pointer]:
+          - /url: upload.php
+          - generic [ref=f39e34]: 
+        - list [ref=f39e36]:
+          - listitem [ref=f39e37]:
+            - link "Library" [ref=f39e38] [cursor=pointer]:
+              - /url: upload.php
+          - listitem [ref=f39e39]:
+            - link "Add Media File" [ref=f39e40] [cursor=pointer]:
+              - /url: media-new.php
+      - listitem [ref=f39e41]:
+        - link "Pages" [ref=f39e42] [cursor=pointer]:
+          - /url: edit.php?post_type=page
+          - generic [ref=f39e43]: 
+        - list [ref=f39e45]:
+          - listitem [ref=f39e46]:
+            - link "All Pages" [ref=f39e47] [cursor=pointer]:
+              - /url: edit.php?post_type=page
+          - listitem [ref=f39e48]:
+            - link "Add Page" [ref=f39e49] [cursor=pointer]:
+              - /url: post-new.php?post_type=page
+      - listitem [ref=f39e50]:
+        - link "Comments" [ref=f39e51] [cursor=pointer]:
+          - /url: edit-comments.php
+          - generic [ref=f39e52]: 
+      - listitem [ref=f39e54]
+      - listitem [ref=f39e56]:
+        - link "Sklentr" [ref=f39e57] [cursor=pointer]:
+          - /url: admin.php?page=sklentr-settings
+          - generic [ref=f39e58]: 
+        - list [ref=f39e60]:
+          - listitem [ref=f39e61]:
+            - link "Settings" [ref=f39e62] [cursor=pointer]:
+              - /url: admin.php?page=sklentr-settings
+              - generic [ref=f39e63]: 
+          - listitem [ref=f39e65]:
+            - link "Services (Home, /services)" [ref=f39e66] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_service
+              - generic [ref=f39e67]: 
+          - listitem [ref=f39e69]:
+            - link "Why-Us Points (/services)" [ref=f39e70] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_svc_perk
+              - generic [ref=f39e71]: 
+          - listitem [ref=f39e73]:
+            - link "Trust Stats (Home, /services)" [ref=f39e74] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_stat
+              - generic [ref=f39e75]: 
+          - listitem [ref=f39e77]:
+            - link "Trusted Logos (Home)" [ref=f39e78] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_project
+              - generic [ref=f39e79]: 
+          - listitem [ref=f39e81]:
+            - link "Problem Cards (Home)" [ref=f39e82] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_problem
+              - generic [ref=f39e83]: 
+          - listitem [ref=f39e85]:
+            - link "Hero Plan Steps (Home)" [ref=f39e86] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_step
+              - generic [ref=f39e87]: 
+          - listitem [ref=f39e89]:
+            - link "Hero Plan Tiles (Home)" [ref=f39e90] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_hero_tile
+              - generic [ref=f39e91]: 
+          - listitem [ref=f39e93]:
+            - link "Why-Us Pillars (Home)" [ref=f39e94] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pillar
+              - generic [ref=f39e95]: 
+          - listitem [ref=f39e97]:
+            - link "Visa Features (Home)" [ref=f39e98] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_visa_feature
+              - generic [ref=f39e99]: 
+          - listitem [ref=f39e101]:
+            - link "Featured Work (Home)" [ref=f39e102] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_work
+              - generic [ref=f39e103]: 
+          - listitem [ref=f39e105]:
+            - link "Process Steps (Home)" [ref=f39e106] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_process
+              - generic [ref=f39e107]: 
+          - listitem [ref=f39e109]:
+            - link "FAQ (Home)" [ref=f39e110] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_faq
+              - generic [ref=f39e111]: 
+          - listitem [ref=f39e113]:
+            - link "Team Locations (unused)" [ref=f39e114] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_location
+              - generic [ref=f39e115]: 
+          - listitem [ref=f39e117]:
+            - link "Tech Stack (Home)" [ref=f39e118] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_tech
+              - generic [ref=f39e119]: 
+          - listitem [ref=f39e121]:
+            - link "Pricing Tiers (Home)" [ref=f39e122] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_pricing
+              - generic [ref=f39e123]: 
+          - listitem [ref=f39e125]:
+            - link "Portfolio Projects (/portfolio)" [ref=f39e126] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_portfolio
+              - generic [ref=f39e127]: 
+          - listitem [ref=f39e129]:
+            - link "Subscribers" [ref=f39e130] [cursor=pointer]:
+              - /url: edit.php?post_type=skl_subscriber
+              - generic [ref=f39e131]: 
+        - button "Toggle Sklentr submenu" [active] [ref=f39e133] [cursor=pointer]
+      - listitem [ref=f39e136]:
+        - link "Appearance" [ref=f39e137] [cursor=pointer]:
+          - /url: themes.php
+          - generic [ref=f39e138]: 
+        - list [ref=f39e140]:
+          - listitem [ref=f39e141]:
+            - link "Themes" [ref=f39e142] [cursor=pointer]:
+              - /url: themes.php
+          - listitem [ref=f39e143]:
+            - link "Patterns" [ref=f39e144] [cursor=pointer]:
+              - /url: site-editor.php?p=/pattern
+          - listitem [ref=f39e145]:
+            - link "Customize" [ref=f39e146] [cursor=pointer]:
+              - /url: customize.php?return=%2Fsklentr%2Fsklentr-v3%2Fwp-admin%2Fadmin.php%3Fpage%3Dsklentr-settings
+          - listitem [ref=f39e147]:
+            - link "Fonts" [ref=f39e148] [cursor=pointer]:
+              - /url: font-library.php
+          - listitem [ref=f39e149]:
+            - link "Menus" [ref=f39e150] [cursor=pointer]:
+              - /url: nav-menus.php
+          - listitem [ref=f39e151]:
+            - link "Theme File Editor" [ref=f39e152] [cursor=pointer]:
+              - /url: theme-editor.php
+      - listitem [ref=f39e153]:
+        - link "Plugins" [ref=f39e154] [cursor=pointer]:
+          - /url: plugins.php
+          - generic [ref=f39e155]: 
+        - list [ref=f39e157]:
+          - listitem [ref=f39e158]:
+            - link "Installed Plugins" [ref=f39e159] [cursor=pointer]:
+              - /url: plugins.php
+          - listitem [ref=f39e160]:
+            - link "Add Plugin" [ref=f39e161] [cursor=pointer]:
+              - /url: plugin-install.php
+          - listitem [ref=f39e162]:
+            - link "Plugin File Editor" [ref=f39e163] [cursor=pointer]:
+              - /url: plugin-editor.php
+      - listitem [ref=f39e164]:
+        - link "Users" [ref=f39e165] [cursor=pointer]:
+          - /url: users.php
+          - generic [ref=f39e166]: 
+        - list [ref=f39e168]:
+          - listitem [ref=f39e169]:
+            - link "All Users" [ref=f39e170] [cursor=pointer]:
+              - /url: users.php
+          - listitem [ref=f39e171]:
+            - link "Add User" [ref=f39e172] [cursor=pointer]:
+              - /url: user-new.php
+          - listitem [ref=f39e173]:
+            - link "Profile" [ref=f39e174] [cursor=pointer]:
+              - /url: profile.php
+      - listitem [ref=f39e175]:
+        - link "Tools" [ref=f39e176] [cursor=pointer]:
+          - /url: tools.php
+          - generic [ref=f39e177]: 
+        - list [ref=f39e179]:
+          - listitem [ref=f39e180]:
+            - link "Available Tools" [ref=f39e181] [cursor=pointer]:
+              - /url: tools.php
+          - listitem [ref=f39e182]:
+            - link "Import" [ref=f39e183] [cursor=pointer]:
+              - /url: import.php
+          - listitem [ref=f39e184]:
+            - link "Export" [ref=f39e185] [cursor=pointer]:
+              - /url: export.php
+          - listitem [ref=f39e186]:
+            - link "Site Health" [ref=f39e187] [cursor=pointer]:
+              - /url: site-health.php
+          - listitem [ref=f39e188]:
+            - link "Export Personal Data" [ref=f39e189] [cursor=pointer]:
+              - /url: export-personal-data.php
+          - listitem [ref=f39e190]:
+            - link "Erase Personal Data" [ref=f39e191] [cursor=pointer]:
+              - /url: erase-personal-data.php
+          - listitem [ref=f39e192]:
+            - link "Sklentr Repair" [ref=f39e193] [cursor=pointer]:
+              - /url: tools.php?page=sklentr-repair
+      - listitem [ref=f39e194]:
+        - link "Settings" [ref=f39e195] [cursor=pointer]:
+          - /url: options-general.php
+          - generic [ref=f39e196]: 
+        - list [ref=f39e198]:
+          - listitem [ref=f39e199]:
+            - link "General" [ref=f39e200] [cursor=pointer]:
+              - /url: options-general.php
+          - listitem [ref=f39e201]:
+            - link "Connectors" [ref=f39e202] [cursor=pointer]:
+              - /url: options-connectors.php
+          - listitem [ref=f39e203]:
+            - link "Writing" [ref=f39e204] [cursor=pointer]:
+              - /url: options-writing.php
+          - listitem [ref=f39e205]:
+            - link "Reading" [ref=f39e206] [cursor=pointer]:
+              - /url: options-reading.php
+          - listitem [ref=f39e207]:
+            - link "Discussion" [ref=f39e208] [cursor=pointer]:
+              - /url: options-discussion.php
+          - listitem [ref=f39e209]:
+            - link "Media" [ref=f39e210] [cursor=pointer]:
+              - /url: options-media.php
+          - listitem [ref=f39e211]:
+            - link "Permalinks" [ref=f39e212] [cursor=pointer]:
+              - /url: options-permalink.php
+          - listitem [ref=f39e213]:
+            - link "Privacy" [ref=f39e214] [cursor=pointer]:
+              - /url: options-privacy.php
+      - listitem [ref=f39e215]:
+        - button "Collapse Main menu" [expanded] [ref=f39e216] [cursor=pointer]:
+          - generic [ref=f39e218]: Collapse Menu
+  - generic [ref=f39e219]:
+    - generic [ref=f39e220]:
+      - navigation "Toolbar":
+        - menu:
+          - group [ref=f39e221]:
+            - menuitem "About WordPress" [ref=f39e222] [cursor=pointer]
+          - group [ref=f39e225]:
+            - menuitem "Sklentr V3" [ref=f39e226] [cursor=pointer]
+          - group [ref=f39e227]:
+            - menuitem "Ctrl+K Open command palette" [ref=f39e228] [cursor=pointer]:
+              - generic [ref=f39e230]:
+                - text: Ctrl+K
+                - generic [ref=f39e231]: Open command palette
+          - group [ref=f39e232]:
+            - menuitem "0 Comments in moderation" [ref=f39e233] [cursor=pointer]:
+              - generic [ref=f39e235]: "0"
+          - group [ref=f39e237]:
+            - menuitem "New" [ref=f39e238] [cursor=pointer]
+        - menu [ref=f39e241]:
+          - group [ref=f39e242]:
+            - menuitem "Howdy, admin" [ref=f39e243] [cursor=pointer]
+    - main [ref=f39e244]:
+      - generic [ref=f39e246]:
+        - heading "Sklentr Settings" [level=1] [ref=f39e247]
+        - paragraph [ref=f39e248]: Content is grouped by page, then by section. Open a page, then a section, to edit its text. Repeatable content (stats, cards, etc.) is managed under its own menu.
+        - generic [ref=f39e249]:
+          - paragraph [ref=f39e250]:
+            - button "Expand all" [ref=f39e251] [cursor=pointer]
+            - button "Collapse all" [ref=f39e252] [cursor=pointer]
+          - group [ref=f39e253]:
+            - generic "Homepage 13 sections ▸" [ref=f39e254] [cursor=pointer]:
+              - generic [ref=f39e255]: Homepage
+              - generic [ref=f39e256]: 13 sections
+              - text: ▸
+            - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸
+          - group [ref=f39e257]:
+            - generic "Services Page (/services) 4 sections ▸" [ref=f39e258] [cursor=pointer]:
+              - generic [ref=f39e259]: Services Page (/services)
+              - generic [ref=f39e260]: 4 sections
+              - text: ▸
+            - text: ▸ ▸ ▸ ▸
+          - group [ref=f39e261]:
+            - generic "Startup Visa Page (/startup-visa) 11 sections ▸" [ref=f39e262] [cursor=pointer]:
+              - generic [ref=f39e263]: Startup Visa Page (/startup-visa)
+              - generic [ref=f39e264]: 11 sections
+              - text: ▸
+            - text: ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸ ▸
+          - group [ref=f39e265]:
+            - generic "Pricing Page (/pricing) 4 sections ▸" [ref=f39e266] [cursor=pointer]:
+              - generic [ref=f39e267]: Pricing Page (/pricing)
+              - generic [ref=f39e268]: 4 sections
+              - text: ▸
+            - text: ▸ ▸ ▸ ▸
+          - group [ref=f39e269]:
+            - generic "Portfolio Page (/portfolio) 3 sections ▸" [ref=f39e270] [cursor=pointer]:
+              - generic [ref=f39e271]: Portfolio Page (/portfolio)
+              - generic [ref=f39e272]: 3 sections
+              - text: ▸
+            - text: ▸ ▸ ▸
+          - group [ref=f39e273]:
+            - generic "About Page (/about) 6 sections ▸" [ref=f39e274] [cursor=pointer]:
+              - generic [ref=f39e275]: About Page (/about)
+              - generic [ref=f39e276]: 6 sections
+              - text: ▸
+            - text: ▸ ▸ ▸ ▸ ▸ ▸
+          - group [ref=f39e277]:
+            - generic "Blog Page (/blog) 2 sections ▸" [ref=f39e278] [cursor=pointer]:
+              - generic [ref=f39e279]: Blog Page (/blog)
+              - generic [ref=f39e280]: 2 sections
+              - text: ▸
+            - text: ▸ ▸
+          - group [ref=f39e281]:
+            - generic "Global (all pages) 2 sections ▸" [ref=f39e282] [cursor=pointer]:
+              - generic [ref=f39e283]: Global (all pages)
+              - generic [ref=f39e284]: 2 sections
+              - text: ▸
+            - text: ▸ ▸
+          - paragraph [ref=f39e285]:
+            - button "Save Changes" [ref=f39e286] [cursor=pointer]
+  - contentinfo [ref=f39e287]:
+    - paragraph [ref=f39e288]:
+      - generic [ref=f39e289]:
+        - text: Thank you for creating with
+        - link "WordPress" [ref=f39e290] [cursor=pointer]:
+          - /url: https://wordpress.org/
+        - text: .
+    - paragraph [ref=f39e291]: Version 7.0.4

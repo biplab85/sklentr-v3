@@ -1,0 +1,344 @@
+// =====================================================================
+// SECTION 09 — Transparent Pricing (DARK ink anchor)
+// Same premium-dark family as the Startup Visa section, but its own treatment:
+// a centred gold top-glow + green corner-glow over ink, and dark elevated tier
+// cards. The "popular" card is lifted with a gold→green ring + shimmering
+// ribbon. Micro-animations: staggered card entrance (data-advance, reversible),
+// hover lift, cascading feature ticks, ribbon shine. Content is dynamic.
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.pricing {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--color-text-on-dark);
+  background:
+    radial-gradient(72% 52% at 50% -10%, rgba(243, 179, 81, .10) 0%, transparent 62%),
+    var(--ink-950);
+  border-block: 1px solid rgba(255, 255, 255, .06);
+  padding-block: clamp(72px, 9vw, 132px);
+}
+
+// ---- Ambient glows (distinct placement from the Visa section) ----
+.pricing__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.pricing__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+
+  &--gold  { width: 560px; height: 560px; top: -180px; left: 50%; transform: translateX(-60%); background: radial-gradient(circle, rgba(243, 179, 81, .22) 0%, rgba(243, 179, 81, 0) 70%); }
+  &--green { width: 480px; height: 480px; bottom: -170px; right: 4%; background: radial-gradient(circle, rgba(30, 255, 133, .16) 0%, rgba(30, 255, 133, 0) 70%); }
+}
+
+// ---- Ambient IT icons (drift "here and there" behind the content) ----
+.pricing__deco { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.pricing .skl-container { position: relative; z-index: 1; } // keep content above the icons
+
+.pricing__deco-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(44px, 4vw, 66px);
+  height: clamp(44px, 4vw, 66px);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .09);
+  color: var(--brand-green);
+  opacity: .16;
+  will-change: transform;
+
+  svg { width: 52%; height: 52%; }
+
+  // Scatter down the left & right margins, interleaved heights + tints.
+  &--a { top: 11%; left: 3%;  color: var(--brand-green); animation: pricingDrift1 17s var(--ease-inout) infinite; }
+  &--b { top: 33%; left: 7%;  color: var(--brand-gold);  animation: pricingDrift2 21s var(--ease-inout) infinite; animation-delay: -4s; }
+  &--c { top: 58%; left: 2%;  color: var(--brand-green); animation: pricingDrift3 19s var(--ease-inout) infinite; animation-delay: -8s; }
+  &--d { top: 82%; left: 6%;  color: var(--brand-gold);  animation: pricingDrift1 23s var(--ease-inout) infinite; animation-delay: -6s; }
+  &--e { top: 13%; right: 4%; color: var(--brand-gold);  animation: pricingDrift2 18s var(--ease-inout) infinite; animation-delay: -3s; }
+  &--f { top: 37%; right: 2%; color: var(--brand-green); animation: pricingDrift3 22s var(--ease-inout) infinite; animation-delay: -10s; }
+  &--g { top: 61%; right: 7%; color: var(--brand-gold);  animation: pricingDrift1 20s var(--ease-inout) infinite; animation-delay: -7s; }
+  &--h { top: 84%; right: 3%; color: var(--brand-green); animation: pricingDrift2 16s var(--ease-inout) infinite; animation-delay: -5s; }
+}
+
+// Three wandering paths (translate + gentle rotate) so no two icons move alike.
+@keyframes pricingDrift1 {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(26px, -32px) rotate(8deg); }
+  50%  { transform: translate(-14px, -18px) rotate(-6deg); }
+  75%  { transform: translate(18px, 22px) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+@keyframes pricingDrift2 {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  30%  { transform: translate(-28px, 24px) rotate(-9deg); }
+  55%  { transform: translate(16px, 30px) rotate(6deg); }
+  80%  { transform: translate(-12px, -20px) rotate(-4deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+@keyframes pricingDrift3 {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  20%  { transform: translate(20px, 26px) rotate(7deg); }
+  50%  { transform: translate(30px, -16px) rotate(-5deg); }
+  75%  { transform: translate(-16px, -28px) rotate(9deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+// Not enough room in the margins on narrower screens.
+@include bp-max(1200px) { .pricing__deco { display: none; } }
+
+// Respect reduced motion — show them, but stop the drifting.
+@include reduced-motion {
+  .pricing__deco-icon { animation: none; }
+}
+
+// ---- Header ----
+.pricing__head {
+  max-width: 720px;
+  margin: 0 auto clamp(44px, 5vw, 68px);
+  text-align: center;
+}
+.pricing__eyebrow { margin: 0 0 14px; color: var(--brand-gold); }
+.pricing__title {
+  margin: 0 0 16px;
+  color: #fff;                 // base for no-JS; char-fill="dark" sweeps to white
+  font-size: var(--fs-h2);
+}
+.pricing__intro {
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  line-height: 1.7;
+  color: #AAB8CC;
+}
+
+// ---- Grid ----
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: clamp(20px, 2.4vw, 30px);
+  max-width: 1100px;
+  margin-inline: auto;
+  list-style: none;
+  padding: 0;
+
+  @include bp-max(920px) { grid-template-columns: 1fr; max-width: 460px; }
+}
+
+// ---- Card (dark elevated surface) ----
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(28px, 3vw, 40px);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(120% 90% at 15% 8%, rgba(30, 255, 133, .04), transparent 55%),
+    linear-gradient(165deg, #16223b 0%, #101a2e 100%);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
+  transition: transform var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out);
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(243, 179, 81, .45);
+    box-shadow: 0 32px 72px rgba(0, 0, 0, .5);
+  }
+}
+
+// Popular tier — lifted, gold→green ring, warmer dark fill, gold glow.
+.pricing-card--popular {
+  z-index: 1;
+  border-color: rgba(243, 179, 81, .5);
+  background:
+    radial-gradient(120% 90% at 15% 8%, rgba(243, 179, 81, .07), transparent 55%),
+    linear-gradient(165deg, #1b2942 0%, #111c31 100%);
+  box-shadow: 0 26px 64px rgba(243, 179, 81, .16), 0 24px 60px rgba(0, 0, 0, .42);
+
+  @include bp-min(921px) { margin-top: -22px; }
+
+  &:hover { box-shadow: 0 34px 76px rgba(243, 179, 81, .22), 0 30px 70px rgba(0, 0, 0, .5); }
+
+  // Gradient ring.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(135deg, var(--brand-gold), var(--brand-green));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+}
+
+.pricing-card__ribbon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--brand-gold), var(--brand-gold-deep));
+  color: var(--ink-950);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 8px 22px rgba(243, 179, 81, .5);
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, .7) 50%, transparent 60%);
+    transform: translateX(-120%);
+    animation: priceShine 3.6s var(--ease-out) infinite;
+  }
+}
+@keyframes priceShine { 0%, 62% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+
+.pricing-card__name {
+  margin: 0 0 18px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.375rem;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+.pricing-card__price { display: flex; flex-direction: column; gap: 4px; }
+.pricing-card__prefix { font-size: 13px; font-weight: 500; color: #8496AE; }
+.pricing-card__amount { display: flex; align-items: baseline; gap: 8px; }
+.pricing-card__value {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.1rem, 1.5rem + 1.6vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.pricing-card--popular .pricing-card__value {
+  background: linear-gradient(135deg, var(--brand-gold), var(--brand-green));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pricing-card__currency { font-size: 14px; font-weight: 600; color: #64748B; }
+
+.pricing-card__period {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  margin: 14px 0 0;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .12);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #C7D2E1;
+
+  svg { width: 14px; height: 14px; color: var(--brand-gold); }
+}
+
+.pricing-card__features {
+  list-style: none;
+  margin: 24px 0 28px;
+  padding: 24px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  display: grid;
+  gap: 13px;
+}
+.pricing-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #C7D2E1;
+}
+.pricing-card__tick {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(30, 255, 133, .12);
+  border: 1px solid rgba(30, 255, 133, .22);
+  color: var(--brand-green);
+
+  svg { width: 13px; height: 13px; }
+}
+
+.pricing-card__cta {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+// ---- Footer note + link ----
+.pricing__foot {
+  margin: clamp(36px, 4vw, 56px) auto 0;
+  max-width: 620px;
+  text-align: center;
+}
+.pricing__note {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #8496AE;
+}
+.pricing__foot .skl-textlink {
+  color: var(--brand-gold);
+  &:hover { color: #fff; }
+}
+
+// =====================================================================
+// Micro-animations — staggered entrance (data-advance, reversible) + cascade.
+// cards-advance.js arms `.advance-armed` and toggles `.is-in`, only when motion
+// is allowed → no-JS / reduced-motion show everything.
+// =====================================================================
+.pricing__grid.advance-armed {
+  .pricing-card {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .6s var(--ease-out), transform .6s var(--ease-out);
+    transition-delay: calc(var(--i) * .1s);
+  }
+  &.is-in .pricing-card { opacity: 1; transform: none; }
+
+  .pricing-card__feature {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .45s var(--ease-out), transform .45s var(--ease-out);
+  }
+  &.is-in .pricing-card__feature { opacity: 1; transform: none; }
+  .pricing-card__feature:nth-child(1) { transition-delay: .32s; }
+  .pricing-card__feature:nth-child(2) { transition-delay: .40s; }
+  .pricing-card__feature:nth-child(3) { transition-delay: .48s; }
+  .pricing-card__feature:nth-child(4) { transition-delay: .56s; }
+  .pricing-card__feature:nth-child(5) { transition-delay: .64s; }
+  .pricing-card__feature:nth-child(6) { transition-delay: .72s; }
+}
+
+@include reduced-motion {
+  .pricing__grid.advance-armed .pricing-card,
+  .pricing__grid.advance-armed .pricing-card__feature {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .pricing-card__ribbon::after { animation: none; opacity: 0; }
+}

@@ -1,0 +1,12 @@
+// =====================================================================
+// Base — character "fill" heading reveal (paired with assets/js/char-fill.js)
+// JS injects .cf-word / .cf-char spans; these just make them animatable.
+// =====================================================================
+[data-char-fill] .cf-word {
+  display: inline-block;
+  white-space: nowrap; // keep each word intact when the line wraps
+}
+[data-char-fill] .cf-char {
+  display: inline-block;
+  will-change: color, opacity, transform;
+}

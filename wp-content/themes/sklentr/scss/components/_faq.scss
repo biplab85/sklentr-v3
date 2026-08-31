@@ -1,0 +1,189 @@
+// =====================================================================
+// SECTION 14 — FAQ (DARK ink anchor)
+// Same premium-dark family as the Pricing section, with its own treatment:
+// a green top-glow + gold corner-glow over ink, drifting IT icons, a
+// gradient-ringed help card, and a light single-open accordion. Panels animate
+// via grid-template-rows (JS toggles .is-open; the list gets .is-enhanced so
+// no-JS shows all answers open).
+// =====================================================================
+@use '../abstracts/mixins' as *;
+
+.faq {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: var(--color-text-on-dark);
+  background:
+    radial-gradient(72% 52% at 50% -10%, rgba(30, 255, 133, .08) 0%, transparent 62%),
+    var(--ink-950);
+  border-block: 1px solid rgba(255, 255, 255, .06);
+  padding-block: clamp(72px, 9vw, 128px);
+}
+
+// ---- Ambient glows (distinct from Pricing: green top / gold bottom-left) ----
+.faq__atmos { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.faq__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+
+  &--green { width: 520px; height: 520px; top: -170px; left: 50%; transform: translateX(-58%); background: radial-gradient(circle, rgba(30, 255, 133, .18) 0%, rgba(30, 255, 133, 0) 70%); }
+  &--gold  { width: 480px; height: 480px; bottom: -160px; left: 4%; background: radial-gradient(circle, rgba(243, 179, 81, .2) 0%, rgba(243, 179, 81, 0) 70%); }
+}
+
+// ---- Drifting IT icons (reuses the Pricing drift keyframes) ----
+.faq__deco { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.faq .skl-container { position: relative; z-index: 1; }
+.faq__deco-icon {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(44px, 4vw, 62px);
+  height: clamp(44px, 4vw, 62px);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .04);
+  border: 1px solid rgba(255, 255, 255, .09);
+  opacity: .16;
+  will-change: transform;
+
+  svg { width: 52%; height: 52%; }
+
+  &--a { top: 16%; left: 3%;  color: var(--brand-green); animation: pricingDrift1 18s var(--ease-inout) infinite; }
+  &--b { top: 72%; left: 6%;  color: var(--brand-gold);  animation: pricingDrift2 22s var(--ease-inout) infinite; animation-delay: -5s; }
+  &--c { top: 20%; right: 4%; color: var(--brand-gold);  animation: pricingDrift3 20s var(--ease-inout) infinite; animation-delay: -3s; }
+  &--d { top: 74%; right: 3%; color: var(--brand-green); animation: pricingDrift1 24s var(--ease-inout) infinite; animation-delay: -8s; }
+
+  @include bp-max(1200px) { display: none; }
+}
+
+.faq__inner {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: start;
+  gap: clamp(40px, 5vw, 80px);
+
+  @include bp-max(880px) { grid-template-columns: 1fr; gap: clamp(36px, 6vw, 52px); }
+}
+
+// ---- Left aside (sticky) ----
+.faq__aside {
+  position: sticky;
+  top: calc(var(--header-h) + 28px);
+
+  @include bp-max(880px) { position: static; top: auto; }
+}
+.faq__eyebrow { margin: 0 0 14px; color: var(--brand-gold); }
+.faq__title { margin: 0 0 16px; color: #fff; font-size: var(--fs-h2); max-width: 14ch; }
+.faq__intro { margin: 0; font-size: var(--fs-body-lg); line-height: 1.7; color: #AAB8CC; max-width: 42ch; }
+
+// Help card — dark surface with a gold→green ring so it pops on the dark band.
+.faq__help {
+  position: relative;
+  margin-top: clamp(28px, 3.5vw, 40px);
+  padding: clamp(24px, 2.6vw, 32px);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(120% 90% at 14% 8%, #1b2942 0%, transparent 58%),
+    linear-gradient(160deg, #141f36 0%, #0d1526 100%);
+  color: var(--color-text-on-dark);
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, .4);
+}
+.faq__help-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  color: var(--brand-gold);
+  background: rgba(243, 179, 81, .16);
+  border: 1px solid rgba(243, 179, 81, .28);
+
+  svg { width: 22px; height: 22px; }
+}
+.faq__help-title { margin: 0 0 8px; font-family: var(--font-heading); font-weight: 700; font-size: 1.25rem; color: #fff; }
+.faq__help-text { margin: 0 0 20px; font-size: 15px; line-height: 1.6; color: #AAB8CC; }
+
+// ---- Accordion (light-on-dark) ----
+.faq__list { border-top: 1px solid rgba(255, 255, 255, .12); }
+.faq-item { border-bottom: 1px solid rgba(255, 255, 255, .1); }
+.faq-item__heading { margin: 0; }
+.faq-item__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: clamp(18px, 2vw, 24px) 4px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.05rem, .95rem + .35vw, 1.2rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: #fff;
+  transition: color var(--dur-base) var(--ease-out);
+
+  &:hover { color: var(--brand-gold); }
+}
+.faq-item__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #C7D2E1;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .14);
+  transition: transform var(--dur-base) var(--ease-out),
+              background var(--dur-base) var(--ease-out),
+              color var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out);
+
+  svg { width: 18px; height: 18px; }
+}
+.faq-item__q:hover .faq-item__icon {
+  color: var(--brand-gold);
+  border-color: rgba(243, 179, 81, .5);
+}
+.faq-item.is-open .faq-item__icon {
+  transform: rotate(180deg);
+  color: var(--ink-950);
+  background: var(--brand-gold);
+  border-color: var(--brand-gold);
+}
+
+.faq-item__panel {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows .4s var(--ease-out);
+}
+.faq-item__answer {
+  overflow: hidden;
+  min-height: 0;
+  transition: opacity .3s var(--ease-out);
+
+  p {
+    margin: 0;
+    padding: 0 4px clamp(18px, 2vw, 24px);
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #AAB8CC;
+    max-width: 60ch;
+  }
+}
+.faq__list.is-enhanced .faq-item__panel { grid-template-rows: 0fr; }
+.faq__list.is-enhanced .faq-item__answer { opacity: 0; }
+.faq__list.is-enhanced .faq-item.is-open .faq-item__panel { grid-template-rows: 1fr; }
+.faq__list.is-enhanced .faq-item.is-open .faq-item__answer { opacity: 1; }
+
+@include reduced-motion {
+  .faq-item__panel,
+  .faq-item__icon { transition: none; }
+  .faq__deco-icon { animation: none; }
+}
